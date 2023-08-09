@@ -1,0 +1,118 @@
+.sumbitPopup {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sumbitPopup-content h2 {
+    color: white;
+}
+
+.sumbitPopup-content h2,
+.sumbitPopup-content h3 {
+    z-index: 5;
+}
+
+.sumbitPopup:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sumbitPopup-content {
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+
+}
+
+.sumbitPopup-content::before,
+.sumbitPopup-content::after {
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    overflow: visible;
+    width: 51%;
+    height: 60%;
+    z-index: -1;
+    background-color: #06b60f;
+    --messageDecoregrad: 15deg;
+}
+
+.sumbitPopup-content::before {
+    transform: skewY(var(--messageDecoregrad));
+    left: 0;
+}
+
+.sumbitPopup-content::after {
+    transform: skewY(calc(-1*(var(--messageDecoregrad))));
+    right: -7px;
+}
+
+.sumbitPopup-content img {
+    max-height: 40vh;
+    max-width: 40vh;
+    animation: moveAnimation 5s infinite;
+}
+
+@keyframes moveAnimation {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.sumbitPopup-content .heading-secondary {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.sumbitPopupButton {
+    background: linear-gradient(to top, #08da13, #07ca11, #06b60f, #06b60f, #06b60f, #06b60f, #06b60f, #07ca11, #08da13);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 100px;
+    margin-top: 25px;
+    box-shadow: rgb(8, 201, 120) 0px 0px 5px -1px;
+    transition: 0.4s;
+    border: #08da13 solid 1px;
+    font-weight: 600;
+}
+
+.sumbitPopupButton:hover {
+    background: linear-gradient(to top, #08da13, #07ca11, #06b60f, #06b60f, #06b60f, #06b60f, #06b60f, #07ca11, #08da13);
+    box-shadow: rgb(8, 201, 120) 0px 0px 9px -1px;
+    color: yellow;
+    transition: 0.2s;
+}
+
+.sumbitPopupButton:active {
+    transform: scale(0.95);
+}

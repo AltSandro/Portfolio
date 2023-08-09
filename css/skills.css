@@ -1,0 +1,211 @@
+:root {
+  --first-color: #139bbd;
+  --second-color: hsl(244, 89%, 51%);
+  --second-colorHr: hsl(239, 92%, 47%);
+  --first-font: "Roboto", sans-serif;
+  --circle-rotation-1: 320deg;
+}
+
+/* Title */
+.SkillsSection h2 {
+  position: relative;
+  top: 50%;
+  text-align: center;
+  font-weight: 650;
+  letter-spacing: 0.1rem;
+  color: var(--first-color);
+  padding-top: 3rem;
+}
+
+/* Delimiter */
+#hrSkills {
+  display: block;
+  border: 0;
+  margin: 3px auto;
+  width: 70%;
+  height: 3px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), var(--second-color), var(--second-colorHr), var(--second-colorHr), var(--second-colorHr), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  box-shadow: 0 0 11px 6px var(--second-colorHr), 0 0 31px 6px var(--second-colorHr);
+}
+
+/* Section MySkills */
+#MySkills {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  width: 100%;
+}
+
+#MySkills h2 {
+  padding-top: 0;
+  font-size: 24px;
+}
+
+/* Skills icons */
+.iconsOfSkills {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  width: 100%;
+  justify-items: center;
+  gap: 4.5rem 0;
+}
+
+.boxCel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--first-color);
+  gap: 0.5rem;
+}
+
+.iconSkillsSet {
+  position: relative;
+  border-radius: 50%;
+  width: 88px;
+  height: 88px;
+}
+
+.iconSkillsSet img {
+  height: 2.1rem; /*The basic size of the picture*/
+}
+
+.iconSkillsSet svg {
+  position: relative;
+  height: 88px;
+  width: 88px;
+  transform: rotate(270deg);
+  z-index: 1;
+}
+
+.IconDivImg {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  z-index: 3;
+}
+
+/*Increased when hiccuping icon- (by layers we play with Index)*/
+.IconDivImg:hover {
+  transform: scale(1.38);
+}
+
+
+.boxCel svg circle {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #5b49451e;
+  stroke-width: 4; /*The thickness of the strip*/
+  stroke-linecap: round;
+  transform: translate(5px, 5px);
+}
+
+.boxCel svg circle:nth-child(2) {
+  stroke-dasharray: 260;
+  stroke-dashoffset: 260;
+  transition: all 1s;/*the time of filling the circular scale regardless of the point*/
+  stroke: var(--second-color);
+}
+
+.circle {
+  position: absolute;
+  inset: 5px;
+  z-index: 3;
+  transition: all 1s; /*Turning time of the point*/
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  width: 10px;/*point size*/
+  height: 10px;
+  border-radius: 50%;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--second-color);
+  box-shadow: 0 0 11px var(--second-color), 0 0 30px var(--second-color);
+}
+
+/*Set up the position of the points on the circles*/
+.circle1,
+.circle2,
+.circle3 {
+  transform: rotate(var(--circle-rotation-1, 320deg));
+}
+
+.circle4 {
+  transform: rotate(var(--circle-rotation-3, 270deg));
+}
+
+.circle5 {
+  transform: rotate(var(--circle-rotation-4, 210deg));
+}
+
+.circle6 {
+  transform: rotate(var(--circle-rotation-5, 270deg));
+}
+
+.circle7 {
+  transform: rotate(var(--circle-rotation-6, 280deg));
+}
+
+.circle8 {
+  transform: rotate(var(--circle-rotation-5, 270deg));
+}
+
+.circle9 {
+  transform: rotate(var(--circle-rotation-8, 240deg));
+}
+
+.circle10 {
+  transform: rotate(var(--circle-rotation-2, 215deg));
+}
+
+.erroring {
+  position: absolute;
+  visibility: hidden;
+}
+
+.circle11 {
+  transform: rotate(var(--circle-rotation-2, 215deg));
+}
+
+.circle12 {
+  transform: rotate(var(--circle-rotation-2, 235deg));
+}
+
+/*Emphasizing the emblem*/
+.skillName {
+  position: relative;
+}
+
+.skillName::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 6px;
+  border-radius: 50%;
+  bottom: -15px;
+  left: 50%;
+  background-color: var(--navLinkHLineColor);
+  visibility: hidden;
+  width: 0px;
+  transition: 0.2s;
+}
+
+.iconSkillSetActiveItem:hover .skillName::before {
+  visibility: visible;
+  width: 4.9%;
+  transform: scaleX(1.4);
+  transform-origin: right;
+}

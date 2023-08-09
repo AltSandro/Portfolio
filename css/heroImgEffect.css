@@ -1,0 +1,46 @@
+#heroImg {
+    --bordedRad: 15px;
+    --borderColor: #0000008a 25%, #27e6d671 0;
+    /* define the color here */
+    padding: 2px;
+    background:
+        /* Top Left */
+        conic-gradient(from 90deg at top var(--bordedRad) left var(--bordedRad), var(--borderColor)) 0 0,
+        /* Top Right */
+        conic-gradient(from 180deg at top var(--bordedRad) right var(--bordedRad), var(--borderColor)) 100% 0,
+        /* Bottom Left */
+        conic-gradient(from 0deg at bottom var(--bordedRad) left var(--bordedRad), var(--borderColor)) 0 100%,
+        /* Bottom Right */
+        conic-gradient(from -90deg at bottom var(--bordedRad) right var(--bordedRad), var(--borderColor)) 100% 100%;
+    background-size: 33px 33px;
+    background-repeat: no-repeat;
+    transition: .22s;
+    border-radius: 0.75rem;
+    background-color: rgba(0, 255, 255, 0);
+}
+
+#heroImg:hover {
+    background-size: 50% 50%;
+}
+
+.heroMesBoard,
+.SkillsSection {
+    background-color: #090c15ce;
+    border: 1px solid #27c9e642;
+}
+
+.heroButtons a {
+    background: var(--second-colorHr);
+    box-shadow: 0 0 11px 3px var(--second-colorHr), 0 0 31px 6px var(--second-colorHr);
+}
+
+.heroButtons a:hover {
+    box-shadow: 0 0 11px 3px var(--first-color), 0 0 31px 3px var(--first-color);
+    transition: 0.33s;
+    border: 1px solid var(--first-color);
+    color: rgb(0, 255, 0);
+}
+
+#heroMessageTitle {
+    color: var(--first-color);
+}

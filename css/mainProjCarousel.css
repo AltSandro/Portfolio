@@ -1,0 +1,548 @@
+#awSr-section {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.awSr div.awSlider {
+    box-sizing: border-box;
+    display: flex;
+    flex: 1;
+    position: relative;
+    margin: 0;
+    margin-inline: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/*The layer on which there are indicators*/
+.awSr.carousel.slide {
+    position: relative;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.awSr .carousel-inner {
+    position: relative;
+}
+
+.awSr img {
+    vertical-align: middle;
+    background-size: cover;
+}
+
+.awSr img,
+.awSr.item.active,
+.awSr .carousel-inner,
+.awSr.carousel.slide,
+.awSr .carousel-control {/*Control is strips on the sides*/
+    border-radius: 5px;
+}
+
+.awSr .carousel-inner>.item>a>img,
+.awSr .carousel-inner>.item>img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.mainProjCarousel-chevron-left,
+.mainProjCarousel-chevron-right {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* Alignment in the center for containers-strips .mainProjCarousel-chevron-left и .mainProjCarousel-chevron-right: */
+.awSr .carousel-control .mainProjCarousel-chevron-left,
+.awSr .carousel-control .mainProjCarousel-chevron-right {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styles for (decor) - .mainProjCarousel-chevron-left и .mainProjCarousel-chevron-right: */
+.awSr .mainProjCarousel-chevron-left::before,
+.awSr .mainProjCarousel-chevron-right::before {
+    display: block;
+    content: "";
+    width: 64px;
+    height: 64px;
+    opacity: 0.2;
+}
+
+/* Styles when hovering for arrows*/
+.awSr .mainProjCarousel-chevron-left:hover::before,
+.awSr .mainProjCarousel-chevron-right:hover::before {
+    width: 64px;
+    height: 64px;
+    opacity: 0.9;
+}
+
+.awSr .mainProjCarousel-chevron-left::before {
+    content: url(https://img.icons8.com/neon/64/back.png);
+}
+
+.awSr .mainProjCarousel-chevron-left:hover::before {
+    content: url(https://img.icons8.com/3d-fluency/64/back.png);
+}
+
+.awSr .mainProjCarousel-chevron-right::before {
+    content: url(https://img.icons8.com/neon/64/forward.png);
+}
+
+.awSr .mainProjCarousel-chevron-right:hover::before {
+    content: url(https://img.icons8.com/3d-fluency/64/forward.png);
+}
+
+.awSr [data-awSlider-role-Button] {
+    cursor: pointer;
+}
+
+.awSr ol {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.awSr ol ol {
+    margin-bottom: 0;
+}
+
+.awSr caption {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #777;
+    text-align: left;
+}
+
+.awSr .carousel {
+    position: relative;
+}
+
+.awSr .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.awSr .carousel-inner>.item {
+    position: relative;
+    display: none;
+    -webkit-transition: .6s ease-in-out left;
+    -o-transition: .6s ease-in-out left;
+    transition: .6s ease-in-out left;
+}
+
+.awSr .carousel-inner>.item>a>img,
+.awSr .carousel-inner>.item>img {
+    line-height: 1;
+}
+
+@media all and (transform-3d),
+(-webkit-transform-3d) {
+    .awSr .carousel-inner>.item {
+        -webkit-transition: -webkit-transform .6s ease-in-out;
+        -o-transition: -o-transform .6s ease-in-out;
+        transition: transform .6s ease-in-out;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-perspective: 1000px;
+        perspective: 1000px;
+    }
+
+    .awSr .carousel-inner>.item.active.right,
+    .awSr .carousel-inner>.item.next {
+        left: 0;
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+    }
+
+    .awSr .carousel-inner>.item.active.left,
+    .awSr .carousel-inner>.item.prev {
+        left: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+
+    .awSr .carousel-inner>.item.active,
+    .awSr .carousel-inner>.item.next.left,
+    .awSr .carousel-inner>.item.prev.right {
+        left: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.awSr .carousel-inner>.active,
+.awSr .carousel-inner>.next,
+.awSr .carousel-inner>.prev {
+    display: block;
+}
+
+.awSr .carousel-inner>.active {
+    left: 0;
+}
+
+.awSr .carousel-inner>.next,
+.awSr .carousel-inner>.prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.awSr .carousel-inner>.next {
+    left: 100%;
+}
+
+.awSr .carousel-inner>.prev {
+    left: -100%;
+}
+
+.awSr .carousel-inner>.next.left,
+.awSr .carousel-inner>.prev.right {
+    left: 0;
+}
+
+.awSr .carousel-inner>.active.left {
+    left: -100%;
+}
+
+.awSr .carousel-inner>.active.right {
+    left: 100%;
+}
+
+/*Add the Flex container and alignment in the center for .carousel-control */
+.awSr .carousel-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+    filter: alpha(opacity=50);
+    opacity: .5;
+}
+
+.awSr .carousel-control.left {
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .5) 0, rgba(0, 0, 0, .0001) 100%);
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, .5) 0, rgba(0, 0, 0, .0001) 100%);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .5)), to(rgba(0, 0, 0, .0001)));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .5) 0, rgba(0, 0, 0, .0001) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+    background-repeat: repeat-x;
+}
+
+.awSr .carousel-control.right {
+    right: 0;
+    left: auto;
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .0001) 0, rgba(0, 0, 0, .5) 100%);
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, .0001) 0, rgba(0, 0, 0, .5) 100%);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .0001)), to(rgba(0, 0, 0, .5)));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .0001) 0, rgba(0, 0, 0, .5) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+    background-repeat: repeat-x;
+}
+
+.awSr .carousel-control:focus,
+.awSr .carousel-control:hover {
+    color: #fff;
+    text-decoration: none;
+    filter: alpha(opacity=90);
+    outline: 0;
+    opacity: .9;
+}
+
+.awSr .carousel-control .mainProjCarousel-chevron-left {
+    right: 0%;
+}
+
+.awSr .carousel-control .mainProjCarousel-chevron-right {
+    left: 0%;
+}
+
+.awSr .carousel-indicators {
+    position: absolute;
+    top: 108%;
+    left: 50%;
+    z-index: 15;
+    width: 60%;
+    padding-left: 0;
+    margin-left: -30%;
+    text-align: center;
+    list-style: none;
+}
+
+.awSr .carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    margin-left: 0.85%;
+    margin-right: 0.85%;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    transition: 0.33s;
+}
+
+.awSr .carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    margin-left: 0.85%;
+    margin-right: 0.85%;
+    background-color: hsl(244, 89%, 51%);
+    box-shadow: 0 0 11px 3px hsl(244, 89%, 51%);
+    border-color: hsla(244, 89%, 51%, 0.856);
+    transition: 0.33s;
+}
+
+.awSr .carousel-caption {
+    position: absolute;
+    box-sizing: border-box;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 8px;
+    z-index: 10;
+    width: fit-content;
+    font-size: 16px;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    color: var(--scrolledStyleThemeColor);
+    background-color: rgba(18, 15, 218, 0.842);
+    border: 1px solid rgba(18, 15, 218, 0.842);
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+    border-radius: 0.75rem;
+}
+
+.awSr .MainCarouselTitle {
+    font-weight: 900;
+    color: #f7f7f7;
+}
+
+@media screen and (max-width: 968px) {
+    .awSr .carousel-caption {
+        font-size: 9px;
+        font-weight: 600;
+        text-align: center;
+        white-space: nowrap;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .awSr .carousel-indicators {
+        bottom: 5px;
+    }
+}
+
+.awSr div.awSlider .carousel {
+    display: table;
+    z-index: 2;
+    -moz-box-shadow: 0 0 4px #444;
+    -webkit-box-shadow: 0 0 4px #444;
+    box-shadow: 0 0 15px rgba(1, 1, 1, .5);
+}
+
+.awSr div.awSlider:hover>img {
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.awSr div.awSlider img {
+    pointer-events: none;
+}
+
+.awSr div.awSlider>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: all .3s;
+    filter: blur(1.8vw);
+    -webkit-filter: blur(2vw);
+    -moz-filter: blur(2vw);
+    -o-filter: blur(2vw);
+    -ms-filter: blur(2vw);
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    opacity: .5;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.awSr .carousel-item {
+    transition: transform 0.6s ease;
+}
+
+.awSr .carousel-item.active {
+    transform: translateX(0);
+}
+
+.awSr .carousel-item-next.carousel-item-left,
+.awSr .carousel-item-prev.carousel-item-right {
+    transform: translateX(0);
+}
+
+/*glitch effect:*/
+.MatrixEffectButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    opacity: 0.5;
+    mix-blend-mode: hard-light;
+    transition: opacity 2s;
+}
+
+.MatrixEffectButton.active::before {
+    animation: animate 0.3s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+        filter: hue-rotate(0deg);
+    }
+
+    10% {
+        background-position: 5px 0;
+    }
+
+    20% {
+        background-position: -5px 0;
+    }
+
+    30% {
+        background-position: 15px 0;
+    }
+
+    40% {
+        background-position: 5px 0;
+    }
+
+    50% {
+        background-position: -25px 0;
+    }
+
+    60% {
+        background-position: -50px 0;
+    }
+
+    70% {
+        background-position: 0 -20px;
+    }
+
+    80% {
+        background-position: -60px -20px;
+    }
+
+    81% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 0;
+        filter: hue-rotate(360deg);
+    }
+}
+
+.ImgMatrixEffectMessage {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    padding: 2px 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.67s;
+}
+
+.ImgMatrixEffectMessage span {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    width: fit-content;
+    white-space: nowrap;
+}
+
+.ImgMatrixEffectMessage::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(12, 0, 0, 0.8);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scale(0, 1) translate(-50%, -50%);
+    transform-origin: center left;
+    transition: 0.55s;
+    z-index: 0;
+    padding: 0.6rem;
+    border-radius: 0.75rem;
+}
+
+.ImgMatrixEffectMessage.active::before {
+    transform: scale(1, 1) translate(-50%, -50%);
+    transition: 0.43s;
+}
+
+/*The start button of the game (there is still in Style, but there is a mechanic of speakers)*/
+#play-now-btn {
+    font-weight: 500;
+    transition: 0.28s;
+}
+
+#play-now-btn:hover {
+    box-shadow: rgb(5, 145, 170) 0px 0px 12px 1px;
+    transform: scale(1.03);
+    transition: 0.33s;
+    color: white;
+}
+
+#play-now-btn:active {
+    box-shadow: rgb(6, 190, 21) 0px 0px 15px 3px;
+    color: rgb(0, 241, 0);
+    transform: scale(1.04);
+    transition: 0.3s;
+}

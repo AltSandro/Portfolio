@@ -1,0 +1,190 @@
+/*we will change the location of the tolbar everywhere:*/
+:root {
+  --styleThemeColor: rgb(13, 110, 253);
+  --scrolledStyleThemeColor: rgb(83, 196, 241);
+  --scrolledStyleThemeColorHover: rgb(83, 241, 215);
+  --navLinkHLineColor: #08da13;
+}
+
+.navbar {
+  z-index: 4;
+}
+
+/*We’ll change like on anidaba by speed and smoothness of the disclosure on the tolbar:*/
+.navbar {
+  background-color: rgba(255, 255, 255, 0.911);/*The tag panels on default*/
+  transition: background-color 0.3s;
+  box-shadow: 0px 11px 9px -10px rgba(70, 125, 167, 0.67);
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.8);/* Color with transparency*/
+}
+
+.navbar .nav-link {
+  position: relative;
+}
+
+.navbar .nav-link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 3px;
+  background-color: #0d6efd;
+  visibility: hidden;
+  width: 0px;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar .nav-link:hover::before {
+  visibility: visible;
+  width: 25px;
+}
+
+.navbar.scrolled .navbar-nav .nav-link::before {
+  background-color: var(--navLinkHLineColor);
+}
+
+.navbar.scrolled .navbar-brand,
+.navbar.scrolled .navbar-toggler,
+.navbar.scrolled .navbar-nav .nav-link {
+  color: var(--scrolledStyleThemeColor);/* will work on the text */
+  border-color: var(--scrolledStyleThemeColor);/*will work on the stroke*/
+  transition: 0.7s;
+}
+
+.navbar.scrolled .nThD {
+  background: var(--scrolledStyleThemeColor); /*He will work on strips*/
+  transition: 0.0s;
+}
+
+/* Change styles for the navigation menu when hovering (for the base color version of the panel): */
+.navbar .navbar-brand:hover,
+.navbar .navbar-toggler:hover,
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--styleThemeColor);/* will work on the text */
+  transition: 0.3s;
+
+}
+
+/*Change the color of subsidiaries when the parent is introduced*/
+.navbar .navbar-toggler:hover .nThD {
+  background: var(--styleThemeColor);
+  transition: 0s;
+}
+
+.navbar .navbar-toggler:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* Change styles for the navigation menu when hovering (for the changed color version of the panel): */
+.navbar.scrolled .navbar-brand:hover,
+.navbar.scrolled .navbar-toggler:hover,
+.navbar.scrolled .navbar-nav .nav-link:hover {
+  color: var(--scrolledStyleThemeColorHover);/*will work on the text */
+  transition: 0.7s;
+}
+
+.navbar.scrolled .navbar-toggler:hover .nThD {
+  background: var(--scrolledStyleThemeColorHover);
+  transition: 0.7s;
+}
+
+.navbar.scrolled .navbar-toggler:hover {
+  background-color: rgba(0, 0, 0, 1);
+  transition: 0.7s;
+}
+
+/*Replacement for any symbol:*/
+.navbar-toggler-icon {
+  background-image: none;
+  background-color: transparent;/* We remove the color of the background of the icon */
+  display: flex;
+  justify-content: center;/*Horizontal centering*/
+  align-items: center;/* Vertical centering */
+  border: 0;
+  padding: 0;/* We remove the inner indentation of the buttons */
+  transform: scaleX(2);
+  transition: transform 0.3s;/* Add animation */
+}
+
+/*rotation effect*/
+.navbar .navbar-toggler-icon.cd {
+  box-sizing: content-box;
+  padding: 0;
+  transform: rotate(90deg);
+  transform-origin: 50% 50%;
+  transition: transform 0.56s;
+  font-weight: bold;
+  display: flex;
+  margin: 0;
+  justify-content: center;
+}
+
+/*Interactive hamburger:*/
+.navbarTogglerhamburger {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8px 7px;
+  transition: 0.33s;
+}
+
+.navbarTogglerhamburger .nThD {
+  align-self: flex-end;
+  height: 2px;
+  width: 100%;
+  background: var(--bs-navbar-color); /*On the base of the Bootstrap*/
+}
+
+.navbarTogglerhamburger .hamburgerMid {
+  width: 100%;
+  transition: all 200ms ease-in-out;
+}
+
+.navbarTogglerhamburger .hamburgerBottom {
+  width: 100%;
+  transition: all 400ms ease-in-out;
+}
+
+.navbarTogglerhamburger:hover .nThD {
+  width: 100%;
+}
+
+.navbarTogglerhamburger:hover .hamburgerTop {
+  animation: hamburger-hover 0.69s infinite ease-in-out alternate;
+}
+
+.navbarTogglerhamburger:hover .hamburgerMid {
+  animation: hamburger-hover 0.69s infinite ease-in-out alternate forwards 200ms;
+}
+
+.navbarTogglerhamburger:hover .hamburgerBottom {
+  animation: hamburger-hover 0.69s infinite ease-in-out alternate forwards 400ms;
+}
+
+@keyframes hamburger-hover {
+  0% {
+    width: 100%;
+  }
+
+  50% {
+    width: 50%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+/*My logo settings:*/
+.myLogo {
+  height: 40px;
+  transition: filter 0.33s;
+}
+
+.navbar-brand:hover .myLogo {
+  filter: hue-rotate(47deg);
+}

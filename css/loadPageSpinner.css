@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+/* Darkened background */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Background color in the absence of video support */
+    background: #0c101b;
+}
+
+/* Styles for the video */
+#preload-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*It is necessary to configure fading (by removing the class .Hiddenb and .HiddenGreeting through the script)*/
+.hiddenB,
+.hiddenGreeting {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.overlay h1 {
+    position: absolute;
+    top: 45%;
+    z-index: 7;
+    font-weight: 800;
+    font-family: 'Source Code Pro', monospace;
+    color: rgb(179, 243, 245);
+    font-size: 2.5rem;
+    transition: opacity 3s ease;
+}
+
+.preload-start-button {
+    position: absolute;
+    top: 65%;
+    z-index: 7;
+    transition: opacity 1s ease;
+}
+
+@media (max-height: 600px) {
+    .overlay h1 {
+        top: 35%; /*Vertical button position */
+    }
+
+    .preload-start-button {
+        top: 57%;
+    }
+}
+
+.preload-start-button {
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(to right, #08da83 0%, hsl(239, 82%, 22%) 51%, #08da13 100%);
+    margin: 10px;
+    font-size: 14px;
+    padding: 14px 16px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: rgb(179, 243, 245);
+    border: 1px;
+    border-radius: 24px;
+    display: inline-block;
+}
+
+.preload-start-button:hover {
+    background-position: right center;/* change the direction of the change*/
+    color: rgb(136, 224, 148);
+    text-decoration: none;
+}

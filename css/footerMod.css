@@ -1,0 +1,106 @@
+/*Basic block for quote*/
+.quote {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    padding-top: 40px;
+    background: url("../img/footer.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.quote .quote-external {
+    max-width: 400px;
+}
+
+.quote::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #090c1500;/*Color filter*/
+    z-index: 0;
+}
+
+/*Stripes from above and below quotes:*/
+.quote-external p::before,
+.quote-external p::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: #0d6efd;
+    margin: 14px auto 10px auto;
+}
+
+/*Primary colors*/
+#mainFooter {
+    background-color: #131722;
+}
+
+[data-font-family-custom] cite {
+    color: rgb(214, 238, 238);
+    font-style: italic;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/*We process the text of the quote and its size when entering it:*/
+.color-custom:hover,
+.color-custom:hover * {
+    color: yellow;
+}
+
+.color-custom:hover {
+    transform: scale(1.065); /*The final size on devices (all devices, if not others, but they are below)*/
+    transition: transform 0.3s ease;
+    transition-delay: 0.2s, 0.4s;
+    transition-duration: 0.7s, 0.7s;
+}
+
+/* Styles for guidance on the parent element or its subsidiaries on computers */
+@media (min-width: 769px) {
+    .color-custom:hover,
+    .color-custom:hover * {
+        transform: scale(1.4); /*The final size on the computers*/
+    }
+}
+
+.color-custom:not(:hover) {
+    transform: scale(1); /* Installation of the initial size for reverse transformation */
+    transition-delay: 0.4s, 0.2s; /* Reversal delay*/
+    transition-duration: 0.7s, 0.7s; /* Duration for reverse transformation*/
+}
+
+[data-footerBottom] {
+    background-color: #0c101b;
+}
+
+/*Contact icon settings:*/
+.contactsLinks img {
+    max-width: 40px;
+    max-height: 40px;
+    border: 1px solid none;
+    padding: 7px;
+    border-radius: 25%;
+}
+
+.contactsLinks img:hover {
+    background-color: #0c101b;
+    transform: scale(1.05);
+}
+
+/*Thin tuning forces (better than bootstrap)*/
+@media (max-width: 567px) {
+    .contactsLinks li {
+      width: calc((100% - 6px) / 7); 
+      padding-left: 0;
+      padding-right: 1px; 
+    }
+}
+  
+/*Set up the dimensions of the second brother:*/
+#mainFooter .custom-border {
+    max-width: 85%;
+    text-align: center;
+}
