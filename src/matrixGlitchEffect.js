@@ -1,22 +1,31 @@
 (() => {
   (() => {
-    const sections = document.querySelectorAll(".MatrixEffectButton");
+const sections = document.querySelectorAll(".MatrixEffectButton");
 
     function startAnimation() {
+      const button = this;
       setTimeout(() => {
-        this.classList.add("active");
-        const message = this.querySelector(".ImgMatrixEffectMessage");
+        button.classList.add("active");
+        const message = button.querySelector(".ImgMatrixEffectMessage");
         setTimeout(() => {
           message.classList.add("active");
           message.style.opacity = 1;
         }, 700);
 
         setTimeout(() => {
-          this.classList.remove("active");
+          button.classList.remove("active");
           message.classList.remove("active");
-          message.style.opacity = "0"; /*identical to default property in CSS */
-        }, 2900); /*How much will the Glich effect lasts*/
-      }, 330); /*delay before Glitch*/
+          message.style.opacity = "0"; 
+          
+          const url = button.getAttribute("data-MatrUrlFollow");
+          const time = button.getAttribute("data-MatrUrlSecDelay");
+          if (url && time) {
+            setTimeout(() => {
+              window.location.href = url;
+            }, time * 1000); 
+          }
+        }, 1900); 
+      }, 330); 
     }
 
     sections.forEach((section) => {
@@ -24,7 +33,7 @@
     });
   })();
 
-  //Скрипт для подсасывания фотки из подчиненного:
+  
   document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".MatrixEffectButton");
 

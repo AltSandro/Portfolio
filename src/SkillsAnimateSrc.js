@@ -1,12 +1,12 @@
 (() => {
-  // Prugge Protectioner of the scrolling and guiding cursor
+  
   function handleScrollAndHover() {
     const setElements = document.getElementsByClassName("iconSkillsSet");
     const strokePercent = ["40", "40", "40", "70", "115", "70", "70", "70", "90", "110", "115", "95"];
     const circleClasses = ["circle1", "circle2", "circle3", "circle4", "circle5", "circle6", "circle7", "circle8", "circle9", "circle10", "circle11", "circle12"];
     
     for (let i = 0; i < 12; i++) {
-      const setId = `_${(i + 1) * 10}`; //with emphasizing so that the ID does not begin with the number in HTML
+      const setId = `_${(i + 1) * 10}`; 
       const circleId = `_${i + 1}`;
       
       const setElement = document.getElementById(setId);
@@ -22,7 +22,7 @@
     }
   }
   
-  // Scrolling event processor
+  
   function handleScroll() {
     const timeElements = document.getElementsByClassName("time");
     for (const element of timeElements) {
@@ -34,7 +34,7 @@
     }
   }
   
-  // The function for checking whether the element is in the middle of the visible area
+  
   function isElementInMiddleViewport(element) {
     const { top, left, bottom, right } = element.getBoundingClientRect();
     const winHeight = window.innerHeight || document.documentElement.clientHeight;
@@ -44,7 +44,7 @@
     );
   }
   
-  // The function for checking whether the element is in the lower part of the visible area
+  
   function isElementInBottomViewport(element) {
     const { top, left, bottom, right } = element.getBoundingClientRect();
     const winHeight = window.innerHeight || document.documentElement.clientHeight;
@@ -54,7 +54,7 @@
     );
   }
   
-  // Run the handlers when loading the page
+  
   window.addEventListener("load", function () {
     document.addEventListener("scroll", handleScroll);
     document.addEventListener("scroll", handleScrollAndHover);

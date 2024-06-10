@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Source+Code+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
 
-/* Darkened background */
+
 .overlay {
     position: fixed;
     top: 0;
@@ -12,11 +12,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Background color in the absence of video support */
+    
     background: #0c101b;
 }
 
-/* Styles for the video */
+
 #preload-video {
     position: absolute;
     width: 100%;
@@ -24,7 +24,7 @@
     object-fit: cover;
 }
 
-/*It is necessary to configure fading (by removing the class .Hiddenb and .HiddenGreeting through the script)*/
+
 .hiddenB,
 .hiddenGreeting {
     opacity: 0;
@@ -51,7 +51,7 @@
 
 @media (max-height: 600px) {
     .overlay h1 {
-        top: 35%; /*Vertical button position */
+        top: 35%; 
     }
 
     .preload-start-button {
@@ -76,7 +76,7 @@
 }
 
 .preload-start-button:hover {
-    background-position: right center;/* change the direction of the change*/
+    background-position: right center;
     color: rgb(136, 224, 148);
     text-decoration: none;
 }

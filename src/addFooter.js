@@ -1,4 +1,4 @@
-//<!--adding footer script:-->
+
 (() => {
   document.addEventListener("DOMContentLoaded", function () {
     let xhr = new XMLHttpRequest();

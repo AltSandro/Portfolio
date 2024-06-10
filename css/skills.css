@@ -6,7 +6,7 @@
   --circle-rotation-1: 320deg;
 }
 
-/* Title */
+
 .SkillsSection h2 {
   position: relative;
   top: 50%;
@@ -17,7 +17,7 @@
   padding-top: 3rem;
 }
 
-/* Delimiter */
+
 #hrSkills {
   display: block;
   border: 0;
@@ -28,7 +28,7 @@
   box-shadow: 0 0 11px 6px var(--second-colorHr), 0 0 31px 6px var(--second-colorHr);
 }
 
-/* Section MySkills */
+
 #MySkills {
   display: flex;
   flex-direction: column;
@@ -42,7 +42,7 @@
   font-size: 24px;
 }
 
-/* Skills icons */
+
 .iconsOfSkills {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
@@ -68,7 +68,7 @@
 }
 
 .iconSkillsSet img {
-  height: 2.1rem; /*The basic size of the picture*/
+  height: 2.1rem; 
 }
 
 .iconSkillsSet svg {
@@ -93,7 +93,7 @@
   z-index: 3;
 }
 
-/*Increased when hiccuping icon- (by layers we play with Index)*/
+
 .IconDivImg:hover {
   transform: scale(1.38);
 }
@@ -104,7 +104,7 @@
   height: 100%;
   fill: none;
   stroke: #5b49451e;
-  stroke-width: 4; /*The thickness of the strip*/
+  stroke-width: 4; 
   stroke-linecap: round;
   transform: translate(5px, 5px);
 }
@@ -112,7 +112,7 @@
 .boxCel svg circle:nth-child(2) {
   stroke-dasharray: 260;
   stroke-dashoffset: 260;
-  transition: all 1s;/*the time of filling the circular scale regardless of the point*/
+  transition: all 1s;
   stroke: var(--second-color);
 }
 
@@ -120,13 +120,13 @@
   position: absolute;
   inset: 5px;
   z-index: 3;
-  transition: all 1s; /*Turning time of the point*/
+  transition: all 1s; 
 }
 
 .circle::before {
   content: "";
   position: absolute;
-  width: 10px;/*point size*/
+  width: 10px;
   height: 10px;
   border-radius: 50%;
   top: -5px;
@@ -136,7 +136,7 @@
   box-shadow: 0 0 11px var(--second-color), 0 0 30px var(--second-color);
 }
 
-/*Set up the position of the points on the circles*/
+
 .circle1,
 .circle2,
 .circle3 {
@@ -184,7 +184,7 @@
   transform: rotate(var(--circle-rotation-2, 235deg));
 }
 
-/*Emphasizing the emblem*/
+
 .skillName {
   position: relative;
 }

@@ -2,7 +2,7 @@
   $(document).ready(function () {
     $(".awSr div.awSlider .carousel").carousel({
       pause: "hover",
-      interval: 5210 /*The interval of the transition*/,
+      interval: 5210,
     });
 
     let startImage = $(".awSr div.awSlider .item.active .awSr > img").attr(

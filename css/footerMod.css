@@ -1,4 +1,4 @@
-/*Basic block for quote*/
+
 .quote {
     position: relative;
     width: 100%;
@@ -19,11 +19,11 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #090c1500;/*Color filter*/
+    background-color: #090c1500;
     z-index: 0;
 }
 
-/*Stripes from above and below quotes:*/
+
 .quote-external p::before,
 .quote-external p::after {
     content: "";
@@ -34,7 +34,7 @@
     margin: 14px auto 10px auto;
 }
 
-/*Primary colors*/
+
 #mainFooter {
     background-color: #131722;
 }
@@ -45,38 +45,38 @@
     font-family: Georgia, "Times New Roman", serif;
 }
 
-/*We process the text of the quote and its size when entering it:*/
+
 .color-custom:hover,
 .color-custom:hover * {
     color: yellow;
 }
 
 .color-custom:hover {
-    transform: scale(1.065); /*The final size on devices (all devices, if not others, but they are below)*/
+    transform: scale(1.065); 
     transition: transform 0.3s ease;
     transition-delay: 0.2s, 0.4s;
     transition-duration: 0.7s, 0.7s;
 }
 
-/* Styles for guidance on the parent element or its subsidiaries on computers */
+
 @media (min-width: 769px) {
     .color-custom:hover,
     .color-custom:hover * {
-        transform: scale(1.4); /*The final size on the computers*/
+        transform: scale(1.4); 
     }
 }
 
 .color-custom:not(:hover) {
-    transform: scale(1); /* Installation of the initial size for reverse transformation */
-    transition-delay: 0.4s, 0.2s; /* Reversal delay*/
-    transition-duration: 0.7s, 0.7s; /* Duration for reverse transformation*/
+    transform: scale(1); 
+    transition-delay: 0.4s, 0.2s; 
+    transition-duration: 0.7s, 0.7s; 
 }
 
 [data-footerBottom] {
     background-color: #0c101b;
 }
 
-/*Contact icon settings:*/
+
 .contactsLinks img {
     max-width: 40px;
     max-height: 40px;
@@ -90,7 +90,7 @@
     transform: scale(1.05);
 }
 
-/*Thin tuning forces (better than bootstrap)*/
+
 @media (max-width: 567px) {
     .contactsLinks li {
       width: calc((100% - 6px) / 7); 
@@ -99,7 +99,7 @@
     }
 }
   
-/*Set up the dimensions of the second brother:*/
+
 #mainFooter .custom-border {
     max-width: 85%;
     text-align: center;

@@ -1,6 +1,6 @@
 #carouselWrapper {
-    background-color: rgba(3, 2, 14, 0.945);/* We set the translucent background color */
-    z-index: 5;/*Debag quotes*/
+    background-color: rgba(3, 2, 14, 0.945);
+    z-index: 5;
 }
 
 #iframeContainer {
@@ -48,7 +48,7 @@
     box-shadow: 0px 1px 8px 2px rgba(100, 182, 247, 0.59);
     text-decoration: none;
     border: 3px solid rgb(31, 139, 182);
-    animation: scaleAnimation 5s infinite; /* 5s - duration of animation, infinite - animation will be cyclically repeated */
+    animation: scaleAnimation 5s infinite; 
     text-transform: uppercase;
     transform: translateY(-50%);
 }
@@ -63,14 +63,14 @@
     }
 
     100% {
-        transform: scale(1); /* Return to the initial scale*/
+        transform: scale(1); 
     } 
 }
 
 .myGameLinkSpan {
     background-image: linear-gradient(to right, red, rgb(23, 0, 128));
     background-clip: text;
-    -webkit-background-clip: text; /* To support the web kit of browsers */
+    -webkit-background-clip: text; 
     color: transparent;
     content: url(https://img.icons8.com/pulsar-line/19/macbook.png);
     vertical-align: sub;
@@ -101,7 +101,7 @@
     transition: 0.5s; 
 }
 
-/*full filling iframeContainer*/
+
 #embedded-iframe {
     width: 100%;
     height: 100%;
@@ -109,7 +109,7 @@
 
 @media screen and (max-width: 768px) {
     #iframeContainer {
-        margin-inline: 10%; /* We change the style for mobile devices */
+        margin-inline: 10%; 
     }
 
     #exitCarouselButton {
@@ -125,7 +125,7 @@
 @media screen and (max-width: 768px) and (orientation: portrait) {
     #iframeContainer {
         top: 10%;
-        max-height: 37.0vh; /* We change the style for vertical position in mobile devices */
+        max-height: 37.0vh; 
         min-height: 40%;
     }
 
@@ -139,7 +139,7 @@
     }
 }
 
-/*photo zoom effect:*/
+
 .zoom-on-hover {
     overflow: hidden;
 }

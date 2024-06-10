@@ -1,12 +1,12 @@
-/* spaceSpinner configuration */
+
 :root {
   --animation-duration: 700ms;
-  --animation-speed: 1.2; /* Default speed is 1*/
-  --spaceSpinner-size: 32px; /* Default size is 32px */
+  --animation-speed: 1.2; 
+  --spaceSpinner-size: 32px; 
   --spaceSpinner-color-two: cyan;
 }
 
-/*The style of both spinners*/
+
 .spaceSpinner,
 .spaceSpinner.navSpiner {
   position: absolute;
@@ -20,7 +20,7 @@
   transition: opacity 0.77s ease, visibility 0.77s linear;
 }
 
-/*Small differences of navigation spinner*/
+
 .spaceSpinner.navSpiner {
   --spaceSpinner-size: 30px;
   position: absolute;
@@ -30,13 +30,13 @@
   right: 2%;
 }
 
-/*The condition of the appearance of spinner under the button:*/
+
 .preload-start-button:hover+.spaceSpinner {
   opacity: 1;
   visibility: visible;
 }
 
-/*The condition of the appearance of the spinner of the navigation panel:*/
+
 .navbar a.navbar-brand:hover+.navSpiner {
   opacity: 1;
   visibility: visible;
@@ -122,7 +122,7 @@
   }
 }
 
-/*Settings of size and thickness on coarse devices (PC)*/
+
 @media (min-width: 864px) {
   .spaceSpinner {
     --spaceSpinner-size: 64px;
@@ -135,7 +135,7 @@
     border-left-width: 3px;
   }
 
-  /*for a spinean navigation panel on large screens:*/
+
   .spaceSpinner.navSpiner .spaceSpinner_circle,
   .spaceSpinner.navSpiner::before,
   .spaceSpinner.navSpiner::after {

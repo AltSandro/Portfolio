@@ -7,20 +7,20 @@
 
   playNowBtn.addEventListener("click", function () {
     carouselWrapper.classList.remove("d-none");
-    carouselContainer.classList.add("semi-transparent"); // Add a class for a translucent background
+    carouselContainer.classList.add("semi-transparent");  
     iframeContainer.innerHTML = `<iframe id="embedded-iframe" class="d-block mx-auto"
             src="https://scratch.mit.edu/projects/851751963/embed" allowtransparency="true"  frameborder="0" scrolling="no" allowfullscreen></iframe>`;
 
-    // Block the scrolling of the page when opening a carousel:
+    
     document.body.style.overflow = "hidden";
   });
 
   exitCarouselButton.addEventListener("click", function () {
     carouselWrapper.classList.add("d-none");
-    carouselContainer.classList.remove("semi-transparent"); //Delete the property of the transparency of the css background from the Classlist selector of the "Carousel Wrapper" element element
+    carouselContainer.classList.remove("semi-transparent");
     iframeContainer.innerHTML = "";
 
-    // Unlock the scrolling of the page when closing the carousel
+    
     document.body.style.overflow = "auto";
   });
 })();

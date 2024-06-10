@@ -8,7 +8,7 @@
           elements.forEach(function (element) {
             element.classList.add("visible");
           });
-        }, 0); //delay time before the appearance of a specific group of elements
+        }, 0); 
       });
   });
 
@@ -21,7 +21,7 @@
           elements.forEach(function (element) {
             element.classList.add("visible");
           });
-        }, 3200); //delay time before the appearance of a specific group of elements
+        }, 3200); 
       });
   });
 })();

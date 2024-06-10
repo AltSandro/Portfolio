@@ -21,7 +21,7 @@
                 loop: true,
                 onStart: () => {
                   const typedElement = document.querySelector(".textSpecial");
-                  typedElement.classList.add("visible"); // Display of the second cursor before starting languages
+                  typedElement.classList.add("visible"); 
                   typedElement.dataset.language = languages[0];
                   typedElement.style.color = getLanguageColor(languages[0]);
                 },
@@ -32,10 +32,10 @@
                   typedElement.style.color = getLanguageColor(currentLanguage);
                 },
               });
-            }, 3000); // A delay of 3 seconds before removing the first cursor and the beginning of languages input
+            }, 3000); 
           },
         });
-      }, 3000); // delay before the first sentence entry
+      }, 3000); 
     });
 
   function getLanguageColor(language) {

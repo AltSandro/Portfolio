@@ -10,7 +10,7 @@
 header {
     font-family: "Merriweather", "Helvetica Neue", Arial, sans-serif;
     box-sizing: border-box;
-    position: relative; /*It is necessary that the "varnish" layer does not go out when folding*/
+    position: relative; 
     width: 100%;
     background-position: center center;
     background-size: cover;
@@ -43,7 +43,7 @@ header::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(15, 1, 26, 0.603); /*Color filter*/
+    background-color: rgba(15, 1, 26, 0.603); 
     z-index: 0;
 }
 
@@ -52,7 +52,7 @@ header>* {
     z-index: 1;
 }
 
-/*inscription*/
+
 .site-heading h1 {
     box-sizing: border-box;
     display: block;
@@ -117,7 +117,7 @@ header.banner .site-heading span.subheading,
             var(--second-color), var(--second-color), var(--second-color), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
 }
 
-/* Styles for the button */
+
 .header-round-button {
     display: flex;
     justify-content: center;
@@ -143,21 +143,21 @@ header.banner .site-heading span.subheading,
     background-color: #88848486;
     border-radius: 50%;
     position: absolute;
-    bottom: -7px;/* Distance from the lower edge of Header */
+    bottom: -7px;
     left: 50%;
     transform: translateX(-50%);
-    box-shadow: rgb(0, 0, 0) 0px 0px 7px -1px; /* Shadow for the button (optionally) */
+    box-shadow: rgb(0, 0, 0) 0px 0px 7px -1px; 
     transition: 0.56s;
     border: 3px solid transparent;
 }
 
-/*Project button style*/
+
 #projBannerButton {
     border-radius: 100px;
     color: black;
 }
 
-/* Styles for icons (Chevron down) */
+
 .header-round-button::before {
     content: "";
     width: 0;
@@ -172,13 +172,13 @@ header.banner .site-heading span.subheading,
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: calc(50% + 5px); /* Image displacement of 5 pixels down due to a fucking bug with a shift */
+    top: calc(50% + 5px); 
     left: 50%;
     transform: translate(-50%, -50%);
-    background-position: center center; /* Horizontal and vertical image centering*/
+    background-position: center center; 
 }
 
-/* When hovering */
+
 .header-round-button:hover,
 #projBannerButton:hover {
     border: 3px solid
@@ -220,7 +220,7 @@ header.banner .site-heading span.subheading,
     background-color: transparent;
 }
 
-/*At the clike*/
+
 .header-round-button:active {
     box-shadow: 0 0 0 0 white;
 }

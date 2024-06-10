@@ -32,7 +32,7 @@
     height: 100%;
 }
 
-/*The layer on which there are indicators*/
+
 .awSr.carousel.slide {
     position: relative;
     display: flex;
@@ -54,7 +54,7 @@
 .awSr.item.active,
 .awSr .carousel-inner,
 .awSr.carousel.slide,
-.awSr .carousel-control {/*Control is strips on the sides*/
+.awSr .carousel-control {
     border-radius: 5px;
 }
 
@@ -72,7 +72,7 @@
     margin: 0 auto;
 }
 
-/* Alignment in the center for containers-strips .mainProjCarousel-chevron-left и .mainProjCarousel-chevron-right: */
+
 .awSr .carousel-control .mainProjCarousel-chevron-left,
 .awSr .carousel-control .mainProjCarousel-chevron-right {
     width: 64px;
@@ -82,7 +82,7 @@
     justify-content: center;
 }
 
-/* Styles for (decor) - .mainProjCarousel-chevron-left и .mainProjCarousel-chevron-right: */
+
 .awSr .mainProjCarousel-chevron-left::before,
 .awSr .mainProjCarousel-chevron-right::before {
     display: block;
@@ -92,7 +92,7 @@
     opacity: 0.2;
 }
 
-/* Styles when hovering for arrows*/
+
 .awSr .mainProjCarousel-chevron-left:hover::before,
 .awSr .mainProjCarousel-chevron-right:hover::before {
     width: 64px;
@@ -232,7 +232,7 @@
     left: 100%;
 }
 
-/*Add the Flex container and alignment in the center for .carousel-control */
+
 .awSr .carousel-control {
     display: flex;
     align-items: center;
@@ -418,7 +418,7 @@
     transform: translateX(0);
 }
 
-/*glitch effect:*/
+
 .MatrixEffectButton::before {
     content: '';
     position: absolute;
@@ -527,7 +527,7 @@
     transition: 0.43s;
 }
 
-/*The start button of the game (there is still in Style, but there is a mechanic of speakers)*/
+
 #play-now-btn {
     font-weight: 500;
     transition: 0.28s;

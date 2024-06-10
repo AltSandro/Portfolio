@@ -1,4 +1,4 @@
-/*we will change the location of the tolbar everywhere:*/
+
 :root {
   --styleThemeColor: rgb(13, 110, 253);
   --scrolledStyleThemeColor: rgb(83, 196, 241);
@@ -10,15 +10,15 @@
   z-index: 4;
 }
 
-/*We’ll change like on anidaba by speed and smoothness of the disclosure on the tolbar:*/
+
 .navbar {
-  background-color: rgba(255, 255, 255, 0.911);/*The tag panels on default*/
+  background-color: rgba(255, 255, 255, 0.911);
   transition: background-color 0.3s;
   box-shadow: 0px 11px 9px -10px rgba(70, 125, 167, 0.67);
 }
 
 .navbar.scrolled {
-  background-color: rgba(0, 0, 0, 0.8);/* Color with transparency*/
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .navbar .nav-link {
@@ -49,26 +49,26 @@
 .navbar.scrolled .navbar-brand,
 .navbar.scrolled .navbar-toggler,
 .navbar.scrolled .navbar-nav .nav-link {
-  color: var(--scrolledStyleThemeColor);/* will work on the text */
-  border-color: var(--scrolledStyleThemeColor);/*will work on the stroke*/
+  color: var(--scrolledStyleThemeColor);
+  border-color: var(--scrolledStyleThemeColor);
   transition: 0.7s;
 }
 
 .navbar.scrolled .nThD {
-  background: var(--scrolledStyleThemeColor); /*He will work on strips*/
+  background: var(--scrolledStyleThemeColor); 
   transition: 0.0s;
 }
 
-/* Change styles for the navigation menu when hovering (for the base color version of the panel): */
+
 .navbar .navbar-brand:hover,
 .navbar .navbar-toggler:hover,
 .navbar .navbar-nav .nav-link:hover {
-  color: var(--styleThemeColor);/* will work on the text */
+  color: var(--styleThemeColor);
   transition: 0.3s;
 
 }
 
-/*Change the color of subsidiaries when the parent is introduced*/
+
 .navbar .navbar-toggler:hover .nThD {
   background: var(--styleThemeColor);
   transition: 0s;
@@ -78,11 +78,11 @@
   background-color: rgba(255, 255, 255, 1);
 }
 
-/* Change styles for the navigation menu when hovering (for the changed color version of the panel): */
+
 .navbar.scrolled .navbar-brand:hover,
 .navbar.scrolled .navbar-toggler:hover,
 .navbar.scrolled .navbar-nav .nav-link:hover {
-  color: var(--scrolledStyleThemeColorHover);/*will work on the text */
+  color: var(--scrolledStyleThemeColorHover);
   transition: 0.7s;
 }
 
@@ -96,20 +96,20 @@
   transition: 0.7s;
 }
 
-/*Replacement for any symbol:*/
+
 .navbar-toggler-icon {
   background-image: none;
-  background-color: transparent;/* We remove the color of the background of the icon */
+  background-color: transparent;
   display: flex;
-  justify-content: center;/*Horizontal centering*/
-  align-items: center;/* Vertical centering */
+  justify-content: center;
+  align-items: center;
   border: 0;
-  padding: 0;/* We remove the inner indentation of the buttons */
+  padding: 0;
   transform: scaleX(2);
-  transition: transform 0.3s;/* Add animation */
+  transition: transform 0.3s;
 }
 
-/*rotation effect*/
+
 .navbar .navbar-toggler-icon.cd {
   box-sizing: content-box;
   padding: 0;
@@ -122,7 +122,7 @@
   justify-content: center;
 }
 
-/*Interactive hamburger:*/
+
 .navbarTogglerhamburger {
   display: flex;
   align-self: center;
@@ -136,7 +136,7 @@
   align-self: flex-end;
   height: 2px;
   width: 100%;
-  background: var(--bs-navbar-color); /*On the base of the Bootstrap*/
+  background: var(--bs-navbar-color); 
 }
 
 .navbarTogglerhamburger .hamburgerMid {
@@ -179,7 +179,7 @@
   }
 }
 
-/*My logo settings:*/
+
 .myLogo {
   height: 40px;
   transition: filter 0.33s;

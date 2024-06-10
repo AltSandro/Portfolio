@@ -3,11 +3,11 @@
 }
 
 span.typed-cursor {
-  /*additional mark to understand what is inside span*/
+  
   color: rgb(0, 119, 255);
 }
 
-/*We set the properties (in this case, modify during scrolling the color of only with the data-colorinverse and "self-controlled text":*/
+
 span.typed-cursor.scrolled-inverse {
   color: rgb(83, 196, 241);
 }

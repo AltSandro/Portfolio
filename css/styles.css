@@ -15,7 +15,7 @@ p {
 }
 
 #indexMain {
-    margin-top: 100px; /*Speaking from Navbar*/ 
+    margin-top: 100px; 
 }
 
 .img-fluid {
@@ -23,10 +23,10 @@ p {
     height: auto;
 }
 
-/*3 media request for the appearance of a line in Navbar under Homepage*/
+
 @media (max-width: 767px) {
 
-    /* Add styles for the line only in narrow mode*/
+    
     #mainNavbar .navbar-nav {
         border-top: 1px solid #ccc;
         margin-top: 10px;
@@ -35,7 +35,7 @@ p {
 
 @media (min-width: 768px) and (max-width: 991px) {
 
-    /* Add styles for the line in narrow mode on wider devices*/
+    
     #mainNavbar .navbar-nav {
         border-top: 1px solid #ccc;
         margin-top: 10px;
@@ -44,22 +44,22 @@ p {
 
 @media (max-width: 767px) and (orientation: landscape) {
 
-    /* Add styles for the line in landscape orientation*/
+    
     #mainNavbar .navbar-nav {
         border-top: 1px solid #ccc;
         margin-top: 10px;
     }
 }
 
-/*Page background:*/
+
 :root {
     --clr-gradient: linear-gradient(113.49deg, #984D38 -30.3%, #894839 -20.11%, #3b376b 3.9%, #272440 47.55%, #181E41 58.12%, #181E41 67.2%, #181E41 103.58%);
 }
 
 body {
     background: var(--clr-gradient);
-    /*To become dynamic:*/
-    animation: gradient 22s ease infinite;/*delay*/
+    
+    animation: gradient 22s ease infinite;
     background-size: 400% 400%;
     background-attachment: fixed;
 }
@@ -77,13 +77,13 @@ body {
         background-position: 0% 0%;
     }
 }
-/*finish background*/
 
-/*Set the return button:*/
+
+
 #scrollBtn {
     position: fixed;
     bottom: 20px;
-    /* We change the Bottom value to shift the button to the x height of the button */
+    
     right: 20px;
     width: 60px;
     height: 60px;
@@ -98,12 +98,12 @@ body {
     z-index: 4;
 }
 
-/* Let's configure the return button for devices that are different from the computer: */
+
 @media (max-width: 1024px) {
     #scrollBtn {
-        bottom: calc(20px - 1.55em); /* We change the Bottom value to shift the button to the x height of the button */
+        bottom: calc(20px - 1.55em); 
         right: calc(20px - 1em);
-        transform: scale(0.6);  /* We use the scaling of the button*/
+        transform: scale(0.6);  
     }
 }
 
@@ -124,10 +124,10 @@ body {
     border-right: 2px solid #fff;
 }
 
-/*Color design of the scroll button:*/
+
 #scrollBtn,
 #scrollBtn .arrow {
-    border-color: rgb(83, 196, 241); /* The color of the arrow and stroke is original*/
+    border-color: rgb(83, 196, 241); 
 }
 
 #scrollBtn:hover,
@@ -137,7 +137,7 @@ body {
     box-shadow: rgb(0, 0, 0) 0px 0px 10px -1px;
 }
 
-/*настраиваем на index фон*/
+
 section.home-about {
     background-color: #f9f9ffe7;
 }
@@ -148,7 +148,7 @@ section.home-about {
     }
 }
 
-/*эффект пояления для фотки:*/
+
 .animated-image.visibleAnimateElem {
     opacity: 0;
     animation: fade-in 1s ease forwards;
@@ -173,17 +173,17 @@ section.home-about {
     }
 }
 
-/*frame:*/
+
 .animated-image {
     box-shadow: 16px 16px 13px -7px rgba(70, 125, 167, 0.39);
 }
 
-/*photo button animation and effects visual:*/
+
 .aboutMebutton.visibleAnimateElem {
     opacity: 0;
     border-radius: 3%;
     animation: fade-in 1s ease forwards;
-    animation-delay: 2s;/*We set up the time of appearance after the start of the page*/
+    animation-delay: 2s;
 }
 
 .aboutMebutton-animation {
@@ -192,12 +192,12 @@ section.home-about {
     border-color: rgb(0, 119, 255);
 }
 
-/*Install the color of the shadows when scrolling on the title:*/
+
 .animated-image.scrolled-inverse {
     box-shadow: 16px 16px 13px -7px rgba(70, 149, 209, 0.39);
 }
 
-/*Color by default during scrolling (due to the script)*/
+
 .aboutMebutton-animation.scrolled-inverse {
     color: rgb(83, 196, 241);
     border-color: rgb(83, 196, 241);
@@ -211,7 +211,7 @@ section.home-about {
     border-color: transparent;
 }
 
-/*PAGE CONTACT*/
+
 #contactSumbitButton {
     box-shadow: 1px 4px 8px 0px rgba(44, 216, 232, 0.17);
 }
@@ -220,7 +220,7 @@ section.home-about {
     transform: scale(1.05);
 }
 
-/*additional transfusion effect*/
+
 .my-glow,
 .my-glow-contact,
 #play-now-btn,
@@ -246,7 +246,7 @@ section.home-about {
     transition: opacity .3s ease-in-out;
 }
 
-/* ,for the sending button separately*/
+
 .my-glow-contact::before {
     content: '';
     position: absolute;
@@ -263,7 +263,7 @@ section.home-about {
     transition: opacity .3s ease-in-out;
 }
 
-/* , for the "Play-Now" button separately:*/
+
 #play-now-btn::before {
     content: '';
     position: absolute;
@@ -280,7 +280,7 @@ section.home-about {
     transition: opacity .3s ease-in-out;
 }
 
-/* , For the "Play in Fullscreen" button separately:*/
+
 #myGameLink::before {
     content: '';
     position: absolute;
@@ -339,7 +339,7 @@ section.home-about {
     }
 }
 
-/*Let's correct the contact page:*/
+
 #contactSubstratePage {
     position: relative;
     background: url(../img/banner3.PNG);
@@ -354,7 +354,7 @@ section.home-about {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(27, 2, 48, 0.5); /*Color filter*/
+    background-color: rgba(27, 2, 48, 0.5); 
     border-radius: 0.75rem;
     z-index: 0;
 }
@@ -364,7 +364,7 @@ section.home-about {
     z-index: 1;
 }
 
-/*Changing the background and color of the text when scrolling on the title:*/
+
 [data-colorInverse].scrolled-inverse {
     background-color: #090c157e;
 }
