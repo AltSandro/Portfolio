@@ -80,3 +80,20 @@
     color: rgb(136, 224, 148);
     text-decoration: none;
 }
+
+.loadPageLoaderSpinner {
+    width: 8rem; 
+    height: 8rem;
+    color: hsl(239, 92%, 47%);
+    box-shadow: 0 0 9px 2px hsla(224, 92%, 52%, 0.959);
+    
+}
+
+.loadPageAltSandroSpinnerLabe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4.5rem;
+    height: 5rem;
+}
