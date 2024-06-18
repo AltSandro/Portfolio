@@ -8,7 +8,7 @@
   playNowBtn.addEventListener("click", function () {
     carouselWrapper.classList.remove("d-none");
     carouselContainer.classList.add("semi-transparent");  
-    iframeContainer.innerHTML = `<iframe id="embedded-iframe" class="d-block mx-auto"
+    iframeContainer.innerHTML = `<iframe id="embedded-iframe" class=""
             src="https://scratch.mit.edu/projects/851751963/embed" allowtransparency="true"  frameborder="0" scrolling="no" allowfullscreen></iframe>`;
 
     
