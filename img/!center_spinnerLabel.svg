@@ -1,0 +1,47 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 528 589" width="528" height="589">
+	<title>___spinnerLabel-svg</title>
+	<defs>
+		<linearGradient id="g1" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(92.06,-339.39,252.444,68.476,346.48,450.86)">
+			<stop offset="0" stop-color="#075109" stop-opacity="1"/>
+			<stop offset=".49" stop-color="#12e017" stop-opacity="1"/>
+			<stop offset=".83" stop-color="#12e017" stop-opacity="1"/>
+			<stop offset="1" stop-color="#3aef3e" stop-opacity=".66"/>
+		</linearGradient>
+		<radialGradient id="g2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-17.657,194.913,-194.913,-17.657,392.516,281.17)">
+			<stop offset="0" stop-color="#064407"/>
+			<stop offset=".51" stop-color="#01973f"/>
+			<stop offset=".65" stop-color="#00a24a"/>
+			<stop offset=".83" stop-color="#00a54b"/>
+			<stop offset="1" stop-color="#00b050"/>
+		</radialGradient>
+		<linearGradient id="g3" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,-550,586.162,0,211.298,566.63)">
+			<stop offset="0" stop-color="#000000" stop-opacity="1"/>
+			<stop offset=".25" stop-color="#000000" stop-opacity="1"/>
+			<stop offset=".49" stop-color="#009ad9" stop-opacity="1"/>
+			<stop offset=".69" stop-color="#00a9ec" stop-opacity="1"/>
+			<stop offset=".82" stop-color="#00b8ff" stop-opacity=".65"/>
+			<stop offset="1" stop-color="#00b8ff" stop-opacity=".65"/>
+		</linearGradient>
+		<linearGradient id="g4" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,550,-586.162,0,211.298,16.63)">
+			<stop offset="0" stop-color="#1abcf6"/>
+			<stop offset=".1" stop-color="#1abcf6"/>
+			<stop offset=".45" stop-color="#056db3"/>
+			<stop offset=".73" stop-color="#0546af"/>
+			<stop offset=".83" stop-color="#000000"/>
+			<stop offset="1" stop-color="#0546af"/>
+		</linearGradient>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m43 125h345v324h-345z"/>
+		</clipPath>
+	</defs>
+	<style>
+		.s0 { fill: url(#g1);stroke: url(#g2);stroke-linecap: round;stroke-linejoin: round;stroke-width: 6.9 } 
+		.s1 { fill: url(#g3);stroke: url(#g4);stroke-linejoin: round;stroke-width: 7 } 
+	</style>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s0" d="m396.2 121.2q11.1 0 22.3 1.7 11.1 1.7 20.8 4.6 9.7 2.9 17.2 6.6 7.5 3.6 9.9 6 2.5 2.5 3.3 4.2 0.8 1.7 1.5 4.4 0.6 2.8 0.8 7.1 0.2 4.2 0.2 10.5 0 7.1-0.3 11.9-0.4 4.9-1.2 8-0.9 3.2-2.5 4.6-1.5 1.5-4.2 1.5-2.7 0-8.5-3.4-5.8-3.4-14.3-7.4-8.4-4-19.6-7.3-11.1-3.3-24.4-3.3-10.5 0.1-18.2 2.6-7.8 2.6-13 7-5.2 4.5-7.7 10.8-2.6 6.3-2.6 13.4 0 10.4 5.7 18 5.7 7.7 15.3 13.6 9.5 6 21.7 11.2 12.1 5.2 24.7 11 12.6 5.8 24.7 13.2 12.1 7.4 21.5 17.7 9.5 10.4 15.3 24.3 5.8 14 5.8 32.9 0 24.7-9.2 43.4-9.2 18.7-25 31.2-15.7 12.5-36.8 18.8l-19.5 2.7 5-55.4 6.1-3.1q6.5-5.1 9.9-12.6 3.4-7.5 3.4-16.8 0-10.6-5.8-18.3-5.9-7.6-15.2-13.6-9.3-5.9-21.2-11.1-11.8-5.2-24.4-11.1l-13.3-7.1-47.3-110.4 2.3-11.1q8.4-17.1 22.6-28.4 14.1-11.3 33.4-16.9 19.2-5.6 40.8-5.6z"/>
+		<path id="Layer" fill-rule="evenodd" class="s1" d="m197.7 129h32.9l101.1 238.9q20.3 48.1 25.1 51.9 4.8 3.9 27.4 5.1v20.3q-33.5-1.6-68.8-1.6-38.7 0-73.6 1.6v-20.3q27.1-0.7 31-3 3.9-2.4 3.9-6.8 0-5.8-9.4-28.9l-73.2-178.2-67 165.7q-11.2 27.8-11.2 39.4 0 6.4 5.9 8.1 6 1.7 29.9 3.7v20.3q-16.7-1.6-55.2-1.6-34.7 0-49.3 1.6v-20.3q21.7-1.2 26.3-4.5 4.6-3.4 17.3-33.1l27.7-64.4z"/>
+		<g id="Clip-Path" clip-path="url(#cp1)">
+		</g>
+	</g>
+</svg>
