@@ -12,15 +12,31 @@
 
 
 .navbar {
-  background-color: rgba(255, 255, 255, 0.911);
-  transition: background-color 0.3s;
-  box-shadow: 0px 11px 9px -10px rgba(70, 125, 167, 0.67);
+  background-color: rgba(255, 255, 252, 0.884);
+  transition: background-color 0.5s ease-in-out;
+  box-shadow: 0px 11px 11px -10px rgba(70, 125, 167, 0.67);
+}
+
+.navbar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(22.5deg, rgba(255, 255, 254, 0.884) 0%, rgba(255, 255, 252, 0.973) 11%);
+  transition: opacity 0.3s ease-in-out; 
+  z-index: -1; 
 }
 
 .navbar.scrolled {
-  background-color: rgba(0, 0, 0, 0.8);
+  background: linear-gradient(22.5deg, rgba(255, 255, 252, 0.884) 0%, rgba(0, 0, 0, 0.8) 11%);
 }
 
+.navbar.scrolled::before {
+  background-color: rgba(0, 0, 0, 0.8); 
+  opacity: 0; 
+}
 .navbar .nav-link {
   position: relative;
 }

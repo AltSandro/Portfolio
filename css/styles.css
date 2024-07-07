@@ -224,6 +224,16 @@ section.home-about {
     box-shadow: 16px 16px 13px -7px rgba(70, 149, 209, 0.39);
 }
 
+.animated-image:hover {
+    box-shadow: 16px 16px 20px -7px rgba(3, 23, 155, 0.39);
+    transition: .22s;
+}
+
+.animated-image.scrolled-inverse:hover {
+    box-shadow: 16px 16px 20px -7px rgba(75, 207, 224, 0.39);
+    transition: .22s;
+}
+
 .aboutMebutton-animation.scrolled-inverse {
     color: rgb(83, 196, 241);
     border-color: rgb(83, 196, 241);

@@ -1,16 +1,11 @@
 #heroImg {
     --bordedRad: 15px;
     --borderColor: #0000008a 25%, #27e6d671 0;
-    
     padding: 2px;
     background:
-       
         conic-gradient(from 90deg at top var(--bordedRad) left var(--bordedRad), var(--borderColor)) 0 0,
-        
         conic-gradient(from 180deg at top var(--bordedRad) right var(--bordedRad), var(--borderColor)) 100% 0,
-        
         conic-gradient(from 0deg at bottom var(--bordedRad) left var(--bordedRad), var(--borderColor)) 0 100%,
-        
         conic-gradient(from -90deg at bottom var(--bordedRad) right var(--bordedRad), var(--borderColor)) 100% 100%;
     background-size: 33px 33px;
     background-repeat: no-repeat;
@@ -20,7 +15,23 @@
 }
 
 #heroImg:hover {
+    border-radius: 1.3rem;
     background-size: 50% 50%;
+    transition: .2s;
+    --borderColor: #0000008a 25%, var(--second-colorHr) 0;
+    padding: 6px;
+    box-shadow: 0 0 11px 3px var(--second-colorHr), 0 0 34px 6px var(--second-colorHr);
+    animation: heroImgPulse 3.4s infinite alternate; 
+    animation-delay: 1.3s;
+}
+
+@keyframes heroImgPulse {
+    0%,100% {
+        box-shadow: 0 0 11px 3px var(--second-colorHr), 0 0 34px 6px var(--second-colorHr);
+    }
+    50% {
+        box-shadow: 0 0 3px 1px var(--second-colorHr), 0 0 5px 2px var(--second-colorHr);
+    }
 }
 
 .heroMesBoard,
