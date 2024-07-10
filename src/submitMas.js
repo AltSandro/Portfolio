@@ -1,4 +1,4 @@
-(() => {
+(function(){
     (function(){
         emailjs.init("5maW-jT_4DU9RPENV"); 
     })();
