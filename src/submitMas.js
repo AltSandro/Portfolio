@@ -1,9 +1,10 @@
 
+
 (() => {
     (function(){
         emailjs.init({
             publicKey: "5maW-jT_4DU9RPENV",
-        }); 
+        });
     })();
 
     document.getElementById('contactSubmitButton').addEventListener('click', function(event) {
@@ -11,7 +12,16 @@
         const email = document.getElementById('email').value.trim();
         const message = document.getElementById('message').value.trim();
         const domain = window.location.hostname;
+        const recaptchaResponse = grecaptcha.getResponse();
 
+
+       
+       if (!recaptchaResponse) {
+            showVisitorErrorMessageData('Please complete the reCAPTCHA.');
+            return;
+        }
+        
+        
         
         if (!validateContactForm(name, email, message)) {
             return;
@@ -26,7 +36,8 @@
             from_name: name,
             from_email: email,
             message: sanitizeInput(message),
-            domain: domain
+            
+           'g-recaptcha-response': recaptchaResponse
         };
 
         emailjs.send('service_91ok17c', 'template_8jenbmb', templateParams) 
@@ -36,14 +47,15 @@
                 removeVisitorErrorMessageData();
 
                 
-                
-                
-                
+               
+               
+               
 
-                
+              
                 document.getElementById('name').value = "";
                 document.getElementById('email').value = "";
                 document.getElementById('message').value = "";
+                grecaptcha.reset(); 
 
             }).catch(function(error) {
                 console.log('FAILED...', error);
@@ -53,7 +65,7 @@
 
     
     function validateContactForm(name, email, message) {
-        
+  
         if (name === "" || email === "" || message === "") {
             showVisitorErrorMessageData('Please fill out all fields.');
             return false;
@@ -76,11 +88,11 @@
         return true;
     };
 
-    
+
     function showVisitorErrorMessageData(message) {
         let visitorErrorMessageData = document.querySelector(".visitorErrorMessageData");
         
-        
+  
         let button = visitorErrorMessageData.querySelector(".contactButtonCloseErrMessage");
         visitorErrorMessageData.innerHTML = '';
         visitorErrorMessageData.appendChild(document.createTextNode(message));
