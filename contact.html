@@ -35,7 +35,10 @@
     
     <link href="css/banner.css" rel="stylesheet">
     
-    <link href="css/sumbitMessage.css" rel="stylesheet">
+    <link href="css/submitMessage.css" rel="stylesheet">
+      
+    <title>reCAPTCHA demo: Simple page</title>
+    <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
 </head>
 
 <body>
@@ -88,8 +91,12 @@
                             <textarea id="message" class="form-control" rows="3"
                                 placeholder="Enter your message"></textarea>
                         </div>
-                        <a id="contactSumbitButton" role="button" class="btn btn-primary mt-4 mb-4 my-glow-contact"
-                            href="#sumbitPopup">Submit</a>
+                        <a id="contactSubmitButton" role="button" class="btn btn-primary mt-4 mb-4 my-glow-contact">Submit</a>
+                        <div class="g-recaptcha" data-sitekey="6LfO8QwqAAAAACwU_9o3F-Mb84AnwsPSzCNp2vAq"></div>
+                        <div class="visitorErrorMessageData alert alert-danger alert-dismissible fade show d-none" role="alert">
+                            Error!
+                            <button type="button" class="contactButtonCloseErrMessage btn-close" aria-label="Close"></button>
+                        </div>
                     </form>
                 </div>
 
@@ -157,13 +164,13 @@
         </div>
 
         
-        <div class="sumbitPopup" id="sumbitPopup">
-            <div class="sumbitPopup-content content ms-2 me-2 mt-2 mb-2">
+        <div class="submitPopup" id="submitPopup">
+            <div class="submitPopup-content content ms-2 me-2 mt-2 mb-2">
                 <h2 class="heading-secondary">Thank you for contacting us!</h2>
                 <img src="https://img.icons8.com/external-vectorslab-flat-vectorslab/500/external-Email-customer-support-vectorslab-flat-vectorslab.png"
                     alt="emailIco" class="mb-4 img-fluid mx-1">
                 <h3> We sent your message </h3>
-                <a href="#contactsSocialMediaIcoBanner" class="sumbitPopupButton">OK</a>
+                <a href="#contactsSocialMediaIcoBanner" class="submitPopupButton">OK</a>
             </div>
         </div>
     </main>
@@ -182,7 +189,9 @@
         <span class="arrow"></span>
     </button>
 
-    <script src="src/sumbitMas.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="module" src="src/submitMas.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
 
 </body>

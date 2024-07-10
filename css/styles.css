@@ -248,11 +248,11 @@ section.home-about {
 }
 
 
-#contactSumbitButton {
+#contactSubmitButton {
     box-shadow: 1px 4px 8px 0px rgba(44, 216, 232, 0.17);
 }
 
-#contactSumbitButton:hover {
+#contactSubmitButton:hover {
     transform: scale(1.05);
 }
 
