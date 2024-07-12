@@ -2,6 +2,10 @@
 <html lang="en">
 
 <head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F0DFWEC2TV"></script>
+    <script src="src/gtag.js"></script>
+      
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="apple-touch-icon" sizes="180x180" href="img/ico/favicon/apple-touch-icon.png">
@@ -36,9 +40,6 @@
     <link href="css/banner.css" rel="stylesheet">
     
     <link href="css/submitMessage.css" rel="stylesheet">
-      
-    <title>reCAPTCHA demo: Simple page</title>
-    <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
 </head>
 
 <body>
@@ -91,9 +92,10 @@
                             <textarea id="message" class="form-control" rows="3"
                                 placeholder="Enter your message"></textarea>
                         </div>
-                        <a id="contactSubmitButton" role="button" class="btn btn-primary mt-4 mb-4 my-glow-contact">Submit</a>
-                        <div class="g-recaptcha" data-sitekey="6LdZIg0qAAAAAGbCwymh2e3SPr2NMC5sK4ieaFmh"></div>
-                        <div class="visitorErrorMessageData alert alert-danger alert-dismissible fade show d-none" role="alert">
+                        <a id="contactSubmitButton" role="button" class="contactSubmitTrigger btn btn-primary mt-4 mb-4 my-glow-contact">Submit</a>
+                        <div class="g-recaptcha capchaContactElem d-none mb-4" data-sitekey="6LdZIg0qAAAAAGbCwymh2e3SPr2NMC5sK4ieaFmh"
+                        data-callback="onReCaptchaSuccess"></div>
+                        <div class="visitorErrorMessageData alert alert-danger alert-dismissible fade show d-none mb-4" role="alert">
                             Error!
                             <button type="button" class="contactButtonCloseErrMessage btn-close" aria-label="Close"></button>
                         </div>
@@ -191,8 +193,11 @@
 
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="src/submitMas.js"></script>
+    <script type="module" src="src/submitMas.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
 
 </body>
 

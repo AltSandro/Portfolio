@@ -1,32 +1,39 @@
-//Cкприпт челез emailJS
+
 (() => {
     (function(){
         emailjs.init({
             publicKey: "5maW-jT_4DU9RPENV",
-        }); // Замените YOUR_PUBLIC_KEY на ваш ключ из сайта пользователя EmailJS
+        }); 
     })();
 
+    
+
     document.getElementById('contactSubmitButton').addEventListener('click', function(event) {
+        event.preventDefault(); 
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim();
         const message = document.getElementById('message').value.trim();
         const domain = window.location.hostname;
-       // const recaptchaResponse = grecaptcha.getResponse();
-
-
-        // Проверка капчи
-       /*if (!recaptchaResponse) {
-            showVisitorErrorMessageData('Please complete the reCAPTCHA.');
-            return;
-        }*/
+        const recaptchaResponse = grecaptcha.getResponse();
+ 
         
-        
-        // Вызываем функцию для проверки данных
-        if (!validateContactForm(name, email, message)) {
-            return;
+        const capchaContactElem = document.querySelector(".capchaContactElem");
+        if (capchaContactElem.classList.contains("d-none")) {
+            capchaContactElem.classList.remove("d-none");
         };
+
         
-        // Далее проводим защиту от XSS (простейший вариант)
+        if (!validateContactForm(name, email, message)) {
+            return; 
+        };
+
+       
+        if (!recaptchaResponse) {
+            showVisitorErrorMessageData('Please complete the reCAPTCHA.');
+            return; 
+        };
+
+        
         function sanitizeInput(input) {
             return input.replace(/</g, "&lt;").replace(/>/g, "&gt;");
         };
@@ -36,21 +43,18 @@
             from_email: email,
             message: sanitizeInput(message),
             domain: domain,
-           // 'g-recaptcha-response': recaptchaResponse
+           'g-recaptcha-response': recaptchaResponse
         };
 
-        emailjs.send('service_91ok17c', 'template_8jenbmb', templateParams) //первый агргумент 'Email servises', второй шаблон 'Email Templates
+        emailjs.send('service_91ok17c', 'template_8jenbmb', templateParams) 
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
-                window.location.hash = 'submitPopup'; // добавляет хэш #submitPopup для активации CSS селектора видимости
+                window.location.hash = 'submitPopup'; 
                 removeVisitorErrorMessageData();
+                grecaptcha.reset();
+                capchaContactElem.classList.add("d-none"); 
 
-                // Выводим данные из формы в консоль //Чисто для отладки
-                //console.log("Name: " + name);
-                //console.log("Email: " + email);
-                //console.log("Message: " + message);
-
-                // Очищаем поля ввода
+                
                 document.getElementById('name').value = "";
                 document.getElementById('email').value = "";
                 document.getElementById('message').value = "";
@@ -61,23 +65,23 @@
             });
     });
 
-    //Проверки на корректность
+    
     function validateContactForm(name, email, message) {
-        // Простейшая валидация данных
+        
         if (name === "" || email === "" || message === "") {
             showVisitorErrorMessageData('Please fill out all fields.');
             return false;
         };
 
-        // Проверка корректности email
+       
         const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         if (!emailRegex.test(email)) {
             showVisitorErrorMessageData('Please enter a valid email address.');
             return false;
         };
 
-        // Ограничение на длину сообщения
-        const maxMessageLength = 2048; // Пример: ограничение до 2048 символов
+        
+        const maxMessageLength = 2048; 
         if (message.length > maxMessageLength) {
             showVisitorErrorMessageData(`Message exceeds ${maxMessageLength} characters. Please shorten your message.`);
             return false;
@@ -86,27 +90,36 @@
         return true;
     };
 
-    //активируем видимость элемента
+    
     function showVisitorErrorMessageData(message) {
         let visitorErrorMessageData = document.querySelector(".visitorErrorMessageData");
         
-        // Очистить предыдущие текстовые узлы, кроме кнопки
+        
         let button = visitorErrorMessageData.querySelector(".contactButtonCloseErrMessage");
         visitorErrorMessageData.innerHTML = '';
         visitorErrorMessageData.appendChild(document.createTextNode(message));
         visitorErrorMessageData.appendChild(button);
     
-        visitorErrorMessageData.classList.remove("d-none"); // делаем видимым
-    }
+        visitorErrorMessageData.classList.remove("d-none"); 
+    };
+
     
-    //Закрытие окна ошибки (у крестика должен быть удалено стандартное поведение)
-    (function hideVisitorErrorMessageData() {
-        let contactButtonCloseErrMessage = document.querySelector(".contactButtonCloseErrMessage");
-        contactButtonCloseErrMessage.addEventListener('click', function(event) {
-            let visitorErrorMessageData = document.querySelector(".visitorErrorMessageData");
-            visitorErrorMessageData.classList.add("d-none");
-        });
-    })();
+    changeElementVisibility(".visitorErrorMessageData",".contactButtonCloseErrMessage");
+    
+    
+    function changeElementVisibility(elem, trigger) {
+        let elemI = document.querySelector(elem);
+        let triggerI = document.querySelector(trigger);
+    
+        if (elemI && triggerI) {
+            triggerI.addEventListener('click', function(event) {
+                elemI.classList.toggle('d-none');
+            });
+        } else {
+            console.error('Element or trigger not found in "changeElementVisibility" function.');
+        };
+    };
+
     
     function removeVisitorErrorMessageData() {
         let contactButtonCloseErrMessage = document.querySelector(".contactButtonCloseErrMessage");
@@ -114,10 +127,18 @@
                 contactButtonCloseErrMessage.click(); 
         };
     };
-   
-    
 })();
 
+
+
+window.onReCaptchaSuccess = function() {
+    let submitButton = document.querySelector('.contactSubmitTrigger');
+    if (submitButton) {
+        submitButton.click();
+    } else {
+        console.error('Button element "contactSubmitButton" not found (0_0) ...');
+    };
+};
 
 
 
