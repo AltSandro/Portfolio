@@ -2,7 +2,7 @@
 (() => {
     (function(){
         emailjs.init({
-            publicKey: "5maW-jT_4DU9RPENV",
+            publicKey: "hy007_8F01aoLXfY7",
         }); 
     })();
 
