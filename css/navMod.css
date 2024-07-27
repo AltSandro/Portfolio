@@ -14,7 +14,7 @@
 .navbar {
   background-color: rgba(255, 255, 252, 0.884);
   transition: background-color 0.5s ease-in-out;
-  box-shadow: 0px 11px 11px -10px rgba(70, 125, 167, 0.67);
+  box-shadow: 0px 11px 11px -10px rgba(243, 244, 245, 0.67);
 }
 
 .navbar::before {
@@ -30,6 +30,7 @@
 }
 
 .navbar.scrolled {
+  box-shadow: 0px 11px 11px -10px rgba(70, 125, 167, 0.67);
   background: linear-gradient(22.5deg, rgba(255, 255, 252, 0.884) 0%, rgba(0, 0, 0, 0.8) 11%);
 }
 

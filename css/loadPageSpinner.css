@@ -85,7 +85,9 @@
     width: 8rem; 
     height: 8rem;
     color: hsl(239, 92%, 47%);
-    box-shadow: 0 0 9px 2px hsla(224, 92%, 52%, 0.959);
+    box-shadow: 0 0 9px 2px hsla(231, 92%, 47%, 0.959);
+    border-style: dotted;
+    border-width: 5px;
     
 }
 
