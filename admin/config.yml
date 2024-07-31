@@ -3,6 +3,11 @@ backend:
   name: github
   repo: AltSandro/altsandro.github.io
   branch: main
+  auth_scope: repo
+  base_url: https://api.netlify.com
+  auth_endpoint: /auth
+  large_media:
+    enabled: true
 
 media_folder: static/img
 public_folder: /img
