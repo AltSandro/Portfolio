@@ -1,5 +1,3 @@
-# when using the default proxy server port
-local_backend: true #потом удалить строчку
 
 backend:
   name: github
