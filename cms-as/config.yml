@@ -1,0 +1,20 @@
+# when using the default proxy server port
+local_backend: true #потом удалить строчку
+
+backend:
+  name: github
+  repo: AltSandro/altsandro.github.io
+  branch: main
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
