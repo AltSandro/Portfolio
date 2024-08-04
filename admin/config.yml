@@ -18,9 +18,9 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
 
-      - label: "Project"
-        name: "project"
-        file: "project.html"
+      - label: "Projects"
+        name: "projects"
+        file: "projects.html"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
