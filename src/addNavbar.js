@@ -13,6 +13,9 @@
       if (targetElement) {
        
         targetElement.insertAdjacentHTML("afterbegin", mainNavbar.outerHTML);
+
+        const navbarLoadedEvent = new Event('navbarLoaded');
+        document.dispatchEvent(navbarLoadedEvent);
       }
     }
   };
