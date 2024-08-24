@@ -42,6 +42,7 @@
             from_name: name,
             from_email: email,
             message: sanitizeInput(message),
+            domain: domain,
            'g-recaptcha-response': recaptchaResponse
         };
 
