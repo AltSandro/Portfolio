@@ -1,31 +1,32 @@
 (() => {
- 
-  document.addEventListener("DOMContentLoaded", function () {
-  
-    window.addEventListener("scroll", handleScroll);
+  "use strict"
 
+  document.addEventListener("DOMContentLoaded", function () {
+    
+    window.addEventListener("scroll", handleScroll);
+    
     document.getElementById("scrollBtn").addEventListener("click", scrollToTop);
 
- 
+    
     function handleScroll() {
       if (
         document.body.scrollTop > 70 ||
         document.documentElement.scrollTop > 70
       ) {
-  
+        
         showScrollButton();
       } else {
- 
+        
         hideScrollButton();
       }
     }
 
-   
+    
     function showScrollButton() {
       document.getElementById("scrollBtn").classList.add("show");
     }
 
-  
+    
     function hideScrollButton() {
       document.getElementById("scrollBtn").classList.remove("show");
     }
@@ -36,7 +37,7 @@
         
         scrollToTopMobile();
       } else {
-       
+        
         scrollToTopDesktop();
       }
     }

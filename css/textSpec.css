@@ -3,10 +3,8 @@
 }
 
 span.typed-cursor {
-  
   color: rgb(0, 119, 255);
 }
-
 
 span.typed-cursor.scrolled-inverse {
   color: rgb(83, 196, 241);

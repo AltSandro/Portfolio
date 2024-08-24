@@ -1,15 +1,21 @@
 (() => {
+  "use strict"
   document
     .getElementById("preloadStratButton")
     .addEventListener("click", function () {
       setTimeout(() => {
+        let mainText = document.querySelector(".textSpecialInvisibleConteiner").textContent;
+
         const typedMain = new Typed(".textSpecialMain", {
-          strings: ["This is a homepage created using"],
+          strings: [mainText],
           typeSpeed: 90,
           backSpeed: 90,
           backDelay: 1000,
           loop: false,
           onComplete: () => {
+            const languageUpdated = new Event('specTextEntered');
+            document.dispatchEvent(languageUpdated);
+            console.log('текст ввелся');
             setTimeout(() => {
               typedMain.cursor.remove();
               const languages = ["HTML", "CSS", "JavaScript", "Bootstrap", "jQuery"];
@@ -21,7 +27,7 @@
                 loop: true,
                 onStart: () => {
                   const typedElement = document.querySelector(".textSpecial");
-                  typedElement.classList.add("visible"); 
+                  typedElement.classList.add("visible");
                   typedElement.dataset.language = languages[0];
                   typedElement.style.color = getLanguageColor(languages[0]);
                 },
@@ -35,6 +41,7 @@
             }, 3000); 
           },
         });
+
       }, 3000); 
     });
 
@@ -54,4 +61,19 @@
         return "black";
     }
   }
+
+
+  document.addEventListener('specTextEntered', function() {
+    const textSpecialMain = document.querySelector(".textSpecialMain");
+    const textSpecialInvisibleConteiner = document.querySelector(".textSpecialInvisibleConteiner");
+    let specContainerLangSwitchElemValue = textSpecialInvisibleConteiner.getAttribute("data-langswitch-item");
+    textSpecialMain.setAttribute("langswrs","");
+    textSpecialMain.setAttribute("data-langswitch-item", specContainerLangSwitchElemValue);
+    textSpecialMain.textContent = textSpecialInvisibleConteiner.textContent;
+  })
+
+
+
 })();
+
+

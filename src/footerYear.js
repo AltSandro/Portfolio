@@ -1,11 +1,10 @@
 
 (() => {
-  
+  "use strict"
   function getCurrentYear() {
     return new Date().getFullYear();
   }
 
-  
   function updateYearText(currentYear) {
     let yearElement = document.getElementById("year-range");
     if (yearElement) {
@@ -19,16 +18,14 @@
     }
   }
 
-  
+
   function waitForFooter() {
     return new Promise((resolve) => {
       const checkFooter = () => {
         const footerElement = document.getElementById("mainFooter");
-        if (footerElement) {
-          
+        if (footerElement) {  
           resolve();
-        } else {
-          
+        } else {   
           setTimeout(checkFooter, 100);
         }
       };
@@ -40,10 +37,7 @@
 
   
   window.addEventListener("DOMContentLoaded", async function () {
-    
     await waitForFooter();
-
-    
     const currentYear = getCurrentYear();
     updateYearText(currentYear);
   });

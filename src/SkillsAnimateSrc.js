@@ -1,11 +1,11 @@
 (() => {
-  
-  function handleScrollAndHover() {
+  "use strict"
+  function handleScrollAndHover(skillsData) {
     const setElements = document.getElementsByClassName("iconSkillsSet");
-    const strokePercent = ["40", "40", "40", "70", "115", "70", "70", "70", "90", "110", "115", "95"];
-    const circleClasses = ["circle1", "circle2", "circle3", "circle4", "circle5", "circle6", "circle7", "circle8", "circle9", "circle10", "circle11", "circle12"];
-    
-    for (let i = 0; i < 12; i++) {
+    const strokePercent = skillsData.map(skill => skill.strokePercent);
+    const circleClasses = skillsData.map(skill => skill.circleClass);
+
+    for (let i = 0; i < skillsData.length; i++) {
       const setId = `_${(i + 1) * 10}`; 
       const circleId = `_${i + 1}`;
       
@@ -22,7 +22,7 @@
     }
   }
   
-  
+
   function handleScroll() {
     const timeElements = document.getElementsByClassName("time");
     for (const element of timeElements) {
@@ -34,7 +34,7 @@
     }
   }
   
-  
+
   function isElementInMiddleViewport(element) {
     const { top, left, bottom, right } = element.getBoundingClientRect();
     const winHeight = window.innerHeight || document.documentElement.clientHeight;
@@ -44,7 +44,7 @@
     );
   }
   
-  
+
   function isElementInBottomViewport(element) {
     const { top, left, bottom, right } = element.getBoundingClientRect();
     const winHeight = window.innerHeight || document.documentElement.clientHeight;
@@ -54,9 +54,29 @@
     );
   }
   
-  
-  window.addEventListener("load", function () {
-    document.addEventListener("scroll", handleScroll);
-    document.addEventListener("scroll", handleScrollAndHover);
-  });
+
+  function init() {
+    fetch('json/skills-data.json')
+      .then(response => response.json())
+      .then(skillsData => {
+        document.addEventListener("scroll", handleScroll);
+        document.addEventListener("scroll", () => handleScrollAndHover(skillsData));
+
+        const observer = new MutationObserver((mutations) => {
+          for (let mutation of mutations) {
+            if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+              handleScroll();
+              handleScrollAndHover(skillsData);
+            }
+          }
+        });
+
+        const config = { childList: true, subtree: true };
+        observer.observe(document.body, config);
+      })
+      .catch(error => console.error('Error loading skills data file', error));
+  }
+
+  window.addEventListener("load", init);
+
 })();

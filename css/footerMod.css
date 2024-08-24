@@ -9,7 +9,11 @@
 }
 
 .quote .quote-external {
-    max-width: 400px;
+    max-width: 410px;
+}
+
+.signDown {
+    border-top: 1px solid rgba(7, 7, 7, 0.67);
 }
 
 .quote::before {
@@ -23,7 +27,6 @@
     z-index: 0;
 }
 
-
 .quote-external p::before,
 .quote-external p::after {
     content: "";
@@ -34,25 +37,40 @@
     margin: 14px auto 10px auto;
 }
 
-
 #mainFooter {
+    position: relative;
     background-color: #131722;
 }
 
-[data-font-family-custom] cite {
-    color: rgb(214, 238, 238);
-    font-style: italic;
-    font-family: Georgia, "Times New Roman", serif;
+#mainFooter::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    user-select: auto;
+    pointer-events: none;
 }
 
+[data-font-family-custom] cite {
+    color: rgb(179, 243, 245);
+    font-style: italic;
+    font-family: Georgia, "Times New Roman", serif;
+    text-shadow: 
+    1px 1px 0 rgba(255, 255, 0, 0.35); 
+
+}
 
 .color-custom:hover,
 .color-custom:hover * {
     color: yellow;
+    text-shadow: none
 }
 
 .color-custom:hover {
-    transform: scale(1.065); 
+    transform: scale(1.065);
     transition: transform 0.3s ease;
     transition-delay: 0.2s, 0.4s;
     transition-duration: 0.7s, 0.7s;
@@ -60,22 +78,22 @@
 
 
 @media (min-width: 769px) {
+
     .color-custom:hover,
     .color-custom:hover * {
-        transform: scale(1.4); 
+        transform: scale(1.4);
     }
 }
 
 .color-custom:not(:hover) {
-    transform: scale(1); 
-    transition-delay: 0.4s, 0.2s; 
-    transition-duration: 0.7s, 0.7s; 
+    transform: scale(1);
+    transition-delay: 0.4s, 0.2s;
+    transition-duration: 0.7s, 0.7s;
 }
 
 [data-footerBottom] {
     background-color: #0c101b;
 }
-
 
 .contactsLinks img {
     max-width: 40px;
@@ -87,9 +105,14 @@
 
 .contactsLinks img:hover {
     background-color: #0c101b;
-    transform: scale(1.05);
+    transform: scale(1.06);
 }
 
+.contactsLinks img:active {
+    background-color: #0d2566;
+    transform: scale(0.93);
+    transition: all 0.37s ease;
+}
 
 @media (max-width: 567px) {
     .contactsLinks li {
@@ -98,7 +121,7 @@
       padding-right: 1px; 
     }
 }
-  
+
 
 #mainFooter .custom-border {
     max-width: 85%;

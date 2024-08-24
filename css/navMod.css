@@ -4,6 +4,9 @@
   --scrolledStyleThemeColor: rgb(83, 196, 241);
   --scrolledStyleThemeColorHover: rgb(83, 241, 215);
   --navLinkHLineColor: #08da13;
+  --first-color: #139bbd;
+  --second-color: hsl(244, 89%, 51%);
+  --second-colorHr: hsl(239, 92%, 47%);
 }
 
 .navbar {
@@ -12,9 +15,30 @@
 
 
 .navbar {
-  background-color: rgba(255, 255, 252, 0.884);
+  background: #f3e7e9;
+  background: linear-gradient(
+    to right,
+    #f3e7e9,#e3eeffe5,#e3eeffea
+  );
   transition: background-color 0.5s ease-in-out;
-  box-shadow: 0px 11px 11px -10px rgba(243, 244, 245, 0.67);
+  box-shadow: 0px 11px 11px -10px rgba(7, 7, 7, 0.67);
+  border-bottom: 1px solid rgba(192, 192, 192, 0.7);
+}
+
+.navbar.scrolled {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.01);
+}
+
+.navbarPre {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  user-select: auto;
+  pointer-events: none;
 }
 
 .navbar::before {
@@ -38,6 +62,8 @@
   background-color: rgba(0, 0, 0, 0.8); 
   opacity: 0; 
 }
+
+
 .navbar .nav-link {
   position: relative;
 }
@@ -63,6 +89,12 @@
   background-color: var(--navLinkHLineColor);
 }
 
+.navbar .navbar-brand,
+.navbar .navbar-toggler,
+.navbar .navbar-nav .nav-link {
+  color: #333333;
+}
+
 .navbar.scrolled .navbar-brand,
 .navbar.scrolled .navbar-toggler,
 .navbar.scrolled .navbar-nav .nav-link {
@@ -71,11 +103,19 @@
   transition: 0.7s;
 }
 
+
 .navbar.scrolled .nThD {
   background: var(--scrolledStyleThemeColor); 
   transition: 0.0s;
 }
 
+.navbar .navbar-toggler:focus {
+  background-color: rgb(255, 255, 255);
+}
+
+.navbar.scrolled .navbar-toggler:focus {
+  background-color: rgba(0, 0, 0, 0.8);
+}
 
 .navbar .navbar-brand:hover,
 .navbar .navbar-toggler:hover,
@@ -84,7 +124,6 @@
   transition: 0.3s;
 
 }
-
 
 .navbar .navbar-toggler:hover .nThD {
   background: var(--styleThemeColor);
@@ -95,7 +134,6 @@
   background-color: rgba(255, 255, 255, 1);
 }
 
-
 .navbar.scrolled .navbar-brand:hover,
 .navbar.scrolled .navbar-toggler:hover,
 .navbar.scrolled .navbar-nav .nav-link:hover {
@@ -104,8 +142,9 @@
 }
 
 .navbar.scrolled .navbar-toggler:hover .nThD {
-  background: var(--scrolledStyleThemeColorHover);
+  background: var(--scrolledStyleThemeColorHover); 
   transition: 0.7s;
+  
 }
 
 .navbar.scrolled .navbar-toggler:hover {
@@ -113,6 +152,123 @@
   transition: 0.7s;
 }
 
+.navbar .navbar-toggler {
+  position: relative;
+  box-sizing: border-box;
+  transition: all 0.7s;
+}
+
+.navbar .navbar-toggler:after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  left: -1px;
+  top: -1px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  border: 1px solid rgba(0, 0, 0, 0); 
+  border-radius: 6px;
+  opacity: 1; 
+  transition: all 0.7s;
+  z-index: -1;
+}
+
+.navbar.scrolled .navbar-toggler:after {
+  border: 1px solid rgba(0, 0, 0, 0);
+  z-index: 0;
+  transition: all 0.7s;
+}
+
+.navbar button.navbar-toggler:hover::after,
+.navbar button.navbar-toggler:active::after {
+  border-color: var(--second-colorHr);
+  animation: navbarTogglerColorChange 3.4s infinite ease-in-out;
+  animation-delay: 2.7s;
+}
+
+.navbar.scrolled button.navbar-toggler:hover::after,
+.navbar.scrolled button.navbar-toggler:active::after {
+  border-color: var(--scrolledStyleThemeColorHover);
+  animation: navbarTogglerColorChangeScrolled 3.4s infinite ease-in-out;
+  animation-delay: 2.7s;
+}
+
+@keyframes navbarTogglerColorChange {
+  0%,100% {
+    border-color: var(--styleThemeColor);
+  }
+  75% {
+    border-color: var(--second-color);
+  }
+  50% {
+    border-color: var(--second-color);
+  }
+  25% {
+    border-color: var(--second-color);
+  }
+}
+
+@keyframes navbarTogglerColorChangeScrolled {
+  0%, 100% {
+    border-color: var(--scrolledStyleThemeColorHover);
+  }
+  75% {
+    border-color: var(--second-color);
+  }
+  50% {
+    border-color: var(--second-color);
+  }
+  25% {
+    border-color: var(--second-color);
+  }
+}
+
+button.navbar-toggler:hover,
+button.navbar-toggler:active {
+  box-shadow: 0 0 11px 3px var(--styleThemeColor), 0 0 27px 6px var(--second-colorHr);
+  animation: navbarTogglerShadowPulse 3.4s infinite ease-in-out; 
+  animation-delay: 2.7s;
+  z-index: 0;
+}
+
+
+.navbar.scrolled button.navbar-toggler:hover,
+.navbar.scrolled button.navbar-toggler:active {
+  box-shadow: 0 0 11px 3px var(--scrolledStyleThemeColorHover), 0 0 27px 6px var(--scrolledStyleThemeColorHover);
+  animation: navbarTogglerShadowPulseScrolled 3.4s infinite ease-in-out;
+  animation-delay: 2.7s;
+  z-index: 0;
+}
+
+@keyframes navbarTogglerShadowPulse {
+  0%,100% {
+    box-shadow: 0 0 11px 3px var(--styleThemeColor), 0 0 27px 6px var(--second-colorHr);
+  }
+  75% {
+    box-shadow: 0 0 5px 1px var(--second-color), 0 0 19px 1px var(--second-color);
+  }
+  50% {
+    box-shadow: 0 0 5px 1px var(--second-color), 0 0 19px 1px var(--first-color);
+  }
+  25% {
+    box-shadow: 0 0 4px 1px var(--second-color), 0 0 10px 1px var(--first-color);
+  }
+}
+
+@keyframes navbarTogglerShadowPulseScrolled {
+  0%, 100% {
+    box-shadow: 0 0 11px 3px var(--scrolledStyleThemeColorHover), 0 0 27px 6px var(--scrolledStyleThemeColorHover);
+  }
+  75% {
+    box-shadow: 0 0 5px 1px var(--second-color), 0 0 19px 1px var(--second-color);
+  }
+  50% {
+    box-shadow: 0 0 5px 1px var(--second-color), 0 0 19px 1px var(--second-color);
+  }
+  25% {
+    box-shadow: 0 0 4px 1px var(--second-color), 0 0 10px 1px var(--scrolledStyleThemeColor);
+  }
+}
 
 .navbar-toggler-icon {
   background-image: none;
@@ -166,19 +322,21 @@
   transition: all 400ms ease-in-out;
 }
 
-.navbarTogglerhamburger:hover .nThD {
+
+button.navbar-toggler:hover .nThD {
   width: 100%;
 }
 
-.navbarTogglerhamburger:hover .hamburgerTop {
+
+button.navbar-toggler:hover .hamburgerTop {
   animation: hamburger-hover 0.69s infinite ease-in-out alternate;
 }
 
-.navbarTogglerhamburger:hover .hamburgerMid {
+button.navbar-toggler:hover .hamburgerMid {
   animation: hamburger-hover 0.69s infinite ease-in-out alternate forwards 200ms;
 }
 
-.navbarTogglerhamburger:hover .hamburgerBottom {
+button.navbar-toggler:hover .hamburgerBottom {
   animation: hamburger-hover 0.69s infinite ease-in-out alternate forwards 400ms;
 }
 
@@ -196,7 +354,6 @@
   }
 }
 
-
 .myLogo {
   height: 40px;
   transition: filter 0.33s;
@@ -204,6 +361,10 @@
 
 .navbar-brand:hover .myLogo {
   filter: hue-rotate(47deg);
+}
+
+.navbar-brand.scrolled-inverse:hover .myLogo {
+  filter: hue-rotate(27deg);
 }
 
 
@@ -221,9 +382,11 @@
   background-position: center; 
 
 }
+
 .navbar.scrolled::before {
   opacity: 0;
 }
+
 .navbar.scrolled::after {
   opacity: 1;
 }

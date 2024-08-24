@@ -42,10 +42,23 @@
     box-shadow: 0px 1px 15px 10px rgba(100, 205, 247, 0.59);
 }
 
+#exitCarouselButton.btn-close {
+    --bs-btn-close-bg: url(https://img.icons8.com/emoji/48/cross-mark-emoji.png);
+    background-size: 80%; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    transform-origin: center; 
+}
+
 #exitCarouselButton:hover {
-    transition: 0.4s;
+    transition: 0.37s;
     box-shadow: 0px 1px 12px 11px rgba(100, 205, 247, 0.59);
     transform: scale(1.1);
+}
+
+#exitCarouselButton:active {
+    box-shadow: 0px 1px 12px 11px rgba(100, 169, 247, 0.59);
+    transform: scale(0.95);
 }
 
 .myGameLinkContainer {
@@ -85,7 +98,6 @@
     50% {
         transform: scale(1.03);
     }
-
 
     100% {
         transform: scale(1); 
@@ -129,9 +141,8 @@
 #iframeContainer,
 #myGameLink,
 #exitCarouselButton {
-    transition: 0.5s; 
+    transition: 0.37s all; 
 }
-
 
 #embedded-iframe {
     width: 100%;
@@ -163,7 +174,6 @@
     }
 }
 
-
 .zoom-on-hover {
     overflow: hidden;
 }
@@ -177,7 +187,6 @@
     opacity: .7;
 
 }
-
 
 @media screen and (max-height: 768px) {
     .myGameLinkContainer {

@@ -35,6 +35,7 @@
   justify-content: space-between;
   text-align: center;
   width: 100%;
+
 }
 
 #MySkills h2 {
@@ -68,7 +69,7 @@
 }
 
 .iconSkillsSet img {
-  height: 2.1rem; 
+  height: 2.1rem;
 }
 
 .iconSkillsSet svg {
@@ -93,9 +94,100 @@
   z-index: 3;
 }
 
+.IconDivImg::before,
+.IconDivImg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--your-background-color); 
+  transition: all 0.3s ease-in-out;
+  z-index: -1; 
+}
+
 
 .IconDivImg:hover {
-  transform: scale(1.38);
+  cursor: pointer;
+  transform: scale(1.37);
+  transform-origin: calc(50% - 2px) calc(50% + 2px);
+}
+
+
+.IconDivImg:hover::before {
+  transform: scale(0.7);
+  transition: all 0.27s ease-in-out;
+  box-shadow: 0 0 11px 3px var(--second-colorHr), 0 0 31px 6px var(--second-colorHr);
+  animation: IconDivImgShadowPulse 3.4s infinite ease-in-out; 
+  animation-delay: 0.7s;
+}
+
+@keyframes IconDivImgShadowPulse {
+  0%,100% {
+      box-shadow: 0 0 11px 3px var(--second-colorHr), 0 0 38px 6px var(--second-colorHr);
+  }
+  75% {
+    box-shadow: 0 0 5px 1px var(--second-color), 0 0 19px 1px var(--second-color);
+  }
+  50% {
+    box-shadow: 0 0 5px 1px var(--second-color), 0 0 19px 1px var(--first-color);
+  }
+  25% {
+    box-shadow: 0 0 4px 1px var(--second-color), 0 0 10px 1px var(--first-color);
+  }
+}
+
+
+.IconDivImg:hover::after  {
+  transform: scale(0.01);
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 0 11px 3px var(--second-color), 0 0 31px 6px var(--first-color);
+}
+
+
+.IconDivImg:hover a  {
+  border-radius: 50%;
+  animation: imgGoStage 0.7s ease forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes imgGoStage {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.17);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.IconDivImg:hover img  {
+  animation: imgSPulse 3.7s infinite ease-in-out;
+  animation-delay: 1.8s;
+}
+
+@keyframes imgSPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.17);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.IconDivImg:active {
+  transform: scale(1);
+  box-shadow: 0 0 11px 3px var(--second-color), 0 0 27px 6px var(--first-color);
+  transition: all 0.37s ease-in-out; 
 }
 
 
@@ -120,7 +212,7 @@
   position: absolute;
   inset: 5px;
   z-index: 3;
-  transition: all 1s; 
+  transition: all 1s;
 }
 
 .circle::before {
@@ -135,7 +227,6 @@
   background-color: var(--second-color);
   box-shadow: 0 0 11px var(--second-color), 0 0 30px var(--second-color);
 }
-
 
 .circle1,
 .circle2,
@@ -184,7 +275,6 @@
   transform: rotate(var(--circle-rotation-2, 235deg));
 }
 
-
 .skillName {
   position: relative;
 }
@@ -209,3 +299,4 @@
   transform: scaleX(1.4);
   transform-origin: right;
 }
+

@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Source+Code+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
 
+:root {
+    --styleThemeColor: rgb(13, 110, 253);
+    --first-color: #139bbd;
+    --second-color: hsl(244, 89%, 51%);
+    --second-colorHr: hsl(239, 92%, 47%);
+    --scrolledStyleThemeColor: rgb(83, 196, 241);
+    --scrolledStyleThemeColorHover: rgb(83, 241, 215);
+}
 
 .overlay {
     position: fixed;
@@ -15,14 +23,12 @@
     background: #0c101b;
 }
 
-
 #preload-video {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
 
 .hiddenB,
 .hiddenGreeting {
@@ -50,7 +56,7 @@
 
 @media (max-height: 600px) {
     .overlay h1 {
-        top: 35%; 
+        top: 35%;
     }
 
     .preload-start-button {
@@ -80,13 +86,13 @@
     text-decoration: none;
 }
 
-
 .loadPageLoaderSpinner {
+    position: relative;
     width: 8rem; 
     height: 8rem;
     color: hsl(239, 92%, 47%);
-    box-shadow: 0 0 9px 2px hsla(231, 92%, 47%, 0.959);
-    border-style: dotted;       
+    box-shadow: 0 0 9px 2px hsla(231, 92%, 47%, 0.959); 
+    border-style: dotted;
 }
 
 .loadPageAltSandroSpinnerLabe {
@@ -98,50 +104,209 @@
     height: 5rem;
 }
 
-
-
-
-.preloadAltSandroTopLabeEmblem {
+.loadPageLoaderSpinner:after {
+    content: "";
     position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 1; 
+    z-index: -1;
+    border-radius: 50%;
+    transform: scale(1.12); 
+    transform-origin: center; 
+    animation: spinnerPulseOpacity 1s infinite ease-in-out;
+}
+
+@keyframes spinnerPulseOpacity {
+
+  0%,
+  100% {
+    box-shadow: 0 0 11px 3px var(--styleThemeColor), 0 0 27px 6px var(--second-colorHr);
+  }
+
+  75% {
+    box-shadow: 0 0 5px 1px var(--second-color), 0 0 19px 1px var(--second-color);
+  }
+
+  50% {
+    box-shadow: 0 0 5px 1px var(--second-color), 0 0 19px 1px var(--first-color);
+  }
+
+  25% {
+    box-shadow: 0 0 4px 1px var(--second-color), 0 0 10px 1px var(--first-color);
+  }
+}
+
+@keyframes spinnerPulseOpacityTwo {
+
+  0%,
+  100% {
+    box-shadow: 0 0 11px 3px var(--scrolledStyleThemeColorHover), 0 0 27px 6px var(--scrolledStyleThemeColorHover);
+  }
+
+  75% {
+    box-shadow: 0 0 5px 1px var(--second-color), 0 0 19px 1px var(--second-color);
+  }
+
+  50% {
+    box-shadow: 0 0 5px 1px var(--second-color), 0 0 19px 1px var(--second-color);
+  }
+
+  25% {
+    box-shadow: 0 0 4px 1px var(--second-color), 0 0 10px 1px var(--scrolledStyleThemeColor);
+  }
+}
+
+@keyframes spinnerPulseOpacityThree {
+
+  0%,
+  100% {
+    box-shadow: 0 0 11px 3px var(--second-colorHr), 0 0 38px 6px var(--second-colorHr);
+  }
+
+  75% {
+    box-shadow: 0 0 5px 1px var(--second-color), 0 0 19px 1px var(--second-color);
+  }
+
+  50% {
+    box-shadow: 0 0 5px 1px var(--second-color), 0 0 19px 1px var(--styleThemeColor);
+  }
+
+  25% {
+    box-shadow: 0 0 4px 1px var(--second-color), 0 0 10px 1px var(--first-color);
+  }
+}
+
+
+.loadPageLoaderSpinner::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 1; 
+  z-index: -1;
+  border-radius: 50%;
+  transform: scale(1.12); 
+  transform-origin: center; 
+  background-color: var(--your-background-color); 
+  box-shadow: none;
+  animation: appearanceSphere 0.8s cubic-bezier(0.42, 0, 0.58, 1) 3;
+  visibility: hidden;
+}
+
+@keyframes appearanceSphere {
+  0% {
+    transform: scale(1); 
+    visibility: hidden;
+  }
+  10%{
+    box-shadow: 0 0 11px 3px var(--second-color), 0 0 31px 6px var(--first-color);
+    visibility: hidden;
+  }
+  20% {
+    box-shadow: 0 0 11px 3px var(--second-color), 0 0 31px 6px var(--first-color);
+    visibility: hidden;
+  }
+  100% {
+    box-shadow: 0 0 11px 3px purple, 0 0 31px 6px red;
+    transform: scale(0.01) rotateX(70deg) rotateY(-620deg) rotateZ(70deg); 
+    visibility: visible;
+  }
+}
+
+@keyframes shadowBallSphere {
+  0% {
+    transform: scale(1.12) rotateX(0deg) rotateY(0deg) rotateZ(720deg);
+  }
+  50% {
+    transform: scale(0.01) rotateX(360deg) rotateY(360deg) rotateZ(0deg);
+    box-shadow: 0 0 11px 3px var(--second-color), 0 0 31px 6px var(--first-color);
+  }
+  100% {
+    transform: scale(1.12) rotateX(720deg) rotateY(720deg) rotateZ(720deg);
+  }
+}
+
+@keyframes shadowBallSphere2 {
+  0% {
+    transform: scale(1.12);
+  }
+  50% {
+    transform: scale(0.01);
+    box-shadow: 0 0 11px 3px var(--second-color), 0 0 31px 6px var(--first-color);
+  }
+  100% {
+    transform: scale(0.01); 
+  }
+}
+
+@keyframes pulseShadowLayerTwo {
+  0%,100% {
+      box-shadow: 0 0 11px 3px var(--second-colorHr), 0 0 38px 6px var(--second-colorHr);
+  }
+  75% {
+    box-shadow: 0 0 5px 1px var(--second-color), 0 0 19px 1px var(--second-color);
+  }
+  50% {
+    box-shadow: 0 0 5px 1px var(--second-color), 0 0 19px 1px var(--first-color);
+  }
+  25% {
+    box-shadow: 0 0 4px 1px var(--second-color), 0 0 10px 1px var(--first-color);
+  }
+}
+
+.preloadAltSandroTopLabeEmblem-container {
+  display: grid;
+  position: relative;
+  justify-items: center;
+  align-content: center;
+  height: 45%; 
+}
+.preloadAltSandroTopLabeEmblem {
     width: 22.5rem;
     height: 25rem;
     margin: 0;
     padding: 0;
     transform-origin: center;
     transition: left 0.77s ease; 
+    margin-top: 1.5rem;
 }
 
 @media (max-height: 601px) {
     .preloadAltSandroTopLabeEmblem {
-        top: 19%;
         width: 13.5rem;
-        height: 15rem;  
+        height: 15rem;
+        margin-bottom: 2.3rem;
+        margin-top: 0rem;  
     }
 }
 
 @media (max-height: 550px) {
     .preloadAltSandroTopLabeEmblem {
-        top: 20%;
         width: 7.2rem;
-        height: 8rem;  
+        height: 8rem;
+        margin-bottom: 2.2rem;    
     }
 }
 
 @media (max-height: 275px) {
     .preloadAltSandroTopLabeEmblem {
-        top: 20%;
         width: 4.5rem;
-        height: 5rem;  
+        height: 5rem; 
+        margin-bottom: 1.9rem;     
     }
 }
-
 
 @media (max-width: 576px) {
     .preloadAltSandroTopLabeEmblem {
         left: 48%;
     }
 }
+
+
+
 

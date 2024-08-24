@@ -6,7 +6,6 @@
         }); 
     })();
 
-    
 
     document.getElementById('contactSubmitButton').addEventListener('click', function(event) {
         event.preventDefault(); 
@@ -16,7 +15,7 @@
         const domain = window.location.hostname;
         const recaptchaResponse = grecaptcha.getResponse();
  
-        
+
         const capchaContactElem = document.querySelector(".capchaContactElem");
         if (capchaContactElem.classList.contains("d-none")) {
             capchaContactElem.classList.remove("d-none");
@@ -27,9 +26,10 @@
             return; 
         };
 
-       
+        
         if (!recaptchaResponse) {
-            showVisitorErrorMessageData('Please complete the reCAPTCHA.');
+            changeErrorMessageData(document.querySelector('[sumberrmass="1"]'), 1);
+            showErrorVisualElement();
             return; 
         };
 
@@ -46,66 +46,61 @@
            'g-recaptcha-response': recaptchaResponse
         };
 
-        emailjs.send('service_91ok17c', 'template_8jenbmb', templateParams, { important: 1 }) 
+        emailjs.send('service_91ok17c', 'template_8jenbmb', templateParams) 
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
                 window.location.hash = 'submitPopup'; 
                 removeVisitorErrorMessageData();
                 grecaptcha.reset();
                 capchaContactElem.classList.add("d-none"); 
-
-                
                 document.getElementById('name').value = "";
                 document.getElementById('email').value = "";
                 document.getElementById('message').value = "";
 
             }).catch(function(error) {
-                console.log('FAILED...', error);
-                showVisitorErrorMessageData('Error sending message. Please try again later...');
+                changeErrorMessageData(document.querySelector('[sumberrmass="2"]'), 2);
+                showErrorVisualElement();
             });
     });
 
-    
     function validateContactForm(name, email, message) {
-        
         if (name === "" || email === "" || message === "") {
-            showVisitorErrorMessageData('Please fill out all fields.');
+            changeErrorMessageData(document.querySelector('[sumberrmass="3"]'), 3);
+            showErrorVisualElement();
             return false;
         };
-
-       
         const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         if (!emailRegex.test(email)) {
-            showVisitorErrorMessageData('Please enter a valid email address.');
+            changeErrorMessageData(document.querySelector('[sumberrmass="4"]'), 4);
+            showErrorVisualElement();
             return false;
         };
-
-        
         const maxMessageLength = 2048; 
         if (message.length > maxMessageLength) {
-            showVisitorErrorMessageData(`Message exceeds ${maxMessageLength} characters. Please shorten your message.`);
+            changeErrorMessageData(`${document.querySelector('[sumberrmass="5"]')} ${maxMessageLength} ${document.querySelector('[sumberrmass="6"]')}`, 5, maxMessageLength);
+            showErrorVisualElement();
             return false;
         };
 
         return true;
     };
 
-    
-    function showVisitorErrorMessageData(message) {
-        let visitorErrorMessageData = document.querySelector(".visitorErrorMessageData");
+    function changeErrorMessageData(messageElement, elemValue, elemErrOption) {
+        let errorInvisibleCurrentMessageContainer = document.querySelector('[errorInvisibleCurrentMessageContainer]');
         
-        
-        let button = visitorErrorMessageData.querySelector(".contactButtonCloseErrMessage");
-        visitorErrorMessageData.innerHTML = '';
-        visitorErrorMessageData.appendChild(document.createTextNode(message));
-        visitorErrorMessageData.appendChild(button);
-    
-        visitorErrorMessageData.classList.remove("d-none"); 
-    };
+        errorInvisibleCurrentMessageContainer.textContent = messageElement.textContent;
+        errorInvisibleCurrentMessageContainer.setAttribute("errinvcontent", elemValue);
+        if (elemValue == 5) {
+            errorInvisibleCurrentMessageContainer.setAttribute("errcurcontoption", elemErrOption);
+        }
+    };    
 
-    
+    function showErrorVisualElement() {
+        let visitorErrorMessageData = document.querySelector(".visitorErrorMessageData");
+        visitorErrorMessageData.classList.remove("d-none"); 
+    }
+
     changeElementVisibility(".visitorErrorMessageData",".contactButtonCloseErrMessage");
-    
     
     function changeElementVisibility(elem, trigger) {
         let elemI = document.querySelector(elem);
@@ -127,6 +122,89 @@
                 contactButtonCloseErrMessage.click(); 
         };
     };
+
+    document.addEventListener("DOMContentLoaded", function() {
+    const targetNode = document.querySelector(".errorInvisibleMessages");
+
+    if (targetNode) {
+        const observer = new MutationObserver((mutationsList) => {
+            for (const mutation of mutationsList) {
+                if (mutation.type === 'childList' || mutation.type === 'characterData' || mutation.type === 'subtree') {
+                    changeErrorInvisibleCurrentMessageContainer();
+                    break;
+                }
+            }
+        });
+
+        observer.observe(targetNode, { childList: true, characterData: true, subtree: true });
+    }
+});
+
+function changeErrorInvisibleCurrentMessageContainer() {
+    let errorInvisibleCurrentMessageContainer = document.querySelector("[errorInvisibleCurrentMessageContainer]");
+    let sumberrmassNumber = errorInvisibleCurrentMessageContainer.getAttribute("errinvcontent"); 
+    let sumberrmass = document.querySelector(`[sumberrmass="${sumberrmassNumber}"]`);
+    let sumberrmassTextContent = sumberrmass.textContent;
+    let visitorErrorMessageData = document.querySelector(".visitorErrorMessageData");
+
+    let button = visitorErrorMessageData.querySelector(".contactButtonCloseErrMessage");
+    if (sumberrmassNumber == 5) {
+        let errcurcontoption = errorInvisibleCurrentMessageContainer.getAttribute("errcurcontoption");
+        let sumberrmassTextContentMix = document.querySelector(`[sumberrmass="${sumberrmassNumber}"]`).textContent +
+            ` ${errcurcontoption} ` + 
+            document.querySelector(`[sumberrmass="${+sumberrmassNumber + 1}"]`).textContent;
+        
+        errorInvisibleCurrentMessageContainer.textContent = sumberrmassTextContentMix;
+        visitorErrorMessageData.textContent = sumberrmassTextContentMix; 
+    } else {
+        errorInvisibleCurrentMessageContainer.textContent = sumberrmassTextContent;
+        visitorErrorMessageData.textContent = sumberrmassTextContent; 
+    }
+    
+    visitorErrorMessageData.appendChild(button);
+};
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const targetNode = document.querySelector(".errorInvisibleMessages");
+
+    if (targetNode) {
+        const observer = new MutationObserver((mutationsList) => {
+            for (const mutation of mutationsList) {
+                if (mutation.type === 'childList' || mutation.type === 'characterData' || mutation.type === 'subtree') {
+                    changeErrorInvisibleCurrentMessageContainer();
+                    break;
+                }
+            }
+        });
+
+        observer.observe(targetNode, { childList: true, characterData: true, subtree: true });
+    }
+});
+
+function changeErrorInvisibleCurrentMessageContainer() {
+    let errorInvisibleCurrentMessageContainer = document.querySelector("[errorInvisibleCurrentMessageContainer]");
+    let sumberrmassNumber = errorInvisibleCurrentMessageContainer.getAttribute("errinvcontent"); 
+    let sumberrmass = document.querySelector(`[sumberrmass="${sumberrmassNumber}"]`);
+    let sumberrmassTextContent = sumberrmass.textContent;
+    let visitorErrorMessageData = document.querySelector(".visitorErrorMessageData");
+
+    let button = visitorErrorMessageData.querySelector(".contactButtonCloseErrMessage");
+    if (sumberrmassNumber == 5) {
+        let errcurcontoption = errorInvisibleCurrentMessageContainer.getAttribute("errcurcontoption");
+        let sumberrmassTextContentMix = document.querySelector(`[sumberrmass="${sumberrmassNumber}"]`).textContent +
+            ` ${errcurcontoption} ` + 
+            document.querySelector(`[sumberrmass="${+sumberrmassNumber + 1}"]`).textContent;
+        
+        errorInvisibleCurrentMessageContainer.textContent = sumberrmassTextContentMix;
+        visitorErrorMessageData.textContent = sumberrmassTextContentMix; 
+    } else {
+        errorInvisibleCurrentMessageContainer.textContent = sumberrmassTextContent;
+        visitorErrorMessageData.textContent = sumberrmassTextContent; 
+    }
+    
+    visitorErrorMessageData.appendChild(button);
+};
 })();
 
 

@@ -21,7 +21,7 @@
     --borderColor: #0000008a 25%, var(--second-colorHr) 0;
     padding: 6px;
     box-shadow: 0 0 11px 3px var(--second-colorHr), 0 0 34px 6px var(--second-colorHr);
-    animation: heroImgPulse 3.4s infinite alternate; 
+    animation: heroImgPulse 3.4s infinite ease-in-out; 
     animation-delay: 1.3s;
 }
 
@@ -29,9 +29,14 @@
     0%,100% {
         box-shadow: 0 0 11px 3px var(--second-colorHr), 0 0 34px 6px var(--second-colorHr);
     }
+    
     50% {
         box-shadow: 0 0 3px 1px var(--second-colorHr), 0 0 5px 2px var(--second-colorHr);
     }
+    25% {
+        box-shadow: 0 0 3px 1px var(--second-color), 0 0 5px 2px var(--second-color);
+    }
+    
 }
 
 .heroMesBoard,

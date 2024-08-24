@@ -1,0 +1,22 @@
+{
+    "navbarNav": [
+        {"href": "about.html", "text": "ABOUT", "langswrs": "langswrs", "addAttributeTwo": "data-langswitch-item='5'"},
+        {"href": "projects.html", "text": "PROJECTS", "langswrs": "langswrs", "addAttributeTwo": "data-langswitch-item='6'"},
+        {"href": "contact.html", "text": "CONTACTS", "langswrs": "langswrs", "addAttributeTwo": "data-langswitch-item='7'"}
+    ],
+    "footerNav": [
+        {"href": "index.html", "text": "My Homepage", "langswrs": "langswrs", "addAttributeTwo": "data-langswitch-item='8'"},
+        {"href": "about.html", "text": "About", "langswrs": "langswrs", "addAttributeTwo": "data-langswitch-item='9'"},
+        {"href": "projects.html", "text": "Projects", "langswrs": "langswrs", "addAttributeTwo": "data-langswitch-item='10'"},
+        {"href": "contact.html", "text": "Contacts", "langswrs": "langswrs", "addAttributeTwo": "data-langswitch-item='11'"}
+    ],
+    "socialLinks": [
+        {"href": "https://github.com", "imgSrc": "img/ico/github.svg", "alt": "Github AltSandro"},
+        {"href": "https://www.linkedin.com/", "imgSrc": "img/ico/linkedin.svg", "alt": "Linkedin AltSandro"},
+        {"href": "http://facebook.com", "imgSrc": "img/ico/facebook.svg", "alt": "Facebook AltSandro"},
+        {"href": "http://instagram.com", "imgSrc": "img/ico/instagram.svg", "alt": "Instagram AltSandro"},
+        {"href": "http://x.com", "imgSrc": "img/ico/twitter.svg", "alt": "X AltSandro"},
+        {"href": "http://youtube.com", "imgSrc": "img/ico/youtube.svg", "alt": "Youtube AltSandro"},
+        {"href": "https://discord.com/", "imgSrc": "img/ico/discord.svg", "alt": "Discord AltSandro"}
+    ]
+}

@@ -9,9 +9,10 @@
     transform: translateY(0);
 }
 
-.textSpecialM.visible {
-    animation-delay: 3s;
+.textSpecialM{
+    min-height: 90px;
 }
+
 
 
 

@@ -32,7 +32,6 @@
     height: 100%;
 }
 
-
 .awSr.carousel.slide {
     position: relative;
     display: flex;
@@ -72,7 +71,6 @@
     margin: 0 auto;
 }
 
-
 .awSr .carousel-control .mainProjCarousel-chevron-left,
 .awSr .carousel-control .mainProjCarousel-chevron-right {
     width: 64px;
@@ -81,7 +79,6 @@
     align-items: center;
     justify-content: center;
 }
-
 
 .awSr .mainProjCarousel-chevron-left::before,
 .awSr .mainProjCarousel-chevron-right::before {
@@ -100,12 +97,20 @@
     opacity: 0.9;
 }
 
+.awSr .mainProjCarousel-chevron-left::before,
+.awSr .mainProjCarousel-chevron-left:hover::before,
+.awSr .mainProjCarousel-chevron-right::before,
+.awSr .mainProjCarousel-chevron-right:hover::before {
+    transition: all 0.5s ease-in-out;
+}
+
 .awSr .mainProjCarousel-chevron-left::before {
     content: url(https://img.icons8.com/neon/64/back.png);
 }
 
 .awSr .mainProjCarousel-chevron-left:hover::before {
     content: url(https://img.icons8.com/3d-fluency/64/back.png);
+    transition: all 0.1s ease-in-out;
 }
 
 .awSr .mainProjCarousel-chevron-right::before {
@@ -114,7 +119,16 @@
 
 .awSr .mainProjCarousel-chevron-right:hover::before {
     content: url(https://img.icons8.com/3d-fluency/64/forward.png);
+    transition: all 0.1s ease-in-out;
 }
+
+.awSr .mainProjCarousel-chevron-left:active::before,
+.awSr .mainProjCarousel-chevron-right:active::before {
+    transition: ease-in-out; 
+    transform: scale(1.1);
+}
+
+
 
 .awSr [data-awSlider-role-Button] {
     cursor: pointer;
@@ -157,6 +171,7 @@
 .awSr .carousel-inner>.item>a>img,
 .awSr .carousel-inner>.item>img {
     line-height: 1;
+
 }
 
 @media all and (transform-3d),
@@ -379,6 +394,7 @@
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
     opacity: 1;
+
 }
 
 .awSr div.awSlider img {
@@ -417,7 +433,6 @@
 .awSr .carousel-item-prev.carousel-item-right {
     transform: translateX(0);
 }
-
 
 .MatrixEffectButton::before {
     content: '';
@@ -526,7 +541,6 @@
     transform: scale(1, 1) translate(-50%, -50%);
     transition: 0.43s;
 }
-
 
 #play-now-btn {
     font-weight: 500;

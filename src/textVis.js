@@ -1,5 +1,7 @@
 (() => {
+  "use strict"
   document.addEventListener("DOMContentLoaded", function () {
+    
     document
       .getElementById("preloadStratButton")
       .addEventListener("click", function () {
@@ -21,7 +23,7 @@
           elements.forEach(function (element) {
             element.classList.add("visible");
           });
-        }, 3200); 
+        }, 3500); 
       });
   });
 })();

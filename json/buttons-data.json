@@ -1,0 +1,28 @@
+{
+    "heroButtons": [
+        {
+            "href": "#hrefContainerSkills",
+            "text": "To Skills",
+            "langswrs": "langswrs",
+            "addAttributeTwo": "data-langswitch-item='25'"
+        },
+        {
+            "href": "./projects.html",
+            "text": "To Projects",
+            "langswrs": "langswrs",
+            "addAttributeTwo": "data-langswitch-item='26'"
+        },
+        {
+            "href": "./contact.html",
+            "text": "To Contacts",
+            "langswrs": "langswrs",
+            "addAttributeTwo": "data-langswitch-item='27'"
+        }
+    ],
+    "buttons": [
+        {
+            "href": "about.html",
+            "text": "About Me"
+        }
+    ]
+}

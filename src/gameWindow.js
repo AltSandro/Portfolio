@@ -1,4 +1,5 @@
 (() => {
+  "use strict"
   let playNowBtn = document.getElementById("play-now-btn");
   let exitCarouselButton = document.getElementById("exitCarouselButton");
   let carouselWrapper = document.getElementById("carouselWrapper");
@@ -7,9 +8,9 @@
 
   playNowBtn.addEventListener("click", function () {
     carouselWrapper.classList.remove("d-none");
-    carouselContainer.classList.add("semi-transparent");  
+    carouselContainer.classList.add("semi-transparent"); 
     iframeContainer.innerHTML = `<iframe id="embedded-iframe" class=""
-            src="https://scratch.mit.edu/projects/851751963/embed" allowtransparency="true"  frameborder="0" scrolling="no" allowfullscreen></iframe>`;
+            src="https://scratch.mit.edu/projects/851751963/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>`;
 
     
     document.body.style.overflow = "hidden";
@@ -17,10 +18,8 @@
 
   exitCarouselButton.addEventListener("click", function () {
     carouselWrapper.classList.add("d-none");
-    carouselContainer.classList.remove("semi-transparent");
+    carouselContainer.classList.remove("semi-transparent"); 
     iframeContainer.innerHTML = "";
-
-    
     document.body.style.overflow = "auto";
   });
 })();

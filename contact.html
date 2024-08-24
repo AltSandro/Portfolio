@@ -2,10 +2,9 @@
 <html lang="en">
 
 <head>
-
+    
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-V4GLFSZGWX"></script>
     <script src="src/gtag.js"></script>
-     
         
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,26 +16,27 @@
     <link rel="icon" href="img/ico/favicon/favicon.ico" type="image/png">
     <link rel="mask-icon" href="img/ico/favicon/favicon.ico">
     <link rel="manifest" href="img/ico/favicon/favicon.ico">
-    <title>CONTACT ME » AltSandro D.Pro-Web, Homepage | Talented Web Developer: Crafting Amazing Online Solutions
+    <title langswrs data-langswitch-item="42">CONTACT ME » AltSandro D.Pro-Web, Homepage | Talented Web Developer: Crafting Amazing Online Solutions
     </title>
     <meta name="title"
         content="CONTACT ME » Talented Web Developer: Crafting Amazing Online Solutions | AltSandro D.Pro-Web, Homepage">
     <meta name="description"
         content="CONTACT ME » Talented Web Developer: Crafting Amazing Online Solutions | AltSandro D.Pro-Web, Homepage">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link href="css/styles.css" rel="stylesheet">
     
-    <script src="src/loadMainSpinner.js"></script>
+    
+    <script defer src="src/loadMainSpinner.js"></script>
     <link href="css/loadPageSpinner.css" rel="stylesheet"> 
     
     <link rel="stylesheet" href="css/spinner.css">
-    
-    <script src="src/navbarScr.js"></script>
+   
     <link href="css/navMod.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/languageSelectorStyle.css">
     
     <link href="css/banner.css" rel="stylesheet">
     
@@ -52,7 +52,7 @@
         <img class="loadPageAltSandroSpinnerLabe" alt="AltSandroSpinnerLabe" src="./img/spinnerLabel.svg">
     </div>
 
-
+    
     <script src="src/addNavbar.js"></script>
 
     <header class="banner text-white masthead" style="background-image: url('./img/headers/smartphone.jpg');">
@@ -60,9 +60,12 @@
             <div class="row">
                 <div class="col-md-10 col-lg-8 mx-auto pt-5">
                     <div class="site-heading">
-                        <h1 class="fs-2 fw-bold text-uppercase mb-0">Contact Me</h1>
+                        <h1 class="fs-2 fw-bold text-uppercase mb-0" langswrs data-langswitch-item="43">Contact Me</h1>
                         <hr class="headerHr opacity-75 mb-0" data-HrColorInverse>
-                        <span class="subheading mb-5 fst-normal mt-2 mx-5 px-5">Have questions? I have answers</span>
+                        <span class="subheading mb-5 fst-normal mt-0 mx-5 px-5">
+                            <span langswrs data-langswitch-item="44">Have questions?</span>
+                            <span class="bannerNowrap" langswrs data-langswitch-item="50">I have answers</span>
+                        </span>
                         <div class="button-wrapper pt-1 mt-5">
                             <a href="#contactPageContainer" class="header-round-button">
                             </a>
@@ -72,92 +75,72 @@
             </div>
         </div>
     </header>
-
     <main>
         <div id="contactPageContainer" class="container px-3 py-5">
-            <div id="contactSubstratePage" class="container pb-2 my-5 rounded-3">
+            <div id="contactSubstratePage" class="container pb-2 my-5">
                 <div class="container pb-2 pt-4">
-                    <h6 class="text-info fs-5 fst-normal lh-lg">If you want to get in touch with me, please fill out the
-                        form below or contact me through any of the methods listed below:</h6>
-                    <form class="border-bottom">
+                    <h6 class="text-info fs-5 fst-normal lh-lg specTextJustify" langswrs data-langswitch-item="45">If you want to get in touch with me,
+                         please fill out the form below or use any of the contact methods listed below:</h6>
+                    <form id="emailForm" class="border-bottom">
                         <div class="form-group">
                             <label for="name"></label>
-                            <input id="name" type="text" class="form-control" placeholder="Enter your name">
+                            <input id="name" type="text" class="form-control" placeholder="Enter your name" langswrs data-langswitch-item="46">
                         </div>
                         <div class="form-group">
                             <label for="email"></label>
-                            <input id="email" type="email" class="form-control" placeholder="Enter your email">
+                            <input id="email" type="email" class="form-control" placeholder="Enter your email" langswrs data-langswitch-item="47">
                         </div>
                         <div class="form-group">
                             <label for="message"></label>
-                            <textarea id="message" class="form-control" rows="3"
-                                placeholder="Enter your message"></textarea>
+                            <textarea id="message" class="form-control textareaSpecSubmitMessage" rows="3"
+                                placeholder="Enter your message" langswrs data-langswitch-item="48"></textarea>
                         </div>
-                        <a id="contactSubmitButton" role="button" class="contactSubmitTrigger btn btn-primary mt-4 mb-4 my-glow-contact">Submit</a>
+                        <a id="contactSubmitButton" role="button" class="contactSubmitTrigger btn btn-primary mt-4 mb-4 my-glow-contact" 
+                        langswrs data-langswitch-item="49">Submit</a>
                         <div class="g-recaptcha capchaContactElem d-none mb-4" data-sitekey="6LdZIg0qAAAAAGbCwymh2e3SPr2NMC5sK4ieaFmh"
                         data-callback="onReCaptchaSuccess"></div>
-                        <div class="visitorErrorMessageData alert alert-danger alert-dismissible fade show d-none mb-4" role="alert">
+                        
+                        <div class="visitorErrorMessageData alert alert-danger alert-dismissible fade show d-none mb-4" role="alert"
+                        data-langswitch-item="50">
                             Error!
                             <button type="button" class="contactButtonCloseErrMessage btn-close" aria-label="Close"></button>
                         </div>
+                       
+                        <div class="errorInvisibleMessages d-none">
+                            <div errorInvisibleCurrentMessageContainer errinvcontent></div>
+                           
+                            <div langswrs data-langswitch-item="61" sumberrmass="1">Please complete the reCAPTCHA.</div>
+                            <div langswrs data-langswitch-item="62" sumberrmass="2">Error sending message. Please try again later...</div>
+                            <div langswrs data-langswitch-item="63" sumberrmass="3">Please fill out all fields.</div>
+                            <div langswrs data-langswitch-item="64" sumberrmass="4">Please enter a valid email address.</div>
+                            <div langswrs data-langswitch-item="65" sumberrmass="5">Message exceeds</div>
+                            <div langswrs data-langswitch-item="66" sumberrmass="6">characters. Please shorten your message.</div>
+                        </div>
+                        
                     </form>
                 </div>
 
-                
+
+
+               
                 <section>
                     <div class="container my-2">
                         <div class="pb-1">
-                            <h3 class="text-warning">My address:</h3>
-                            <p class="text-light px-1 ps-2 py-2 fs-5">Ukraine, Kyiv</p>
+                            <h3 class="text-warning" langswrs data-langswitch-item="51">My address:</h3>
+                            <p class="text-light px-1 ps-2 py-2 fs-5" dataLocText langswrs data-langswitch-item="52"></p>
                         </div>
                         <div class="pb-2">
-                            <h3 class="text-warning">My social networks:</h3>
+                            <h3 class="text-warning" langswrs data-langswitch-item="53">My social networks:</h3>
                             <ul id="contactsSocialMediaIcoBanner"
-                                class="nav justify-content-left py-2 my-0 mb-0 contactsLinks rounded-3">
-                                <li class="ps-1 pe-1">
-                                    <a href="https://github.com" target="_blank">
-                                        <img src="img/ico/github.svg" alt="github AltSandro">
-                                    </a>
-                                </li>
-                                <li class="px-1">
-                                    <a href="https://www.linkedin.com/" target="_blank">
-                                        <img src="img/ico/linkedin.svg" alt="linkdin AltSandro">
-                                    </a>
-                                </li>
-                                <li class="px-1">
-                                    <a href="http://facebook.com" target="_blank">
-                                        <img src="img/ico/facebook.svg" alt="Facebook AltSandro">
-                                    </a>
-                                </li>
-                                <li class="px-1">
-                                    <a href="http://instagram.com" target="_blank">
-                                        <img src="img/ico/instagram.svg" alt="Instagram AltSandro">
-                                    </a>
-                                </li>
-                                <li class="px-1">
-                                    <a href="http://x.com" target="_blank">
-                                        <img src="img/ico/twitter.svg" alt="X AltSandro">
-                                    </a>
-                                </li>
-                                <li class="px-1">
-                                    <a href="http://youtube.com" target="_blank">
-                                        <img src="img/ico/youtube.svg" alt="Youtube AltSandro">
-                                    </a>
-                                </li>
-                                <li class="px-1">
-                                    <a href="https://discord.com/" target="_blank">
-                                        <img src="img/ico/discord.svg" alt="Discord AltSandro">
-                                    </a>
-                                </li>
+                                class="nav justify-content-left py-2 my-0 mb-0 contactsLinks rounded-3" dataSocLinkContent>
                             </ul>
                         </div>
                         <div class="pb-2">
-                            <h3 class="text-warning mb-3">My location:</h3>
+                            <h3 class="text-warning mb-3" langswrs data-langswitch-item="54">My location:</h3>
                             <div class="ratio ratio-21x9 h-50">
-                                <iframe class="rounded-3 border"
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1450529.7907806238!2d32.2563002!3d48.4932758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf75c4fc1405%3A0x45f3a841e394f8d4!2sKyiv%2C%20Ukraine!5e0!3m2!1sen!2sus!4v1658056427822!5m2!1sen!2sus"
+                                <iframe class="rounded-3 border bg-body-secondary"
                                     width="600" height="450" style="border: 2px solid #0d6efd;" allowfullscreen=""
-                                    loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                                    loading="lazy" referrerpolicy="no-referrer-when-downgrade" dataMapSrc>
                                 </iframe>
                             </div>
                         </div>
@@ -167,44 +150,57 @@
         </div>
 
         
+        <script defer src="src/contentLoaders/locationContentLoader.js"></script>
+
+       
         <div class="submitPopup" id="submitPopup">
             <div class="submitPopup-content content ms-2 me-2 mt-2 mb-2">
-                <h2 class="heading-secondary">Thank you for contacting us!</h2>
+                <h2 class="heading-secondary" langswrs data-langswitch-item="55">Thank you for contacting me!</h2>
                 <img src="https://img.icons8.com/external-vectorslab-flat-vectorslab/500/external-Email-customer-support-vectorslab-flat-vectorslab.png"
                     alt="emailIco" class="mb-4 img-fluid mx-1">
-                <h3> We sent your message </h3>
+                <h3 langswrs data-langswitch-item="56"> We sent your message </h3>
                 <a href="#contactsSocialMediaIcoBanner" class="submitPopupButton">OK</a>
             </div>
         </div>
     </main>
+    
 
     
     <script src="src/addFooter.js"></script>
 
     
-    <script src="src/footerYear.js"></script>
+    
+    <script src="src/contentLoaders/navbarLinksLoader.js"></script>
+    <script src="src/navbarScr.js"></script>
+
+    <script src="src/contentLoaders/footerNavContentLoader.js"></script>
+
+    
+    <script defer src="src/footerYear.js"></script>
     <link href="css/styles.css" rel="stylesheet">
 
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
-    <script src="src/scrollToTop.js" class="show"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
+    <script defer src="src/scrollToTop.js" class="show"></script>
     <button id="scrollBtn">
         <span class="arrow"></span>
     </button>
 
+    
+    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script defer type="module" src="src/submitMas.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    
+    <script defer src="https://www.google.com/recaptcha/api.js" ></script>
+    <script defer src="https://www.google.com/recaptcha/enterprise.js" ></script>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="module" src="src/submitMas.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
     
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
-    
+    <script src="src/contentLoaders/langSwitch.js"></script>
+
     
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fae04d1720c641dfb6fed8e9fdfe9244"}'></script>
     
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0771133e214d493382ad790792786e24"}'></script>
-
 </body>
 
 </html>

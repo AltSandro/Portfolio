@@ -1,0 +1,123 @@
+[
+  {
+    "id": "_1",
+    "circleId": "_10",
+    "imgSrc": "https://img.icons8.com/color/480/html-5--v1.png",
+    "alt": "HTML labe",
+    "skillName": "HTML",
+    "strokePercent": "40",
+    "link": "https://html.spec.whatwg.org/multipage/",
+    "circleClass": "circle1"
+  },
+  {
+    "id": "_2",
+    "circleId": "_20",
+    "imgSrc": "./img/sk/html.svg",
+    "alt": "CSS labe",
+    "skillName": "CSS",
+    "strokePercent": "40",
+    "link": "https://www.w3.org/Style/CSS/",
+    "circleClass": "circle2"
+  },
+  {
+    "id": "_3",
+    "circleId": "_30",
+    "imgSrc": "./img/sk/js.svg",
+    "alt": "JavaScript labe",
+    "skillName": "JavaScript",
+    "strokePercent": "40",
+    "link": "https://www.ecma-international.org/publications-and-standards/standards/ecma-262/",
+    "circleClass": "circle3"
+  },
+  {
+    "id": "_4",
+    "circleId": "_40",
+    "imgSrc": "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/144/external-bootstrap-a-free-and-open-source-css-framework-logo-shadow-tal-revivo.png",
+    "alt": "Bootstrap labe",
+    "skillName": "Bootstrap",
+    "strokePercent": "70",
+    "link": "https://getbootstrap.com/",
+    "circleClass": "circle4"
+  },
+  {
+    "id": "_5",
+    "circleId": "_50",
+    "imgSrc": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/144/external-vuejs-an-open-source-javascript-framework-for-building-user-interfaces-and-single-page-applications-logo-color-tal-revivo.png",
+    "alt": "Vue labe",
+    "skillName": "Vue",
+    "strokePercent": "115",
+    "link": "https://vuejs.org/",
+    "circleClass": "circle5"
+  },
+  {
+    "id": "_6",
+    "circleId": "_60",
+    "imgSrc": "https://img.icons8.com/fluency/144/data-configuration.png",
+    "alt": "SQL labe",
+    "skillName": "SQL",
+    "strokePercent": "70",
+    "link": "https://www.iso.org/standard/76583.html",
+    "circleClass": "circle6"
+  },
+  {
+    "id": "_7",
+    "circleId": "_70",
+    "imgSrc": "https://img.icons8.com/3d-fluency/144/python.png",
+    "alt": "Python labe",
+    "skillName": "Python",
+    "strokePercent": "70",
+    "link": "https://www.python.org/",
+    "circleClass": "circle7"
+  },
+  {
+    "id": "_8",
+    "circleId": "_80",
+    "imgSrc": "https://img.icons8.com/fluency/144/c-programming.png",
+    "alt": "C labe",
+    "skillName": "C",
+    "strokePercent": "70",
+    "link": "https://www.iso.org/standard/74528.html",
+    "circleClass": "circle8"
+  },
+  {
+    "id": "_9",
+    "circleId": "_90",
+    "imgSrc": "https://img.icons8.com/cute-clipart/144/flask.png",
+    "alt": "Flask labe",
+    "skillName": "Flask",
+    "strokePercent": "90",
+    "link": "https://flask.palletsprojects.com/",
+    "circleClass": "circle9"
+  },
+  {
+    "id": "_1dontUse",
+    "circleId": "_100",
+    "imgSrc": "https://img.icons8.com/fluency/144/figma.png",
+    "alt": "Figma labe",
+    "skillName": "Figma",
+    "strokePercent": "110",
+    "link": "https://www.figma.com/",
+    "circleClass": "circle10",
+    "debug": true
+  },
+  {
+    "id": "_11",
+    "circleId": "_110",
+    "imgSrc": "https://img.icons8.com/fluency/144/figma.png",
+    "alt": "Figma labe",
+    "skillName": "Figma",
+    "strokePercent": "115",
+    "link": "https://www.figma.com/",
+    "circleClass": "circle11"
+  },
+  {
+    "id": "_12",
+    "circleId": "_120",
+    "imgSrc": "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/144/external-jquery-is-a-javascript-library-designed-to-simplify-html-logo-shadow-tal-revivo.png",
+    "alt": "jQuery labe",
+    "skillName": "jQuery",
+    "strokePercent": "95",
+    "link": "https://jquery.com/",
+    "circleClass": "circle12"
+  }
+]

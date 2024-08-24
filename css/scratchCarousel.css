@@ -119,12 +119,57 @@
   }
 }
 
+.baguetteBox-button#close-button {
+  transition: all 0.37s;
+}
+
+.baguetteBox-button#close-button {
+  top: 20px;
+  right: 2%;
+  right: calc(2% + 6px);
+  width: 30px;
+  height: 30px;
+}
+
+.baguetteBox-button#close-button svg line {
+  transform: scale(0.8);
+  transform-origin: center; 
+  stroke-width: 4; 
+  stroke: rgb(197, 15, 15); 
+}
+
+.baguetteBox-button#close-button:hover svg line {
+  stroke: var(--navLinkHLineColor); 
+  transition: all 0.37s;
+}
+
+
+.baguetteBox-button#close-button:focus svg line {
+  transition: all 0.37s;
+}
+
+
 .baguetteBox-button#next-button,
 .baguetteBox-button#previous-button {
   top: 50%;
   top: calc(50% - 30px);
   width: 44px;
   height: 60px;
+  transform: scale(0.95);
+  transform-origin: center;
+}
+
+
+.baguetteBox-button#next-button svg polyline,
+.baguetteBox-button#previous-button svg polyline  {
+  stroke: rgba(100, 205, 247, 0.59); 
+  transition: all 0.37s;
+}
+
+.baguetteBox-button#next-button:hover svg polyline,
+.baguetteBox-button#previous-button:hover svg polyline {
+  stroke: var(--navLinkHLineColor); 
+  transition: all 0.37s;
 }
 
 .baguetteBox-button {
@@ -134,14 +179,32 @@
   padding: 0;
   margin: 0;
   border: 0;
-  -moz-border-radius: 15%;
-  border-radius: 15%;
   background-color: #323232;
   background-color: rgba(50, 50, 50, .5);
   color: #ddd;
   font: 1.6em sans-serif;
   -webkit-transition: background-color .4s ease;
   transition: background-color .4s ease;
+  box-shadow: 0px 1px 15px 1px rgba(122, 147, 156, 0.59);
+}
+
+
+.baguetteBox-button,
+.baguetteBox-button *,
+.baguetteBox-button#next-button,
+.baguetteBox-button#next-button *,
+.baguetteBox-button#previous-button,
+.baguetteBox-button#previous-button * {
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+
+.baguetteBox-button#close-button,
+.baguetteBox-button#close-button svg,
+.baguetteBox-button#close-button * {
+  border-radius: 5px;
+  -moz-border-radius: 5px;
 }
 
 .baguetteBox-button:focus,
@@ -157,20 +220,10 @@
   left: 2%;
 }
 
-.baguetteBox-button#close-button {
-  top: 20px;
-  right: 2%;
-  right: calc(2% + 6px);
-  width: 30px;
-  height: 30px;
-}
-
 .baguetteBox-button svg {
   position: absolute;
   left: 0;
   top: 0;
-  box-shadow: 0px 1px 15px 1px rgba(122, 147, 156, 0.59);
-  border-radius: 0.33rem;
 }
 
 .baguetteBox-button svg:hover {
