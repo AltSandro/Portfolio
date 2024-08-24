@@ -51,7 +51,6 @@
 .preloadHoverContent {
   visibility: hidden;
   opacity: 0; 
-  transition: opacity 0.77s ease, visibility 0.77s linear; 
 }
 
 .preloadSpinner {
@@ -60,10 +59,22 @@
   opacity: 0; 
 }
 
+.preloadHoverContent, 
+.preloadHoverContent .spaceSpinner {
+  transition: none; 
+}
+
+
 .preload-start-button:hover+.preloadHoverContent,
 .preload-start-button:hover+.preloadHoverContent .spaceSpinner {
+  transition: opacity 0.77s ease, visibility 0.77s linear; 
   opacity: 1;
   visibility: visible;
+}
+
+.preload-start-button:not(:hover) + .preloadHoverContent,
+.preload-start-button:not(:hover) + .preloadHoverContent .spaceSpinner {
+  transition: opacity 0.77s ease, visibility 0.77s linear; 
 }
 
 
