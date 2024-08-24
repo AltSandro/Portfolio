@@ -59,7 +59,6 @@
                         content = item.textContent;
                     } else if (item.tagName === 'A') {
                         content = item.textContent;
-                        console.log('СОДЕРЖИМОЕ А', item.textContent);
                     } else if (item.tagName === 'DIV' || item.tagName === 'SPAN') {
                         content = item.textContent;
                     } else if (item.tagName === 'IMG') {

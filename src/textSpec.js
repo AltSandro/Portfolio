@@ -15,7 +15,6 @@
           onComplete: () => {
             const languageUpdated = new Event('specTextEntered');
             document.dispatchEvent(languageUpdated);
-            console.log('текст ввелся');
             setTimeout(() => {
               typedMain.cursor.remove();
               const languages = ["HTML", "CSS", "JavaScript", "Bootstrap", "jQuery"];

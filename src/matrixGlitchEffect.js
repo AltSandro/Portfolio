@@ -22,20 +22,16 @@
             setTimeout(() => {
                 button.classList.add("active");
                 const message = button.querySelector(".ImgMatrixEffectMessage");
-                console.log('Button clicked:', button); 
-                console.log('Message element:', message); 
 
                 setTimeout(() => {
                     message.classList.add("active");
                     message.style.opacity = 1;
-                    console.log('Message activated'); 
                 }, 700);
 
                 setTimeout(() => {
                     button.classList.remove("active");
                     message.classList.remove("active");
                     message.style.opacity = "0"; 
-                    console.log('Message deactivated');
 
                     const url = button.getAttribute("data-MatrUrlFollow");
                     const time = button.getAttribute("data-MatrUrlSecDelay");

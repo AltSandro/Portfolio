@@ -48,7 +48,6 @@
 
         emailjs.send('service_91ok17c', 'template_8jenbmb', templateParams) 
             .then(function(response) {
-                console.log('SUCCESS!', response.status, response.text);
                 window.location.hash = 'submitPopup'; 
                 removeVisitorErrorMessageData();
                 grecaptcha.reset();
