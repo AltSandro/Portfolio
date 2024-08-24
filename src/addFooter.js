@@ -1,5 +1,6 @@
 (() => {
   "use strict"
+  
   document.addEventListener("DOMContentLoaded", function () {
     if (document.getElementById("mainFooter")) return; 
 
