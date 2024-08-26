@@ -7,7 +7,7 @@ media_folder: img
 public_folder: /img
 
 collections:
-  - name: "Страницы"
+  - name: "Код страниц html"
     label: "Страницы"
     files:
       - label: "Home"
@@ -37,7 +37,7 @@ collections:
           - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "Карусель проектов"
-    label: "Карусель проектов"
+    label: "Карусель проектов('Cмотри на AltSandro D.Pro-Web')"
     files:
       - label: "Main Project Carousel Data"
         name: "mainProjCarouselData"
