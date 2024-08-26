@@ -43,15 +43,14 @@ collections:
         name: "mainProjCarouselData"
         file: "json/mainProjCarousel-data.json"
         fields:
-          - { label: "Carousel Items", name: "items", widget: "list", fields: [
-              { label: "Active", name: "active", widget: "boolean" },
+          - { label: "Slides", name: "slides", widget: "list", fields: [
               { label: "Image URL", name: "image", widget: "string" },
-              { label: "Alt Text", name: "alt", widget: "string" },
-              { label: "Link URL", name: "link", widget: "string" },
               { label: "Caption", name: "caption", widget: "string" },
-              { label: "Matrix Effect Button", name: "matrix_effect_button", widget: "boolean" },
-              { label: "Matrix URL", name: "matrix_url", widget: "string", required: false },
-              { label: "Matrix URL Sec Delay", name: "matrix_url_sec_delay", widget: "string", required: false },
-              { label: "Matrix Effect Message", name: "matrix_effect_message", widget: "string", required: false }
+              { label: "Link URL", name: "link", widget: "string" },
+              { label: "Alt Text", name: "alt", widget: "string" },
+              { label: "Matrix Effect", name: "isMatrixEffect", widget: "boolean", required: false },
+              { label: "Matrix Effect Message", name: "matrixEffectMessage", widget: "string", required: false },
+              { label: "Matrix Effect Delay", name: "matrixEffectDelay", widget: "string", required: false },
+              { label: "Langswrs", name: "langswrs", widget: "string", required: false },
+              { label: "Data Langswitch Item", name: "dataLangswitchItem", widget: "string", required: false }
             ]}
-
