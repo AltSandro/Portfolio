@@ -5,6 +5,7 @@ backend:
 
 media_folder: img
 public_folder: /img
+mainProjCarouselSliders: img\RaNproj
 
 collections:
   - name: "Код страниц html"
@@ -37,7 +38,7 @@ collections:
           - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "Карусель проектов"
-    label: "Карусель проектов('Cмотри на AltSandro D.Pro-Web')"
+    label: "Карусель проектов ( 'Cмотри на AltSandro D.Pro-Web' )"
     files:
       - label: "Main Project Carousel Data"
         name: "mainProjCarouselData"
