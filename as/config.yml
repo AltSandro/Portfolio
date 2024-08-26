@@ -43,14 +43,15 @@ collections:
         name: "mainProjCarouselData"
         file: "json/mainProjCarousel-data.json"
         fields:
-          - { label: "1) Cлайды карусели проектов", name: "slides", widget: "list", fields: [
-              { label: "2) URL на изображение слайд проекта", name: "image", widget: "string" },
-              { label: "Как подписать слайд:", name: "caption", widget: "string" },
-              { label: "Куда перейдем при клике по слайду(URL)", name: "link", widget: "string", required: false },
-              { label: "alt фотки(если не прогрузится вдруг...)", name: "alt", widget: "string", required: false },
-              { label: "Эффект матрицы(для онгоинга)", name: "isMatrixEffect", widget: "boolean", required: false },
-              { label: "Сообщение эффекта матрицы", name: "matrixEffectMessage", widget: "string", required: false },
-              { label: "Задержка эффекта матрицы(сек), ~1.3 ставить", name: "matrixEffectDelay", widget: "string", required: false },
-              { label: "langswrs - всегда такое слово если нужно переводить", name: "langswrs", widget: "string", required: false },
-              { label: "№ dataLangswitchItem='...' из 'Файл языкового переключения'", name: "dataLangswitchItem", widget: "string", required: false }
+            - { label: "Cлайды карусели проектов", name: "slides", widget: "list", fields: [
+              { label: "1) URL на изображение слайд проекта", name: "image", widget: "string" },
+              { label: "2) Как подписать слайд:", name: "caption", widget: "string" },
+              { label: "3) Куда перейдем при клике по слайду(URL)", name: "link", widget: "string", required: false },
+              { label: "4) alt фотки(если не прогрузится вдруг...)", name: "alt", widget: "string", required: false },
+              { label: "5) Эффект матрицы(для онгоинга)", name: "isMatrixEffect", widget: "boolean", required: false },
+              { label: "6) Сообщение эффекта матрицы", name: "matrixEffectMessage", widget: "string", required: false },
+              { label: "7) Задержка эффекта матрицы(сек), ~1.3 ставить", name: "matrixEffectDelay", widget: "string", required: false },
+              { label: "8) langswrs - всегда такое слово если нужно переводить", name: "langswrs", widget: "string", required: false },
+              { label: "9) № dataLangswitchItem='...' из 'Файл языкового переключения'", name: "dataLangswitchItem", widget: "string", required: false }
             ]}
+
