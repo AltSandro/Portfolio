@@ -36,21 +36,21 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
 
-- name: "Карусель"
-    label: "Карусель"
+  - name: "Carousel"
+    label: "Carousel"
     files:
-      - label: "Данные карусели основного проекта"
+      - label: "Main Project Carousel Data"
         name: "mainProjCarouselData"
         file: "json/mainProjCarousel-data.json"
         fields:
-          - { label: "Слайды", name: "slides", widget: "list", fields: [
-              { label: "URL изображения", name: "image", widget: "string" },
-              { label: "Подпись", name: "caption", widget: "string" },
-              { label: "URL ссылки", name: "link", widget: "string" },
-              { label: "Альтернативный текст", name: "alt", widget: "string" },
-              { label: "Эффект матрицы", name: "isMatrixEffect", widget: "boolean", required: false },
-              { label: "Сообщение для эффекта матрицы", name: "matrixEffectMessage", widget: "string", required: false },
-              { label: "Задержка для эффекта матрицы", name: "matrixEffectDelay", widget: "string", required: false },
-              { label: "Имя-метка языкового переключателя", name: "langswrs", widget: "string", required: false },
-              { label: "Элемент переключателя языка", name: "dataLangswitchItem", widget: "string", required: false }
+          - { label: "Slides", name: "slides", widget: "list", fields: [
+              { label: "Image URL", name: "image", widget: "string" },
+              { label: "Caption", name: "caption", widget: "string" },
+              { label: "Link URL", name: "link", widget: "string" },
+              { label: "Alt Text", name: "alt", widget: "string" },
+              { label: "Matrix Effect", name: "isMatrixEffect", widget: "boolean", required: false },
+              { label: "Matrix Effect Message", name: "matrixEffectMessage", widget: "string", required: false },
+              { label: "Matrix Effect Delay", name: "matrixEffectDelay", widget: "string", required: false },
+              { label: "Langswrs", name: "langswrs", widget: "string", required: false },
+              { label: "Data Langswitch Item", name: "dataLangswitchItem", widget: "string", required: false }
             ]}
