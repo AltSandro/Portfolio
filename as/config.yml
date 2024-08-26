@@ -43,8 +43,8 @@ collections:
         name: "mainProjCarouselData"
         file: "json/mainProjCarousel-data.json"
         fields:
-          - { label: "Cлайды карусели проектов", name: "slides", widget: "list", fields: [
-              { label: "URL на изображение слайд проекта", name: "image", widget: "string" },
+          - { label: "1) Cлайды карусели проектов", name: "slides", widget: "list", fields: [
+              { label: "2) URL на изображение слайд проекта", name: "image", widget: "string" },
               { label: "Как подписать слайд:", name: "caption", widget: "string" },
               { label: "Куда перейдем при клике по слайду(URL)", name: "link", widget: "string", required: false },
               { label: "alt фотки(если не прогрузится вдруг...)", name: "alt", widget: "string", required: false },
