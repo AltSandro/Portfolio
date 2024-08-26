@@ -51,6 +51,6 @@ collections:
               { label: "Эффект матрицы(если проект будет онгоинг то да - лучше включить)", name: "isMatrixEffect", widget: "boolean", required: false },
               { label: "Сообщение для эффекта матрицы(если его нет оставить пустым)", name: "matrixEffectMessage", widget: "string", required: false },
               { label: "Задержка для эффекта матрицы(сек), обычно цифру 1.3 ставить", name: "matrixEffectDelay", widget: "string", required: false },
-              { label: "Языковой переключатель(на базе закладки "Файл языкового переключения")", name: "langswrs", widget: "string", required: false },
-              { label: "Элемент переключателя языка(dataLangswitchItem)= цифра из "Файл языкового переключения", name: "dataLangswitchItem", widget: "string", required: false }
+              { label: "Языковой переключатель(на базе закладки 'Файл языкового переключения')", name: "langswrs", widget: "string", required: false },
+              { label: "Элемент переключателя языка(dataLangswitchItem)= цифра из 'Файл языкового переключения'", name: "dataLangswitchItem", widget: "string", required: false }
             ]}
