@@ -5,7 +5,8 @@ backend:
 
 media_folder: img
 public_folder: /img
-media_folder: img/RaNproj
+media_folder_2: img/RaNproj
+public_folder_2: /img/RaNproj
 
 collections:
   - name: "Страницы"
