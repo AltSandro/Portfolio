@@ -5,8 +5,7 @@ backend:
 
 media_folder: img
 public_folder: /img
-media_folder_2: img/RaNproj
-public_folder_2: /img/RaNproj
+
 
 collections:
   - name: "Страницы"
@@ -43,6 +42,14 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
 
+  - name: "CSS"
+    label: "Код CSS"
+    files:
+      - label: "Footer CSS"
+            name: "footerCss"
+            file: "css/footerMod.css"
+            fields:
+              - { label: "CSS", name: "cssContent", widget: "code", required: true, default: "/* Ваш CSS код здесь */", hint: "Редактируйте CSS код" }     
 
   - name: "Карусель проектов"
     label: "Карусель проектов ( 'Cмотри на AltSandro D.Pro-Web' )"
