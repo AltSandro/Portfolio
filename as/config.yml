@@ -44,13 +44,13 @@ collections:
         file: "json/mainProjCarousel-data.json"
         fields:
           - { label: "Слайды", name: "slides", widget: "list", fields: [
-              { label: "URL изображения", name: "image", widget: "string" },
-              { label: "Подпись", name: "caption", widget: "string" },
-              { label: "URL ссылки", name: "link", widget: "string" },
-              { label: "Альтернативный текст", name: "alt", widget: "string" },
-              { label: "Эффект матрицы", name: "isMatrixEffect", widget: "boolean", required: false },
-              { label: "Сообщение для эффекта матрицы", name: "matrixEffectMessage", widget: "string", required: false },
-              { label: "Задержка для эффекта матрицы", name: "matrixEffectDelay", widget: "string", required: false },
-              { label: "Языковой переключатель", name: "langswrs", widget: "string", required: false },
-              { label: "Элемент переключателя языка", name: "dataLangswitchItem", widget: "string", required: false }
+              { label: "URL изображения(локально(желательно) или из инета)", name: "image", widget: "string" },
+              { label: "Подпись-заголовок(на карусели подпись слайда)", name: "caption", widget: "string" },
+              { label: "URL, куда перейдем при клике, если есть коечно она..", name: "link", widget: "string", required: false },
+              { label: "alt подпись фотки(если фотка не прогрузится вдруг...)", name: "alt", widget: "string" },
+              { label: "Эффект матрицы(если проект будет онгоинг то да - лучше включить)", name: "isMatrixEffect", widget: "boolean", required: false },
+              { label: "Сообщение для эффекта матрицы(если его нет оставить пустым)", name: "matrixEffectMessage", widget: "string", required: false },
+              { label: "Задержка для эффекта матрицы(сек), обычно цифру 1.3 ставить", name: "matrixEffectDelay", widget: "string", required: false },
+              { label: "Языковой переключатель(на базе закладки "Файл языкового переключения")", name: "langswrs", widget: "string", required: false },
+              { label: "Элемент переключателя языка(dataLangswitchItem)= цифра из "Файл языкового переключения", name: "dataLangswitchItem", widget: "string", required: false }
             ]}
