@@ -1,40 +1,49 @@
 {
-    "slides": [
-      {
-        "image": "img/RaNproj/1.png",
-        "caption": "CS50 Homepage",
-        "link": "index.html",
-        "alt": "CS50 Homepage",
-        "langswrs": "langswrs",
-        "dataLangswitchItem": "34"
-      },
-      {
-        "image": "img/RaNproj/2.png",
-        "caption": "Ongoing calculator project",
-        "link": "https://youtu.be/Cm4HuoB4yC0?feature=shared",
-        "alt": "Ongoing calculator project",
-        "isMatrixEffect": true,
-        "matrixEffectMessage": "Is still in the making...",
-        "matrixEffectDelay": "1.3",
-        "langswrs": "langswrs",
-        "dataLangswitchItem": "35"
-      },
-      {
-        "image": "img/RaNproj/3.png",
-        "caption": "LEMONCHELLO Fruit Hunt",
-        "link": "#lemonchello-section",
-        "alt": "LEMONCHELLO Fruit Hunt",
-        "langswrs": "langswrs",
-        "dataLangswitchItem": "36"
-      },
-      {
-        "image": "img/RaNproj/4.png",
-        "caption": "Quick select SVU",
-        "link": "https://altsandro.github.io/qsvu-online-solution",
-        "alt": "Quick select SVU",
-        "langswrs": "langswrs",
-        "dataLangswitchItem": "37"
-      }
-    ]
+  "slides": [
+    {
+      "image": "img/RaNproj/1.png",
+      "caption": "CS50 Homepage",
+      "link": "index.html",
+      "alt": "CS50 Homepage",
+      "langswrs": "langswrs",
+      "dataLangswitchItem": "34",
+      "isMatrixEffect": false
+    },
+    {
+      "image": "img/RaNproj/2.png",
+      "caption": "Ongoing calculator project",
+      "link": "https://youtu.be/Cm4HuoB4yC0?feature=shared",
+      "alt": "Ongoing calculator project",
+      "isMatrixEffect": true,
+      "matrixEffectMessage": "Is still in the making...",
+      "matrixEffectDelay": "1.3",
+      "langswrs": "langswrs",
+      "dataLangswitchItem": "35"
+    },
+    {
+      "image": "img/RaNproj/3.png",
+      "caption": "LEMONCHELLO Fruit Hunt",
+      "link": "#lemonchello-section",
+      "alt": "LEMONCHELLO Fruit Hunt",
+      "langswrs": "langswrs",
+      "dataLangswitchItem": "36",
+      "isMatrixEffect": false
+    },
+    {
+      "image": "img/RaNproj/4.png",
+      "caption": "Quick select SVU",
+      "link": "https://altsandro.github.io/qsvu-online-solution",
+      "alt": "Quick select SVU",
+      "langswrs": "langswrs",
+      "dataLangswitchItem": "37",
+      "isMatrixEffect": false
+    },
+    {
+      "isMatrixEffect": false,
+      "dataLangswitchItem": "37",
+      "langswrs": "langswrs",
+      "image": "img/RaNproj/4.png",
+      "caption": "Quick select bbb"
+    }
+  ]
 }
-  
