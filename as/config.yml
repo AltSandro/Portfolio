@@ -5,7 +5,7 @@ backend:
 
 media_folder: img
 public_folder: /img
-mainProjCarouselSliders: img\RaNproj
+media_folder: img/RaNproj
 
 collections:
   - name: "Страницы"
