@@ -8,8 +8,8 @@ public_folder: /img
 mainProjCarouselSliders: img\RaNproj
 
 collections:
-  - name: "Код страниц html"
-    label: "Страницы"
+  - name: "Страницы"
+    label: "Код страниц html"
     files:
       - label: "Home"
         name: "home"
