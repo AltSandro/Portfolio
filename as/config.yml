@@ -49,7 +49,7 @@ collections:
         name: "footerCss"
         file: "css/footerMod.css"
         fields:
-          - { label: "CSS", name: "cssContent", widget: "string"}     
+          - { label: "footerCss", name: "CSS", widget: "markdown"}     
 
   - name: "Карусель проектов"
     label: "Карусель проектов ( 'Cмотри на AltSandro D.Pro-Web' )"
