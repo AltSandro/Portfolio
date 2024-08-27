@@ -216,13 +216,13 @@ collections:
       fields:
         - label: "Language"
           name: "en"
-          widget: "object"
+          widget: "string"
         - label: "Language"
           name: "uk"
-          widget: "object"
+          widget: "string"
         - label: "Language"
           name: "ru"
-          widget: "object"    
+          widget: "string"    
 
 
 
