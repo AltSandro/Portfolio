@@ -209,11 +209,8 @@ collections:
   
   - name: "Англ перевод"
     label: "Language Translations (ENG)"
-    files:
-      - label: "English Translations"
-        name: "englishTranslations"
-        file: "json/lang-data.json"
-
+    file: "json/lang-data.json"
+    widget: "text"
 
 
 
