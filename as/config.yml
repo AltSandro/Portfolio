@@ -133,6 +133,18 @@ collections:
               { label: "2) Расположенте на иконку", name: "imgSrc", widget: "string" },
               { label: "3) Описание иконки (alt)", name: "alt", widget: "string" }
             ]}
+            
+  - name: "Англ перевод"
+    label: "Language Translations (ENG)"
+    files:
+      - label: "English Translations"
+        name: "englishTranslations"
+        file: "json/lang-data.json"
+        fields:
+          - label: "Language"
+            name: "en"
+            widget: "object"
+              - { label: "Body", name: "en", widget: "markdown" }
 
   - name: "Navbar - ссылки (чисто по сайту)"
     label: "Navbar - ссылки (чисто по сайту)"
@@ -206,48 +218,7 @@ collections:
           - { label: "CSS Content", name: "cssContent", widget: "code", language: "css", required: true, hint: "Редактируйте CSS код" }
           - { label: "style", name: "style", widget: "markdown"}     
 
-- name: "LanguageData"
-  label: "Language Translations (Переводы)"
-  files:
-    - label: "JSON Translations"
-      name: "jsonTranslations"
-      file: "json/lang-data.json"
-      fields:
-        - label: "Page Titles"
-          name: "page_titles"
-          widget: "object"
-          fields:
-            - label: "Home Title"
-              name: "home_title"
-              widget: "string"
-              hint: "Title for the homepage."
-            - label: "About Title"
-              name: "about_title"
-              widget: "string"
-              hint: "Title for the about page."
-        - label: "Nav Items"
-          name: "nav_items"
-          widget: "object"
-          fields:
-            - label: "About"
-              name: "about"
-              widget: "string"
-            - label: "Projects"
-              name: "projects"
-              widget: "string"
-            - label: "Contacts"
-              name: "contacts"
-              widget: "string"
-        - label: "Buttons"
-          name: "buttons"
-          widget: "object"
-          fields:
-            - label: "Explore Button"
-              name: "explore_button"
-              widget: "string"
-            - label: "Submit Button"
-              name: "submit_button"
-              widget: "string"
+
   
 
   
