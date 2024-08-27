@@ -51,7 +51,35 @@ collections:
         fields:
           - { label: "CSS Content", name: "cssContent", widget: "code", language: "css", required: true, hint: "Редактируйте CSS код" }
           - { label: "style", name: "style", widget: "markdown"}     
+  
+  - name: "HeroButtons"
+    label: "HeroButtons (страница 'ОБО МНЕ' )"
+    files:
+      - label: "Hero buttons data"
+        name: "heroButtonsData"
+        file: "json/buttons-data.json"
+        fields:
+          - { label: "heroButtons_In_AboutPage", name: "heroButtons", widget: "list", fields: [
+              { label: "1) Cсылка перехода кнопки(URL)", name: "href", widget: "string"},
+              { label: "2) Текст кнопки", name: "text", widget: "string" },
+              { label: "3) langswrs - обязательная метка для 4го пункта", name: "langswrs", widget: "string", required: false },
+              { label: "4) addAttributeTwo то есть фразу надо data-langswitch-item='...' ", name: "addAttributeTwo", widget: "string", required: false }
+            ]}
 
+  - name: "Остальные меняемые кнопки"
+    label: "Остальные меняемые кнопки"
+    files:
+      - label: "Остальные меняемые кнопки (кроме HeroButtons)"
+        name: "OtheButtonsData"
+        file: "json/buttons-data.json"
+        fields:
+          - { label: "OtheButtonsData", name: "buttons", widget: "list", fields: [
+              { label: "1) Cсылка перехода кнопки(URL)", name: "href", widget: "string"},
+              { label: "2) Текст кнопки", name: "text", widget: "string" },
+              { label: "3) langswrs - обязательная метка для 4го пункта", name: "langswrs", widget: "string", required: false },
+              { label: "4) addAttributeTwo то есть фразу надо data-langswitch-item='...' ", name: "addAttributeTwo", widget: "string", required: false }
+            ]}    
+  
   - name: "Карусель проектов"
     label: "Карусель проектов ( 'Cмотри на AltSandro D.Pro-Web' )"
     files:
@@ -61,7 +89,7 @@ collections:
         fields:
           - { label: "Cлайды карусели проектов", name: "slides", widget: "list", fields: [
               { label: "1) URL на изображение слайд проекта", name: "image", widget: "string" },
-              { label: "2) Как подписать слайд:", name: "caption", widget: "string" },
+              { label: "2) Как подписать слайд", name: "caption", widget: "string" },
               { label: "3) Куда перейдем при клике по слайду(URL)", name: "link", widget: "string", required: false },
               { label: "4) alt фотки(если не прогрузится вдруг...)", name: "alt", widget: "string", required: false },
               { label: "5) Эффект матрицы(для онгоинга)", name: "isMatrixEffect", widget: "boolean", required: false },
@@ -71,17 +99,6 @@ collections:
               { label: "9) dataLangswitchItem='...' из 'Файл языкового переключения'", name: "dataLangswitchItem", widget: "string", required: false }
             ]}
 
-  - name: "HeroButtons"
-    label: "HeroButtons (страница 'ОБО МНЕ' )"
-    files:
-      - label: "Hero buttons data"
-        name: "heroButtonsData"
-        file: "json/buttons-data.json"
-        fields:
-          - { label: "heroButtons_AboutPage", name: "heroButtons", widget: "list", fields: [
-              { label: "1) Cсылка перехода кнопки(URL)", name: "href", widget: "string"},
-              { label: "2) Текст кнопки:", name: "text", widget: "string" },
-              { label: "3) langswrs - обязательная метка для 4го пункта", name: "langswrs", widget: "string", required: false },
-              { label: "4) addAttributeTwo то есть фразу надо data-langswitch-item='...' ", name: "addAttributeTwo", widget: "string", required: false }
-            ]}
+
   
+
