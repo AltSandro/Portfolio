@@ -207,17 +207,88 @@ collections:
           - { label: "CSS Content", name: "cssContent", widget: "code", language: "css", required: true, hint: "Редактируйте CSS код" }
           - { label: "style", name: "style", widget: "markdown"}
   
-  - name: "Англ перевод"
-    label: "Language Translations (ENG)"
+ - name: "translations"
+    label: "Language Translations"
     files:
-      - label: "English Translations"
-        name: "englishTranslations"
+      - name: "English Translations"
+        label: "English Translations"
         file: "json/lang-data.json"
         fields:
-          - label: "Language"
-            name: "en"
-            widget: "keyvalue"
-           
+          - label: "Translations"
+            name: "translations"
+            widget: "object"
+            fields:
+              - { label: "Language", name: "en", widget: "object", fields: [
+                  { label: "1", name: "1", widget: "string" },
+                  { label: "2", name: "2", widget: "string" },
+                  { label: "3", name: "3", widget: "string" },
+                  { label: "4", name: "4", widget: "string" },
+                  { label: "5", name: "5", widget: "string" },
+                  { label: "6", name: "6", widget: "string" },
+                  { label: "7", name: "7", widget: "string" },
+                  { label: "8", name: "8", widget: "string" },
+                  { label: "9", name: "9", widget: "string" },
+                  { label: "10", name: "10", widget: "string" },
+                  { label: "11", name: "11", widget: "string" },
+                  { label: "12", name: "12", widget: "string" },
+                  { label: "13", name: "13", widget: "string" },
+                  { label: "14", name: "14", widget: "string" },
+                  { label: "15", name: "15", widget: "string" },
+                  { label: "16", name: "16", widget: "string" },
+                  { label: "17", name: "17", widget: "string" },
+                  { label: "18", name: "18", widget: "string" },
+                  { label: "19", name: "19", widget: "string" },
+                  { label: "20", name: "20", widget: "string" },
+                  { label: "21", name: "21", widget: "string" },
+                  { label: "22", name: "22", widget: "string" },
+                  { label: "23", name: "23", widget: "string" },
+                  { label: "24", name: "24", widget: "string" },
+                  { label: "25", name: "25", widget: "string" },
+                  { label: "26", name: "26", widget: "string" },
+                  { label: "27", name: "27", widget: "string" },
+                  { label: "28", name: "28", widget: "string" },
+                  { label: "29", name: "29", widget: "string" },
+                  { label: "30", name: "30", widget: "string" },
+                  { label: "31", name: "31", widget: "string" },
+                  { label: "32", name: "32", widget: "string" },
+                  { label: "33", name: "33", widget: "string" },
+                  { label: "34", name: "34", widget: "string" },
+                  { label: "35", name: "35", widget: "string" },
+                  { label: "36", name: "36", widget: "string" },
+                  { label: "37", name: "37", widget: "string" },
+                  { label: "38", name: "38", widget: "string" },
+                  { label: "39", name: "39", widget: "string" },
+                  { label: "40", name: "40", widget: "string" },
+                  { label: "41", name: "41", widget: "string" },
+                  { label: "42", name: "42", widget: "string" },
+                  { label: "43", name: "43", widget: "string" },
+                  { label: "44", name: "44", widget: "string" },
+                  { label: "45", name: "45", widget: "string" },
+                  { label: "46", name: "46", widget: "string" },
+                  { label: "47", name: "47", widget: "string" },
+                  { label: "48", name: "48", widget: "string" },
+                  { label: "49", name: "49", widget: "string" },
+                  { label: "50", name: "50", widget: "string" },
+                  { label: "51", name: "51", widget: "string" },
+                  { label: "52", name: "52", widget: "string" },
+                  { label: "53", name: "53", widget: "string" },
+                  { label: "54", name: "54", widget: "string" },
+                  { label: "55", name: "55", widget: "string" },
+                  { label: "56", name: "56", widget: "string" },
+                  { label: "57", name: "57", widget: "string" },
+                  { label: "58", name: "58", widget: "string" },
+                  { label: "59", name: "59", widget: "string" },
+                  { label: "60", name: "60", widget: "string" },
+                  { label: "61", name: "61", widget: "string" },
+                  { label: "62", name: "62", widget: "string" },
+                  { label: "63", name: "63", widget: "string" },
+                  { label: "64", name: "64", widget: "string" },
+                  { label: "65", name: "65", widget: "string" },
+                  { label: "66", name: "66", widget: "string" },
+                  { label: "67", name: "67", widget: "string" },
+                  { label: "68", name: "68", widget: "string" },
+                  { label: "69", name: "69", widget: "string" }
+                ]}
 
 
   
