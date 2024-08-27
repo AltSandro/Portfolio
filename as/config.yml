@@ -206,6 +206,22 @@ collections:
           - { label: "CSS Content", name: "cssContent", widget: "code", language: "css", required: true, hint: "Редактируйте CSS код" }
           - { label: "style", name: "style", widget: "markdown"}     
 
+- name: "Переводы"
+  label: "Переводы (Переводы)"
+  files:
+    - label: "JSON Translations"
+      name: "jsonTranslations"
+      file: "json/lang-data.json"
+      fields:
+        - label: "Translations JSON"
+          name: "json"
+          widget: "code"  # Или используйте "textarea" для простого текстового поля
+          default_language: "json"
+          description: "Edit the entire JSON file here."
+          editor_components: []  # Добавляет минимальную поддержку редактора кода
+          output_code_only: true  # Сохраняет файл как обычный JSON
+          mode: "application/json"  # Устанавливает режим для JSON
+          hint: "Here you can edit the entire JSON translation file at once."
 
   
 
