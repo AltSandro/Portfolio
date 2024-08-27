@@ -1,4 +1,4 @@
-\backend:
+backend:
   name: github
   repo: AltSandro/altsandro.github.io
   branch: main
@@ -121,26 +121,33 @@ collections:
               - { label: "1) Адрес", name: "linkText", widget: "string" }
               - { label: "2) Локация на карте (URL)", name: "mapSrc", widget: "string" }
 
-  - name: "PagesNav"
-    label: "Pages Navigation (Навигация страниц)"
+  - name: "Navbar - ссылки (чисто по сайту)"
+    label: "Navbar - ссылки (чисто по сайту)"
     files:
       - label: "Pages Navigation data"
-        name: "pagesNavData"
+        name: "pages_Navbar_Link_Data"
         file: "json/pagesNav-data.json"
         fields:
           - { label: "Navbar Navigation", name: "navbarNav", widget: "list", fields: [
-              { label: "1) Ссылка", name: "href", widget: "string" },
-              { label: "2) Текст ссылки", name: "text", widget: "string" },
-              { label: "3) Язык", name: "langswrs", widget: "string", required: false },
-              { label: "4) Дополнительный атрибут", name: "addAttributeTwo", widget: "string", required: false }
-            ]}
-          - { label: "Footer Navigation", name: "footerNav", widget: "list", fields: [
-              { label: "1) Ссылка", name: "href", widget: "string" },
-              { label: "2) Текст ссылки", name: "text", widget: "string" },
-              { label: "3) Язык", name: "langswrs", widget: "string", required: false },
+              { label: "1) Ссылка на страницу сайта", name: "href", widget: "string" },
+              { label: "2) Текст ссылки(как будет отображено на сайте)", name: "text", widget: "string" },
+              { label: "3) langswrs - всегда такое слово если нужно переводить", name: "langswrs", widget: "string", required: false },
               { label: "4) Дополнительный атрибут", name: "addAttributeTwo", widget: "string", required: false }
             ]}
 
+  - name: "Footer - ссылки (чисто по сайту)"
+    label: "Footer - ссылки (чисто по сайту)"
+    files:
+      - label: "FooterNavigation data"
+        name: "footer_pages_link_Data"
+        file: "json/pagesNav-data.json"
+        fields:
+          - { label: "Footer pages Navigation", name: "footerNav", widget: "list", fields: [
+              { label: "1) Ссылка на страницу сайта", name: "href", widget: "string" },
+              { label: "2) Текст ссылки(как будет отображено на сайте)", name: "text", widget: "string" },
+              { label: "3) langswrs - всегда такое слово если нужно переводить", name: "langswrs", widget: "string", required: false },
+              { label: "4) dataLangswitchItem='...' из 'Файл языкового переключения", name: "addAttributeTwo", widget: "string", required: false }
+            ]}
 
   - name: "Страницы"
     label: "Код страниц html"
