@@ -1,4 +1,4 @@
-backend:
+\backend:
   name: github
   repo: AltSandro/altsandro.github.io
   branch: main
@@ -134,10 +134,6 @@ collections:
               { label: "3) Язык", name: "langswrs", widget: "string", required: false },
               { label: "4) Дополнительный атрибут", name: "addAttributeTwo", widget: "string", required: false }
             ]}
-        - label: "Footer Navigation"
-        name: "Footer Navigation"
-        file: "json/pagesNav-data.json"
-        fields:
           - { label: "Footer Navigation", name: "footerNav", widget: "list", fields: [
               { label: "1) Ссылка", name: "href", widget: "string" },
               { label: "2) Текст ссылки", name: "text", widget: "string" },
