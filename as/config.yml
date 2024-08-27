@@ -50,23 +50,27 @@ collections:
               { label: "4) addAttributeTwo то есть фразу надо data-langswitch-item='...' ", name: "addAttributeTwo", widget: "string", required: false }
             ]}
             
- - name: "Навыки"
+- name: "Skills"
   label: "Навыки"
   files:
     - label: "Skills"
       name: "skills"
       file: "json/skills-data.json"
-      widget: "list"
       fields:
-            - { label: "1) Порядковый id элемента (_1.._2.._3)", name: "id", widget: "string" }
-            - { label: "2) Порядковый circleId круга (внутренний)", name: "circleId", widget: "string" }
-            - { label: "3) Источник изображения (imgSrc)", name: "imgSrc", widget: "string" }
-            - { label: "4) Описание изображения (alt)", name: "alt", widget: "string" }
-            - { label: "5) Подпись скила (имя)", name: "skillName", widget: "string" }
-            - { label: "6) Уровень владения (нехватающих градусов до полных 360)", name: "strokePercent", widget: "string" }
-            - { label: "7) Ссылка (link)", name: "link", widget: "string" }
-            - { label: "8) Порядковый № 'circle_' (circle1..circle2..circle3)", name: "circleClass", widget: "string" }
-            - { label: "9) Отладочный/невидимый (debug)", name: "debug", widget: "boolean", required: false }
+        - label: "Список навыков"
+          name: "skillsList"
+          widget: "list"
+          fields:
+            - { label: "ID", name: "id", widget: "string" }
+            - { label: "ID круга", name: "circleId", widget: "string" }
+            - { label: "Ссылка на изображение", name: "imgSrc", widget: "string" }
+            - { label: "Альтернативный текст", name: "alt", widget: "string" }
+            - { label: "Название навыка", name: "skillName", widget: "string" }
+            - { label: "Процент завершения (stroke)", name: "strokePercent", widget: "number" }
+            - { label: "Ссылка на ресурс", name: "link", widget: "string" }
+            - { label: "Класс круга", name: "circleClass", widget: "string" }
+            - { label: "Режим отладки", name: "debug", widget: "boolean", required: false }
+
 
                
   - name: "Карусель проектов"
@@ -105,27 +109,19 @@ collections:
               - { label: "4) Категория('Scratch' всегда)", name: "category", widget: "string" }
               - { label: "5) Название проекта ('LEMONCHELLO Fruit Hunt' всегда)", name: "name", widget: "string" }
 
-- name: "Skills"
-  label: "Навыки"
-  files:
-    - label: "Skills"
-      name: "skills"
-      file: "json/skills-data.json"
-      fields:
-        - label: "Список навыков"
-          name: "skillsList"
-          widget: "list"
-          fields:
-            - { label: "ID", name: "id", widget: "string" }
-            - { label: "ID круга", name: "circleId", widget: "string" }
-            - { label: "Ссылка на изображение", name: "imgSrc", widget: "string" }
-            - { label: "Альтернативный текст", name: "alt", widget: "string" }
-            - { label: "Название навыка", name: "skillName", widget: "string" }
-            - { label: "Процент завершения (stroke)", name: "strokePercent", widget: "number" }
-            - { label: "Ссылка на ресурс", name: "link", widget: "string" }
-            - { label: "Класс круга", name: "circleClass", widget: "string" }
-            - { label: "Режим отладки", name: "debug", widget: "boolean", required: false }
-
+  - name: "Локация"
+    label: "Локация"
+    files:
+      - label: "Location"
+        name: "location"
+        file: "json/loc-data.json"
+        fields:
+          - label: "Информация о локации"
+            name: "locationInfo"
+            widget: "object"
+            fields:
+              - { label: "1) Адрес", name: "linkText", widget: "string" }
+              - { label: "2) Локация на карте (URL)", name: "mapSrc", widget: "string" }
 
   - name: "Страницы"
     label: "Код страниц html"
