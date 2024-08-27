@@ -121,6 +121,31 @@ collections:
               - { label: "1) Адрес", name: "linkText", widget: "string" }
               - { label: "2) Локация на карте (URL)", name: "mapSrc", widget: "string" }
 
+  - name: "Ccылки перехода на страницы сайта navbar и футер(без social media)"
+  label: "Pages Navigation (Навигация страниц)"
+  files:
+    - label: "Pages Navigation data"
+      name: "pagesNavData"
+      file: "json/pagesNav-data.json"
+      fields:
+        - label: "Navbar Navigation"
+          name: "navbarNav"
+          widget: "list"
+          fields:
+            - { label: "1) Ссылка", name: "href", widget: "string" }
+            - { label: "2) Текст ссылки", name: "text", widget: "string" }
+            - { label: "3) Язык", name: "langswrs", widget: "string" }
+            - { label: "4) Дополнительный атрибут", name: "addAttributeTwo", widget: "string" }
+        - label: "Footer Navigation"
+          name: "footerNav"
+          widget: "list"
+          fields:
+            - { label: "1) Ссылка", name: "href", widget: "string" }
+            - { label: "2) Текст ссылки", name: "text", widget: "string" }
+            - { label: "3) Язык", name: "langswrs", widget: "string" }
+            - { label: "4) Дополнительный атрибут", name: "addAttributeTwo", widget: "string" }
+
+
   - name: "Страницы"
     label: "Код страниц html"
     files:
