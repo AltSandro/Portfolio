@@ -214,7 +214,7 @@ collections:
         label: "Language Translations (ENG)"
         file: "json/lang-data.json"
         fields:
-          - { label: "Translations", name: "translations", widget: "markdown" }
+          - { label: "Translations", name: "en", widget: "markdown" }
 
 
 
