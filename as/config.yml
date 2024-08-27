@@ -78,11 +78,10 @@ collections:
         name: "heroButtonsData"
         file: "json/buttons-data.json"
         fields:
-          - { label: "heroButtons_About", name: "heroButtons", widget: "list", fields: [
-              { label: "1) Cсылка перехода кнопки(URL)", name: "link", widget: "string"},
-              { label: "2) Текст кнопки:", name: "caption", widget: "string" },
+          - { label: "heroButtons_AboutPage", name: "heroButtons", widget: "list", fields: [
+              { label: "1) Cсылка перехода кнопки(URL)", name: "href", widget: "string"},
+              { label: "2) Текст кнопки:", name: "text", widget: "string" },
               { label: "3) langswrs - обязательная метка для 4го пункта", name: "langswrs", widget: "string", required: false },
               { label: "4) addAttributeTwo то есть фразу надо data-langswitch-item='...' ", name: "addAttributeTwo", widget: "string", required: false }
             ]}
   
-
