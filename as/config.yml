@@ -136,14 +136,6 @@ collections:
             - { label: "2) Текст ссылки", name: "text", widget: "string" }
             - { label: "3) Язык", name: "langswrs", widget: "string" }
             - { label: "4) Дополнительный атрибут", name: "addAttributeTwo", widget: "string" }
-        - label: "Footer Navigation"
-          name: "footerNav"
-          widget: "list"
-          fields:
-            - { label: "1) Ссылка", name: "href", widget: "string" }
-            - { label: "2) Текст ссылки", name: "text", widget: "string" }
-            - { label: "3) Язык", name: "langswrs", widget: "string" }
-            - { label: "4) Дополнительный атрибут", name: "addAttributeTwo", widget: "string" }
 
 
   - name: "Страницы"
