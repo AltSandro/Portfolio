@@ -212,7 +212,10 @@ collections:
       - label: "English Translations"
         name: "englishTranslations"
         file: "json/lang-data.json"
-        widget: "markdown"
+        fields:
+          - label: "JSON Content"
+            name: "jsonContent"
+            widget: "object"
 
 
 
