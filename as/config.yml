@@ -9,17 +9,17 @@ public_folder: /img
 
 collections:
   - name: "Favicon"
-    label: "Favicon Data"
+    label: "Favicon"
     files:
-      - label: "Favicon Data"
+      - label: "Favicon"
         name: "favicon"
         file: "json/favicon-data.json"
         fields:
           - { label: "Favicon Data", name: "favicon", widget: "list", fields: [
-              { label: "'rel' атрибут", name: "rel", widget: "string", required: true },
-              { label: "sizes (опционально)", name: "sizes", widget: "string", required: false },
-              { label: "type (опционально)", name: "type", widget: "string", required: false },
-              { label: "ссылка, где лежит файл", name: "href", widget: "string", required: true }
+              { label: "1) 'rel' атрибут", name: "rel", widget: "string", required: true },
+              { label: "2) sizes (опционально)", name: "sizes", widget: "string", required: false },
+              { label: "3) type (опционально)", name: "type", widget: "string", required: false },
+              { label: "4) ссылка, где лежит файл", name: "href", widget: "string", required: true }
             ]} 
 
   - name: "Страницы"
