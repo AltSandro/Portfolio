@@ -213,13 +213,6 @@ collections:
       - label: "English Translations"
         name: "englishTranslations"
         file: "json/lang-data.json"
-        fields:
-          - label: "Language"
-            name: "en"
-            widget: "object"
-            fields: [
-              
-            ]
 
 
 
