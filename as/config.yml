@@ -15,7 +15,7 @@ collections:
         name: "favicon"
         file: "json/favicon-data.json"
         fields:
-          - { label: "Favicon Data", name: "favicon", widget: "list", fields: [
+          - { label: "Favicon Elements", name: "favicon", widget: "list", fields: [
               { label: "1) 'rel' атрибут", name: "rel", widget: "string", required: true },
               { label: "2) sizes (опционально)", name: "sizes", widget: "string", required: false },
               { label: "3) type (опционально)", name: "type", widget: "string", required: false },
@@ -73,7 +73,7 @@ collections:
         name: "heroButtonsData"
         file: "json/buttons-data.json"
         fields:
-          - { label: "heroButtons_In_AboutPage", name: "heroButtons", widget: "list", fields: [
+          - { label: "HeroButtons_elements", name: "heroButtons", widget: "list", fields: [
               { label: "1) Cсылка перехода кнопки(URL)", name: "href", widget: "string"},
               { label: "2) Текст кнопки", name: "text", widget: "string" },
               { label: "3) langswrs - обязательная метка для 4го пункта", name: "langswrs", widget: "string", required: false },
@@ -84,10 +84,10 @@ collections:
     label: "Остальные меняемые кнопки"
     files:
       - label: "Остальные меняемые кнопки (кроме HeroButtons)"
-        name: "OtheButtonsData"
+        name: "Other_Buttons_Data"
         file: "json/buttons-data.json"
         fields:
-          - { label: "OtheButtonsData", name: "buttons", widget: "list", fields: [
+          - { label: "Elements", name: "buttons", widget: "list", fields: [
               { label: "1) Cсылка перехода кнопки(URL)", name: "href", widget: "string"},
               { label: "2) Текст кнопки", name: "text", widget: "string" },
               { label: "3) langswrs - обязательная метка для 4го пункта", name: "langswrs", widget: "string", required: false },
