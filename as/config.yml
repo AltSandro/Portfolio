@@ -58,7 +58,6 @@ collections:
         file: "json/skills-data.json"
         fields:
           - label: "Список навыков"
-            widget: "list"
             fields:
               - { label: "1) Порядковый id элемента (_1.._2.._3)", name: "id", widget: "string" }
               - { label: "2) Порядковый circleId круга (внутренний)", name: "circleId", widget: "string" }
