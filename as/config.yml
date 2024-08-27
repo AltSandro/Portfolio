@@ -49,16 +49,17 @@ collections:
               { label: "3) langswrs - обязательная метка для 4го пункта", name: "langswrs", widget: "string", required: false },
               { label: "4) addAttributeTwo то есть фразу надо data-langswitch-item='...' ", name: "addAttributeTwo", widget: "string", required: false }
             ]}
-            
+
   - name: "Навыки"
     label: "Навыки"
     files:
       - label: "Skills Data"
         name: "skillsData"
         file: "json/skills-data.json"
+        widget: "list"
         fields:
           - label: "Список навыков"
-            widget: "list"
+            widget: "object"
             fields:
               - { label: "1) Порядковый id элемента (_1.._2.._3)", name: "id", widget: "string" }
               - { label: "2) Порядковый circleId круга (внутренний)", name: "circleId", widget: "string" }
