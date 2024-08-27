@@ -213,18 +213,10 @@ collections:
         name: "englishTranslations"
         file: "json/lang-data.json"
         fields:
-          - label: "Language"
-            name: "en"
-            widget: "object"
-            fields:
-              - label: "Translations"
-                name: "translations"
-                widget: "object_list"
-                fields:
-                  - label: "Key"
-                    name: "key"
-                    widget: "string"
-                  - label: "Value"
-                    name: "value"
-                    widget: "string"
+          - label: "JSON Content"
+            name: "jsonContent"
+            widget: "code"
+            default: "{}"
+            mode: "json"
+            hint: "Edit the entire JSON file directly here."
      
