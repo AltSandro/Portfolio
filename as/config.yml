@@ -80,8 +80,8 @@ collections:
             name: "images"
             widget: "list"
             fields:
-              - { label: "1) Ссылка на изображение", name: "href", widget: "string" }
-              - { label: "2) Источник изображения (src)", name: "src", widget: "string" }
+              - { label: "1) Ссылка на изображение, равно src", name: "href", widget: "string" }
+              - { label: "2) Источник изображения (src), равно href", name: "src", widget: "string" }
               - { label: "3) Описание изображения (alt)", name: "alt", widget: "string" }
               - { label: "4) Категория('Scratch' всегда)", name: "category", widget: "string" }
               - { label: "5) Название проекта ('LEMONCHELLO Fruit Hunt' всегда)", name: "name", widget: "string" }
