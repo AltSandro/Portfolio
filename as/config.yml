@@ -70,3 +70,19 @@ collections:
               { label: "8) langswrs - всегда такое слово если нужно переводить", name: "langswrs", widget: "string", required: false },
               { label: "9) dataLangswitchItem='...' из 'Файл языкового переключения'", name: "dataLangswitchItem", widget: "string", required: false }
             ]}
+
+  - name: "HeroButtons"
+    label: "HeroButtons (страница 'ОБО МНЕ' )"
+    files:
+      - label: "Hero buttons data"
+        name: "heroButtonsData"
+        file: "json/buttons-data.json"
+        fields:
+          - { label: "heroButtons_About", name: "heroButtons", widget: "list", fields: [
+              { label: "1) Cсылка перехода кнопки(URL)", name: "link", widget: "string"},
+              { label: "2) Текст кнопки:", name: "caption", widget: "string" },
+              { label: "3) langswrs - обязательная метка для 4го пункта", name: "langswrs", widget: "string", required: false },
+              { label: "4) addAttributeTwo то есть фразу надо data-langswitch-item='...' ", name: "addAttributeTwo", widget: "string", required: false }
+            ]}
+  
+
