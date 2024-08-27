@@ -76,11 +76,11 @@ collections:
         name: "scratchProjectGallery"
         file: "json/scratchProjectGallery-data.json"
         fields:
-          - label: "Изображения"
+          - label: "Изображения Scratch проекта"
             name: "images"
             widget: "list"
             fields:
-              - { label: "1) Ссылка на изображение, равно src", name: "href", widget: "string" }
+              - { label: "1) Ссылка на изображение(href), равно src", name: "href", widget: "string" }
               - { label: "2) Источник изображения (src), равно href", name: "src", widget: "string" }
               - { label: "3) Описание изображения (alt)", name: "alt", widget: "string" }
               - { label: "4) Категория('Scratch' всегда)", name: "category", widget: "string" }
