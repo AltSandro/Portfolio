@@ -215,7 +215,7 @@ collections:
         fields:
           - label: "JSON Content"
             name: "jsonContent"
-            widget: "code"
+            widget: "markdown"
 
 
 
