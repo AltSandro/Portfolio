@@ -217,9 +217,13 @@ collections:
         - label: "Language"
           name: "en"
           widget: "object"
-          fields:
-            - label: "Body"
-              widget: "markdown"
+        - label: "Language"
+          name: "uk"
+          widget: "object"
+        - label: "Language"
+          name: "ru"
+          widget: "object"    
+
 
 
 
