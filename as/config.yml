@@ -57,7 +57,7 @@ collections:
         name: "skillsData"
         file: "json/skills-data.json"
         fields:
-          - { label: "Skills Elements", name: "skills", widget: "list", fields: [
+          - { label: "Skills Elements", widget: "list", fields: [
               {label: "1) Порядковый id элемента (_1.._2.._3)", name: "id", widget: "string" },
               { label: "2) Порядковый circleId круга (внутренний)", name: "circleId", widget: "string" },
               { label: "3) Источник изображения (imgSrc)", name: "imgSrc", widget: "string" },
