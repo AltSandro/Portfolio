@@ -14,13 +14,13 @@ collections:
       - label: "Favicon Data"
         name: "favicon"
         file: "json/favicon-data.json"
-        fields: 
-        - { label: "Favicon Data", name: "favicon", widget: "list", fields: [
-            { label: "'rel' атрибут", name: "rel", widget: "string" },
-            { label: "sizes (опционально)", name: "sizes", widget: "string", required: false },
-            { label: "type (опционально)", name: "type", widget: "string", required: false },
-            { label: "ссылка, где лежит файл", name: "href", widget: "string" }
-        ]}
+        fields:
+          - { label: "Favicon Data", name: "favicon", widget: "list", fields: [
+              { label: "'rel' атрибут", name: "rel", widget: "string", required: true },
+              { label: "sizes (опционально)", name: "sizes", widget: "string", required: false },
+              { label: "type (опционально)", name: "type", widget: "string", required: false },
+              { label: "ссылка, где лежит файл", name: "href", widget: "string", required: true }
+            ]} 
 
   - name: "Страницы"
     label: "Код страниц html"
