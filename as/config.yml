@@ -56,10 +56,8 @@ collections:
     - label: "Skills"
       name: "skills"
       file: "json/skills-data.json"
+      widget: "list"
       fields:
-        - label: "Навык"
-          widget: "list"
-          fields:
             - { label: "1) Порядковый id элемента (_1.._2.._3)", name: "id", widget: "string" }
             - { label: "2) Порядковый circleId круга (внутренний)", name: "circleId", widget: "string" }
             - { label: "3) Источник изображения (imgSrc)", name: "imgSrc", widget: "string" }
@@ -107,19 +105,27 @@ collections:
               - { label: "4) Категория('Scratch' всегда)", name: "category", widget: "string" }
               - { label: "5) Название проекта ('LEMONCHELLO Fruit Hunt' всегда)", name: "name", widget: "string" }
 
-  - name: "Локация"
-    label: "Локация"
-    files:
-      - label: "Location"
-        name: "location"
-        file: "json/loc-data.json"
-        fields:
-          - label: "Информация о локации"
-            name: "locationInfo"
-            widget: "object"
-            fields:
-              - { label: "1) Адрес", name: "linkText", widget: "string" }
-              - { label: "2) Локация на карте (URL)", name: "mapSrc", widget: "string" }
+- name: "Skills"
+  label: "Навыки"
+  files:
+    - label: "Skills"
+      name: "skills"
+      file: "json/skills-data.json"
+      fields:
+        - label: "Список навыков"
+          name: "skillsList"
+          widget: "list"
+          fields:
+            - { label: "ID", name: "id", widget: "string" }
+            - { label: "ID круга", name: "circleId", widget: "string" }
+            - { label: "Ссылка на изображение", name: "imgSrc", widget: "string" }
+            - { label: "Альтернативный текст", name: "alt", widget: "string" }
+            - { label: "Название навыка", name: "skillName", widget: "string" }
+            - { label: "Процент завершения (stroke)", name: "strokePercent", widget: "number" }
+            - { label: "Ссылка на ресурс", name: "link", widget: "string" }
+            - { label: "Класс круга", name: "circleClass", widget: "string" }
+            - { label: "Режим отладки", name: "debug", widget: "boolean", required: false }
+
 
   - name: "Страницы"
     label: "Код страниц html"
