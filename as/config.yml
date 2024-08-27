@@ -133,7 +133,7 @@ collections:
               { label: "2) Расположенте на иконку", name: "imgSrc", widget: "string" },
               { label: "3) Описание иконки (alt)", name: "alt", widget: "string" }
             ]}
-            
+
   - name: "Англ перевод"
     label: "Language Translations (ENG)"
     files:
@@ -143,7 +143,6 @@ collections:
         fields:
           - label: "Language"
             name: "en"
-            widget: "object"
               - { label: "Body", name: "en", widget: "markdown" }
 
   - name: "Navbar - ссылки (чисто по сайту)"
