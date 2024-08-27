@@ -207,14 +207,14 @@ collections:
           - { label: "CSS Content", name: "cssContent", widget: "code", language: "css", required: true, hint: "Редактируйте CSS код" }
           - { label: "style", name: "style", widget: "markdown"}
   
- - name: "language"
-    label: "Language Translations"
+  - name: "Англ перевод"
+    label: "Language Translations (ENG)"
     files:
-      - name: "English Translations"
-        label: "Language Translations (ENG)"
+      - label: "English Translations"
+        name: "englishTranslations"
         file: "json/lang-data.json"
-        fields:
-          - { label: "Translations", name: "en", widget: "markdown" }
+        widget: "markdown"
+
 
 
 
