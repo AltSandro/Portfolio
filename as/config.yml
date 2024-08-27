@@ -120,6 +120,24 @@ collections:
             fields:
               - { label: "1) Адрес", name: "linkText", widget: "string" }
               - { label: "2) Локация на карте (URL)", name: "mapSrc", widget: "string" }
+              
+  - name: "Англ перевод"
+    label: "Language Translations (ENG)"
+    files:
+      - label: "English Translations"
+        name: "english Translations"
+        file: "json/lang-data.json"
+        fields:
+          - label: "Language"
+            name: "en"
+            widget: "object"
+            fields:
+              - { label: "1) Title for Homepage", name: "1", widget: "string" }
+              - { label: "2) Browser Video Support", name: "2", widget: "string" }
+              - { label: "3) Homepage Greeting", name: "3", widget: "string" }
+              - { label: "4) Visit Homepage Text", name: "4", widget: "string" }
+              - { label: "5) ABOUT", name: "5", widget: "string" }
+
 
   - name: "Cсылки на месседжеры"
     label: "Cсылки на месседжеры"
