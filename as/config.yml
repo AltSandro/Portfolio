@@ -216,10 +216,8 @@ collections:
         fields:
           - label: "Language"
             name: "en"
-            widget: "object"
-            fields:
-              - label: "Body"
-                name: "en"
+            widget: "markdown"
+
 
 
 
