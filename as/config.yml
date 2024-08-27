@@ -21,50 +21,6 @@ collections:
               { label: "3) type (опционально)", name: "type", widget: "string", required: false },
               { label: "4) ссылка, где лежит файл", name: "href", widget: "string", required: true }
             ]} 
-
-  - name: "Страницы"
-    label: "Код страниц html"
-    files:
-      - label: "Home"
-        name: "home"
-        file: "index.html"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
-      - label: "About"
-        name: "about"
-        file: "about.html"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
-      - label: "Projects"
-        name: "projects"
-        file: "projects.html"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
-      - label: "Contact"
-        name: "contact"
-        file: "contact.html"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
-      - label: "404"
-        name: "404"
-        file: "404.html"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
-
-  - name: "CSS"
-    label: "Код CSS"
-    files:
-      - label: "Footer CSS"
-        name: "footerCss"
-        file: "css/footerMod.css"
-        fields:
-          - { label: "CSS Content", name: "cssContent", widget: "code", language: "css", required: true, hint: "Редактируйте CSS код" }
-          - { label: "style", name: "style", widget: "markdown"}     
   
   - name: "HeroButtons"
     label: "HeroButtons (страница 'ОБО МНЕ' )"
@@ -113,6 +69,23 @@ collections:
               { label: "9) dataLangswitchItem='...' из 'Файл языкового переключения'", name: "dataLangswitchItem", widget: "string", required: false }
             ]}
 
+  - name: "Галерея Scratch проекта"
+    label: "Галерея Scratch проекта"
+    files:
+      - label: "Scratch Project Gallery"
+        name: "scratchProjectGallery"
+        file: "json/scratchProjectGallery-data.json"
+        fields:
+          - label: "Изображения"
+            name: "images"
+            widget: "list"
+            fields:
+              - { label: "1) Ссылка на изображение", name: "href", widget: "string" }
+              - { label: "2) Источник изображения (src)", name: "src", widget: "string" }
+              - { label: "3) Описание изображения (alt)", name: "alt", widget: "string" }
+              - { label: "4) Категория('Scratch' всегда)", name: "category", widget: "string" }
+              - { label: "5) Название проекта ('LEMONCHELLO Fruit Hunt' всегда)", name: "name", widget: "string" }
+
   - name: "Локация"
     label: "Локация"
     files:
@@ -124,8 +97,52 @@ collections:
             name: "locationInfo"
             widget: "object"
             fields:
-              - { label: "Адрес", name: "linkText", widget: "string" }
-              - { label: "Карта (URL)", name: "mapSrc", widget: "string" }
+              - { label: "1) Адрес", name: "linkText", widget: "string" }
+              - { label: "2) Локация на карте (URL)", name: "mapSrc", widget: "string" }
+
+  - name: "Страницы"
+    label: "Код страниц html"
+    files:
+      - label: "Home"
+        name: "home"
+        file: "index.html"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "About"
+        name: "about"
+        file: "about.html"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Projects"
+        name: "projects"
+        file: "projects.html"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Contact"
+        name: "contact"
+        file: "contact.html"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "404"
+        name: "404"
+        file: "404.html"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "CSS"
+    label: "Код CSS"
+    files:
+      - label: "Footer CSS"
+        name: "footerCss"
+        file: "css/footerMod.css"
+        fields:
+          - { label: "CSS Content", name: "cssContent", widget: "code", language: "css", required: true, hint: "Редактируйте CSS код" }
+          - { label: "style", name: "style", widget: "markdown"}     
 
 
   
