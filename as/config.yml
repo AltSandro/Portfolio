@@ -66,10 +66,10 @@ collections:
           - { label: "CSS Content", name: "cssContent", widget: "code", language: "css", required: true, hint: "Редактируйте CSS код" }
           - { label: "style", name: "style", widget: "markdown"}     
   
-  - name: "Buttons"
-    label: "Управление кнопками"
+  - name: "HeroButtons"
+    label: "HeroButtons (страница 'ОБО МНЕ' )"
     files:
-      - label: "Hero Buttons Data (страница 'ОБО МНЕ')"
+      - label: "Hero buttons data"
         name: "heroButtonsData"
         file: "json/buttons-data.json"
         fields:
@@ -78,10 +78,13 @@ collections:
               { label: "2) Текст кнопки", name: "text", widget: "string" },
               { label: "3) langswrs - обязательная метка для 4го пункта", name: "langswrs", widget: "string", required: false },
               { label: "4) addAttributeTwo то есть фразу надо data-langswitch-item='...' ", name: "addAttributeTwo", widget: "string", required: false }
-          ]}
-      
-      - label: "Остальные кнопки"
-        name: "otherButtonsData"
+            ]}
+
+  - name: "Остальные меняемые кнопки"
+    label: "Остальные меняемые кнопки"
+    files:
+      - label: "Остальные меняемые кнопки (кроме HeroButtons)"
+        name: "Other_Buttons_Data"
         file: "json/buttons-data.json"
         fields:
           - { label: "Elements", name: "buttons", widget: "list", fields: [
@@ -89,8 +92,7 @@ collections:
               { label: "2) Текст кнопки", name: "text", widget: "string" },
               { label: "3) langswrs - обязательная метка для 4го пункта", name: "langswrs", widget: "string", required: false },
               { label: "4) addAttributeTwo то есть фразу надо data-langswitch-item='...' ", name: "addAttributeTwo", widget: "string", required: false }
-          ]}
-
+            ]}    
   
   - name: "Карусель проектов"
     label: "Карусель проектов ( 'Cмотри на AltSandro D.Pro-Web' )"
