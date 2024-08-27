@@ -216,7 +216,7 @@ collections:
           - label: "JSON Content"
             name: "jsonContent"
             widget: "code"
-            default: "{}"
             mode: "json"
             hint: "Edit the entire JSON file directly here."
+            required: false
      
