@@ -216,7 +216,8 @@ collections:
         fields:
           - label: "Language"
             name: "en"
-            widget: "list"
+            widget: "object"
+            fields:
 
 
 
