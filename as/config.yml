@@ -120,7 +120,7 @@ collections:
       name: "location"
       file: "json/loc-data.json"
       fields:
-        - { label: "Информация о локации", name: "locationInfo", widget: "list", fields: [
+        - { label: "Информация о локации", name: "locationInfo", widget: "object", fields: [
             { label: "Адрес", name: "linkText", widget: "string" },
             { label: "Карта (URL)", name: "mapSrc", widget: "string" }
           ]}
