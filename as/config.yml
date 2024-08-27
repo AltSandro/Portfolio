@@ -121,6 +121,19 @@ collections:
               - { label: "1) Адрес", name: "linkText", widget: "string" }
               - { label: "2) Локация на карте (URL)", name: "mapSrc", widget: "string" }
 
+  - name: "Cсылки на месседжеры"
+    label: "Cсылки на месседжеры"
+    files:
+      - label: "Social media links"
+        name: "Social media links"
+        file: "json/pagesNav-data.json"
+        fields:
+          - { label: "Social media links", name: "socialLinks", widget: "list", fields: [
+              { label: "1) Ссылка на меседжер", name: "href", widget: "string" },
+              { label: "2) Расположенте на иконку", name: "imgSrc", widget: "string" },
+              { label: "3) Описание иконки (alt)", name: "alt", widget: "string" }
+            ]}
+
   - name: "Navbar - ссылки (чисто по сайту)"
     label: "Navbar - ссылки (чисто по сайту)"
     files:
