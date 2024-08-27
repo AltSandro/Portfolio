@@ -57,7 +57,7 @@ collections:
         file: "json/skills-data.json"
         widget: "list"
         fields:
-          [ label: "Список навыков",  widget: "list", fields: 
+          label: "Список навыков",  widget: "list", fields: 
             - { label: "1) Порядковый id элемента (_1.._2.._3)", name: "id", widget: "string" }
             - { label: "2) Порядковый circleId круга (внутренний)", name: "circleId", widget: "string" }
             - { label: "3) Источник изображения (imgSrc)", name: "imgSrc", widget: "string" }
@@ -67,7 +67,6 @@ collections:
             - { label: "7) Ссылка (link)", name: "link", widget: "string" }
             - { label: "8) Порядковый № 'circle_' (circle1..circle2..circle3)", name: "circleClass", widget: "string" }
             - { label: "9) Отладочный/невидимый (debug)", name: "debug", widget: "boolean", required: false }
-          ]
                
   - name: "Карусель проектов"
     label: "Карусель проектов ( 'Cмотри на AltSandro D.Pro-Web' )"
