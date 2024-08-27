@@ -219,7 +219,6 @@ collections:
           widget: "object"
           fields:
             - label: "Body"
-              name: "en"
               widget: "markdown"
 
 
