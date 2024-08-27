@@ -58,14 +58,15 @@ collections:
         file: "json/skills-data.json"
         fields:
           - { label: "Skills Elements", name: "skills", widget: "list", fields: [
-              { label: "1) ID", name: "id", widget: "string" },
-              { label: "2) Circle ID", name: "circleId", widget: "string" },
-              { label: "3) Image Source", name: "imgSrc", widget: "string" },
-              { label: "4) Alt Text", name: "alt", widget: "string" },
-              { label: "5) Skill Name", name: "skillName", widget: "string" },
-              { label: "6) Percentage", name: "percentage", widget: "string" },
-              { label: "7) langswrs", name: "langswrs", widget: "string" },
-              { label: "8) dataLangswitchItem", name: "dataLangswitchItem", widget: "string" }
+            { label: "1) Порядковый id элемента (_1.._2.._3)", name: "id", widget: "string" }
+            { label: "2) Порядковый circleId круга (внутренний)", name: "circleId", widget: "string" }
+            { label: "3) Источник изображения (imgSrc)", name: "imgSrc", widget: "string" }
+            { label: "4) Описание изображения (alt)", name: "alt", widget: "string" }
+            { label: "5) Подпись скила (имя)", name: "skillName", widget: "string" }
+            { label: "6) Уровень владения (нехватающих градусов до полных 360)", name: "strokePercent", widget: "string" }
+            { label: "7) Ссылка (link)", name: "link", widget: "string" }
+            { label: "8) Порядковый № 'circle_' (circle1..circle2..circle3)", name: "circleClass", widget: "string" }
+            { label: "9) Отладочный/невидимый (debug)", name: "debug", widget: "boolean", required: false }
             ]}
                
   - name: "Карусель проектов"
