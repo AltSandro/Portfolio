@@ -50,7 +50,24 @@ collections:
               { label: "4) addAttributeTwo то есть фразу надо data-langswitch-item='...' ", name: "addAttributeTwo", widget: "string", required: false }
             ]}
             
-
+  - name: "Skills"
+    label: "Skills"
+    files:
+      - label: "Skills Data"
+        name: "skillsData"
+        file: "json/skills-data.json"
+        fields:
+          - { label: "Skills Elements", name: "skills", widget: "list", fields: [
+              { label: "1) ID", name: "id", widget: "string" },
+              { label: "2) Circle ID", name: "circleId", widget: "string" },
+              { label: "3) Image Source", name: "imgSrc", widget: "string" },
+              { label: "4) Alt Text", name: "alt", widget: "string" },
+              { label: "5) Skill Name", name: "skillName", widget: "string" },
+              { label: "6) Percentage", name: "percentage", widget: "string" },
+              { label: "7) langswrs", name: "langswrs", widget: "string" },
+              { label: "8) dataLangswitchItem", name: "dataLangswitchItem", widget: "string" }
+            ]}
+               
   - name: "Карусель проектов"
     label: "Карусель проектов ( 'Cмотри на AltSandro D.Pro-Web' )"
     files:
