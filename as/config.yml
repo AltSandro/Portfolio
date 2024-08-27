@@ -215,7 +215,8 @@ collections:
         fields:
           - label: "JSON Content"
             name: "jsonContent"
-            widget: "object"
+            widget: "textarea"
+            required: false
 
 
 
