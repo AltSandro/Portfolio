@@ -10,19 +10,15 @@ public_folder: /img
 collections:
   - name: "Favicon"
   label: "Favicon Data"
-  folder: "json"
-  create: true
-  extension: "json"
-  format: "json"
   fields:
     - label: "Favicon Entries"
       name: "favicon"
-      widget: "list"
+      file: "json/favicon-data.json"
       fields:
-        - { label: "rel атрибут", name: "rel", widget: "string" }
+        - { label: "'rel' атрибут", name: "rel", widget: "string" }
         - { label: "sizes (опционально)", name: "sizes", widget: "string", required: false }
         - { label: "type (опционально)", name: "type", widget: "string", required: false }
-        - { label: "href", name: "href", widget: "string" }
+        - { label: "ссылка, где лежит файл", name: "href", widget: "string" }
 
   - name: "Страницы"
     label: "Код страниц html"
@@ -114,6 +110,9 @@ collections:
               { label: "8) langswrs - всегда такое слово если нужно переводить", name: "langswrs", widget: "string", required: false },
               { label: "9) dataLangswitchItem='...' из 'Файл языкового переключения'", name: "dataLangswitchItem", widget: "string", required: false }
             ]}
+
+
+  
 
 
   
