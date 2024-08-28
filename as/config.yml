@@ -1,5 +1,5 @@
 locale: 'ru'
-logo: "/img/spinnerLabel.svg"
+logo_url: https://altsandro.github.io/img/spinnerLabel.svg
 
 backend:
   name: github
