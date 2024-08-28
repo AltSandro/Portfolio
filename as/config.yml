@@ -20,8 +20,32 @@ collections:
               { label: "2) sizes (опционально)", name: "sizes", widget: "string", required: false },
               { label: "3) type (опционально)", name: "type", widget: "string", required: false },
               { label: "4) ссылка, где лежит файл", name: "href", widget: "string", required: true }
-            ]} 
-  
+            ]}
+
+  - name: "Спиннер"
+    label: "Спиннер"
+    files:
+      - label: "Spinner Label Image"
+        name: "spinnerLabelImage"
+        file: "img/spinnerLabel.svg"
+        fields:
+          - label: "Image Source"
+            name: "src"
+            widget: "image"
+            required: true
+
+  - name: "Логотип"
+    label: "Логотип"
+    files:
+      - label: "Logo Image"
+        name: "logoImage"
+        file: "img/logo2.png"
+        fields:
+          - label: "Image Source"
+            name: "src"
+            widget: "image"
+            required: true
+
   - name: "HeroButtons"
     label: "HeroButtons (страница 'ОБО МНЕ' )"
     files:
