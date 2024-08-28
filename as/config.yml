@@ -8,6 +8,15 @@ public_folder: /img
 
 
 collections:
+  - name: "Project Images"
+    label: "Project Images"
+    files:
+      - label: "Project Images"
+        name: "projectImages"
+        file: "json/project-images-data.json"
+        fields:
+          - { label: "Image", name: "image", widget: "image", media_folder: "img/RaNproj", public_folder: "/img/RaNproj" }
+
   - name: "Favicon"
     label: "Favicon"
     files:
