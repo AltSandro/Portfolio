@@ -208,14 +208,12 @@ collections:
   
   - name: "translations"
     label: "Language Translations"
-    editor:
-      preview: true
     files:
       - label: "English Translations"
         name: "englishTranslations"
         file: "json/lang-data.json"
         fields:
-          - label: "JSON Content"
+          - label: "JSON Content - ENG"
             name: "en"
             widget: "object"
             fields:

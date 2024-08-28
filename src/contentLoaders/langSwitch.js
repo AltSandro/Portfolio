@@ -36,8 +36,16 @@
 
             contentItems.forEach(item => {
                 const itemId = item.getAttribute('data-langSwitch-item');
-
-                let content = languageData[language]?.[itemId] || languageData["en"]?.[itemId]; 
+            
+                const languageEntries = languageData[language] || [];
+                const fallbackEntries = languageData["en"] || [];
+            
+                const getContentById = (id, entries) => {
+                    const entry = entries.find(entry => entry.key === id);
+                    return entry ? entry.value : null;
+                };
+                    
+                let content = getContentById(itemId, languageEntries) || getContentById(itemId, fallbackEntries);
                          
                 if (!content) {
                     if (item.classList.contains('textareaSpecSubmitMessage')) {
