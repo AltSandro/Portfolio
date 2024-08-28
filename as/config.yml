@@ -206,11 +206,11 @@ collections:
           - { label: "CSS Content", name: "cssContent", widget: "code", language: "css", required: true, hint: "Редактируйте CSS код" }
           - { label: "style", name: "style", widget: "markdown"}
   
-  - name: "Translations"
-    label: "Translations"
+  - name: "Translations - EN"
+    label: "Translations - EN"
     files:
-      - label: "Translations"
-        name: "Translations"
+      - label: "English Translations"
+        name: "englishTranslations"
         file: "json/lang-data.json"
         fields:
           - label: "Translations (EN)"
@@ -224,7 +224,14 @@ collections:
               - label: "Value"
                 name: "value"
                 widget: "string"
-                
+
+  - name: "Translations - UK"
+    label: "Translations - UK"
+    files:
+      - label: "Ukrainian Translations"
+        name: "ukrainianTranslations"
+        file: "json/lang-data.json"
+        fields:
           - label: "Translations (UK)"
             name: "uk"
             widget: "list"
@@ -236,7 +243,14 @@ collections:
               - label: "Value"
                 name: "value"
                 widget: "string"
-                
+
+  - name: "Translations - RU "
+    label: "Translations - RU"
+    files:
+      - label: "Russian Translations"
+        name: "russianTranslations"
+        file: "json/lang-data.json"
+        fields:
           - label: "Translations (RU)"
             name: "ru"
             widget: "list"
@@ -248,13 +262,3 @@ collections:
               - label: "Value"
                 name: "value"
                 widget: "string"
-
-
-  
-
-
-
-
-  
-
-  
