@@ -206,18 +206,19 @@ collections:
           - { label: "CSS Content", name: "cssContent", widget: "code", language: "css", required: true, hint: "Редактируйте CSS код" }
           - { label: "style", name: "style", widget: "markdown"}
   
-  - name: "translations"
-    label: "Language Translations"
+ - name: "lang_data"
+    label: "Language Data"
+    editor:
+      preview: false
     files:
-      - label: "English Translations"
-        name: "englishTranslations"
+      - label: "Language Data"
+        name: "lang_data"
         file: "json/lang-data.json"
         fields:
-          - label: "JSON Content"
-            name: "jsonContent"
-            widget: "textarea"
-            required: false
-
+          - label: "JSON"
+            name: "raw_json"
+            widget: "code"
+            mode: "application/json"
 
 
   
