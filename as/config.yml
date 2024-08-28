@@ -3,12 +3,11 @@ backend:
   repo: AltSandro/altsandro.github.io
   branch: main
 
-media_folder: img
-public_folder: /img
+media_folder: img/RaNproj
+public_folder: /img/RaNproj
 
 
 collections:
-
   - name: "Favicon"
     label: "Favicon"
     files:
