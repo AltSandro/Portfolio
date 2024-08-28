@@ -209,7 +209,7 @@ collections:
   - name: "lang_data"
     label: "Language Data"
     editor:
-      preview: true
+      preview: false
     files:
       - label: "Language Data"
         name: "lang_data"
@@ -219,6 +219,7 @@ collections:
             name: "raw_json"
             widget: "code"
             mode: "json"
+            default: ""
 
 
   
