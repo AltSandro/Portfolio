@@ -197,14 +197,18 @@ collections:
           - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "CSS"
-    label: "Код CSS"
-    files:
-      - label: "Footer CSS"
-        name: "footerCss"
-        file: "css/footerMod.css"
-        fields:
-          - { label: "CSS Content", name: "cssContent", widget: "code", language: "css", required: true, hint: "Редактируйте CSS код" }
-          - { label: "style", name: "style", widget: "markdown"}
+  label: "CSS Styles"
+  files:
+    - label: "Footer CSS"
+      name: "footerCss"
+      file: "css/footerMod.css"
+      fields:
+        - label: "CSS Content"
+          name: "cssContent"
+          widget: "code"
+          mode: "css"
+          required: true
+          hint: "Редактируйте CSS код"
   
   - name: "Translations - EN"
     label: "Translations - EN"
@@ -262,3 +266,10 @@ collections:
               - label: "Value"
                 name: "value"
                 widget: "string"
+
+
+
+
+  
+
+  
