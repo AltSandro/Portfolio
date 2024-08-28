@@ -1,12 +1,19 @@
-header.css-y7r3-AppHeader {
-  background: #f3e7e9;
-  background: linear-gradient(
-    to right,
-    #f3e7e9,#e3eeffe5,#e3eeffea
-  ) !important;
-  transition: background-color 0.5s ease-in-out;
-  box-shadow: 0px 11px 11px -10px rgba(7, 7, 7, 0.67) !important;
-  border-bottom: 1px solid rgba(192, 192, 192, 0.7) !important;
-  color: red !important;
+html,
+body {
+
 }
 
+body {
+
+}
+
+.frame-content {
+
+}
+.frame-content img {
+
+}
+
+.SplitPane {
+  background-color: red !important;
+}
