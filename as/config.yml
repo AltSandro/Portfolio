@@ -217,9 +217,8 @@ collections:
         fields:
           - label: "JSON"
             name: "en"
-            widget: "code"
+            widget: "object"
             mode: "json"
-            default: ""
 
 
   
