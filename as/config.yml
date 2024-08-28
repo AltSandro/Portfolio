@@ -260,9 +260,6 @@ collections:
     folder: "img/RaNproj"
     create: true
     update: true
-    delete: true
-    uploadMedia: true
-    deleteMedia: true
  
 
 
