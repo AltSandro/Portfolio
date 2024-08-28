@@ -8,3 +8,9 @@ body {
 body {
   padding: 20px;
 }
+
+.netlify-cms .nc-button {
+    background-color: #4CAF50; /* Зеленый фон */
+    color: white; /* Белый текст */
+    border-radius: 5px; /* Скругление углов */
+}
