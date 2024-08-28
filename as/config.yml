@@ -262,8 +262,10 @@ collections:
     folder: "img/"
     create: true
     update: true
+    editor:
+      preview: true
     fields:
-      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Папка img/", name: "img", widget: "image" }
 
 
 
