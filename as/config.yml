@@ -256,6 +256,14 @@ collections:
                 name: "value"
                 widget: "string"
 
+  - name: "photos"
+    label: "Photos"
+    folder: "img/"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+
 
 
 
