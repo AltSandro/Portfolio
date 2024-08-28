@@ -206,8 +206,8 @@ collections:
           - { label: "CSS Content", name: "cssContent", widget: "code", language: "css", required: true, hint: "Редактируйте CSS код" }
           - { label: "style", name: "style", widget: "markdown"}
   
-- name: "translations"
-  label: "Language Translations"
+- name: "Translations - EN"
+  label: "Translations - EN"
   files:
     - label: "English Translations"
       name: "englishTranslations"
@@ -225,8 +225,8 @@ collections:
               name: "value"
               widget: "string"
 
-- name: "translations"
-  label: "Language Translations"
+- name: "Translations - UK"
+  label: "Translations - UK"
   files:
     - label: "Ukrainian Translations"
       name: "ukrainianTranslations"
@@ -243,9 +243,9 @@ collections:
             - label: "Value"
               name: "value"
               widget: "string"
-              
-- name: "translations"
-  label: "Language Translations"
+
+- name: "Translations - RU "
+  label: "Translations - RU"
   files:
     - label: "Russian Translations"
       name: "russianTranslations"
