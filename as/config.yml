@@ -219,7 +219,6 @@ collections:
             name: "raw_json"
             widget: "code"
             mode: "json"
-            default: "{}"
 
 
   
