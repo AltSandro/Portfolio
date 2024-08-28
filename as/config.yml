@@ -1,4 +1,5 @@
 locale: 'ru'
+display_url: /img/spinnerLabel.svg
 
 backend:
   name: github
