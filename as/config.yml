@@ -213,18 +213,42 @@ collections:
         name: "Translations"
         file: "json/lang-data.json"
         fields:
-          - { label: "Translations (EN)", name: "en", widget: "list", allow_add: "true", fields: [
-              { label: "Key", name: "key", widget: "string" },
-              { label: "Value", name: "value", widget: "string" }
-            ]}
-          - { label: "Translations (UK)", name: "uk", widget: "list", allow_add: "true", fields: [
-              { label: "Key", name: "key", widget: "string" },
-              { label: "Value", name: "value", widget: "string" }
-            ]}
-          - { label: "Translations (RU)", name: "ru", widget: "list", allow_add: "true", fields: [
-              { label: "Key", name: "key", widget: "string" },
-              { label: "Value", name: "value", widget: "string" }
-            ]}  
+          - label: "Translations (EN)"
+            name: "en"
+            widget: "list"
+            allow_add: true
+            fields:
+              - label: "Key"
+                name: "key"
+                widget: "string"
+              - label: "Value"
+                name: "value"
+                widget: "string"
+                
+          - label: "Translations (UK)"
+            name: "uk"
+            widget: "list"
+            allow_add: true
+            fields:
+              - label: "Key"
+                name: "key"
+                widget: "string"
+              - label: "Value"
+                name: "value"
+                widget: "string"
+                
+          - label: "Translations (RU)"
+            name: "ru"
+            widget: "list"
+            allow_add: true
+            fields:
+              - label: "Key"
+                name: "key"
+                widget: "string"
+              - label: "Value"
+                name: "value"
+                widget: "string"
+
 
   
 
