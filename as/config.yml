@@ -263,8 +263,7 @@ collections:
     delete: true
     uploadMedia: true
     deleteMedia: true
-    fields:
-      - { label: "Изображение", name: "image", widget: "image" }    
+ 
 
 
 
