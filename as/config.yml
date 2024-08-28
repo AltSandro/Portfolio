@@ -195,31 +195,7 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
-
-  - name: "CSS"
-    label: "CSS Styles"
-    files:
-      - label: "Footer CSS"
-        name: "footerCss"
-        file: "css/footerMod.css"
-        fields:
-          - label: "CSS Content"
-            name: "cssContent"
-            widget: "code"
-            mode: "css"
-            required: true
-            hint: "Редактируйте CSS код"
-      - label: "Main CSS"
-        name: "mainCss"
-        file: "css/main.css"
-        fields:
-          - label: "CSS Content"
-            name: "cssContent"
-            widget: "code"
-            mode: "css"
-            required: true
-            hint: "Редактируйте основной CSS код"
-
+  
   - name: "Translations - EN"
     label: "Translations - EN"
     files:
