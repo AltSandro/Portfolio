@@ -216,7 +216,7 @@ collections:
         file: "json/lang-data.json"
         fields:
           - label: "JSON"
-            name: "raw_json"
+            name: "en"
             widget: "code"
             mode: "json"
             default: ""
