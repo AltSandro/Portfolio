@@ -252,7 +252,14 @@ collections:
               - label: "Value"
                 name: "value"
                 widget: "string"
-
+                
+  - label: "RaNproj"
+    name: "RaNproj"
+    folder: "img/RaNproj"
+    create: true
+    fields:
+      - { label: "Название", name: "title", widget: "string" }
+      - { label: "Изображение", name: "image", widget: "image" }    
 
 
 
