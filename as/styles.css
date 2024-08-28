@@ -1,26 +1,9 @@
 html,
 body {
-  color: #444;
-  font-size: 14px;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: rgb(45, 45, 78);
+  color: #ffffff;
+
 }
 
-body {
-  padding: 20px;
-}
 
-.netlify-cms .nc-button {
-    background-color: #4CAF50; /* Зеленый фон */
-    color: white; /* Белый текст */
-    border-radius: 5px; /* Скругление углов */
-}
 
-.frame-content {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.9rem;
-  color: red;
-}
-.frame-content img {
-  max-width: 100%;
-  color: red;
-}
