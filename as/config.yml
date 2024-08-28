@@ -209,7 +209,7 @@ collections:
   - name: "translations"
     label: "Language Translations"
     editor:
-    preview: true
+      preview: true
     files:
       - label: "English Translations"
         name: "englishTranslations"
@@ -218,7 +218,9 @@ collections:
           - label: "JSON Content"
             name: "jsonContent"
             widget: "object"
-
+            fields:
+              - { label: "1)", name: "1", widget: "string" }
+              - { label: "2))", name: "2", widget: "string" }
 
 
   
