@@ -1,5 +1,6 @@
 locale: 'ru'
 logo_url: https://altsandro.github.io/img/spinnerLabel.svg
+display_url: https://altsandro-d-pro-web.netlify.app
 
 backend:
   name: github
@@ -256,12 +257,12 @@ collections:
                 name: "value"
                 widget: "string"
 
-  - name: "photos"
-    label: "Photos"
+  - name: "img папка"
+    label: "img папка (не видит существующие)"
     folder: "img/"
     create: true
+    update: true
     fields:
-      - { label: "Title", name: "title", widget: "string" }
       - { label: "Image", name: "image", widget: "image" }
 
 
