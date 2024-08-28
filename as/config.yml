@@ -255,12 +255,6 @@ collections:
                 name: "value"
                 widget: "string"
 
-  - label: "RaNproj"
-    name: "img/RaNproj"
-    folder: "img/RaNproj"
-    create: true
-    update: true
- 
 
 
 
