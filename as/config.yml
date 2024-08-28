@@ -206,62 +206,31 @@ collections:
           - { label: "CSS Content", name: "cssContent", widget: "code", language: "css", required: true, hint: "Редактируйте CSS код" }
           - { label: "style", name: "style", widget: "markdown"}
   
-  - name: "Translations - EN"
-    label: "Translations - EN"
-    files:
-      - label: "English Translations"
-        name: "englishTranslations"
-        file: "json/lang-data.json"
+  - name: "translations"
+    label: "Language Translations"
+    folder: "json/"
+    create: false
+    identifier_field: "name"
+    fields:
+      - label: "Language"
+        name: "name"
+        widget: "select"
+        options:
+          - { label: "English", value: "en" }
+          - { label: "Ukrainian", value: "uk" }
+          - { label: "Russian", value: "ru" }
+      - label: "Translations"
+        name: "translations"
+        widget: "list"
+        allow_add: true
         fields:
-          - label: "Translations (EN)"
-            name: "en"
-            widget: "list"
-            allow_add: true
-            fields:
-              - label: "Key"
-                name: "key"
-                widget: "string"
-              - label: "Value"
-                name: "value"
-                widget: "string"
+          - label: "Key"
+            name: "key"
+            widget: "string"
+          - label: "Value"
+            name: "value"
+            widget: "string"
 
-  - name: "Translations - UK"
-    label: "Translations - UK"
-    files:
-      - label: "Ukrainian Translations"
-        name: "ukrainianTranslations"
-        file: "json/lang-data.json"
-        fields:
-          - label: "Translations (UK)"
-            name: "uk"
-            widget: "list"
-            allow_add: true
-            fields:
-              - label: "Key"
-                name: "key"
-                widget: "string"
-              - label: "Value"
-                name: "value"
-                widget: "string"
-
-  - name: "Translations - RU "
-    label: "Translations - RU"
-    files:
-      - label: "Russian Translations"
-        name: "russianTranslations"
-        file: "json/lang-data.json"
-        fields:
-          - label: "Translations (RU)"
-            name: "ru"
-            widget: "list"
-            allow_add: true
-            fields:
-              - label: "Key"
-                name: "key"
-                widget: "string"
-              - label: "Value"
-                name: "value"
-                widget: "string"
 
 
 
