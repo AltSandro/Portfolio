@@ -362,18 +362,18 @@ collections:
             name: "style"
             widget: "markdown"
 
- - name: "lang_data"
-  label: "Language Data"
-  editor:
-    preview: false
-  files:
-    - label: "Language Data"
-      name: "lang_data"
-      file: "json/lang-data.json"
-      fields:
-        - label: "JSON"
-          name: "raw_json"
-          widget: "code"
-          mode: "json"
-          default: "{}"
+  - name: "lang_data"
+    label: "Language Data"
+    editor:
+      preview: false
+    files:
+      - label: "Language Data"
+        name: "lang_data"
+        file: "json/lang-data.json"
+        fields:
+          - label: "JSON"
+            name: "raw_json"
+            widget: "code"
+            mode: "json"
+            default: "{}"
 
