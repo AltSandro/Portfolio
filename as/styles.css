@@ -1,9 +1,11 @@
-html,
-body {
-  background-color: rgb(45, 45, 78);
-  color: #ffffff;
-
+header {
+  background: #f3e7e9;
+  background: linear-gradient(
+    to right,
+    #f3e7e9,#e3eeffe5,#e3eeffea
+  );
+  transition: background-color 0.5s ease-in-out;
+  box-shadow: 0px 11px 11px -10px rgba(7, 7, 7, 0.67);
+  border-bottom: 1px solid rgba(192, 192, 192, 0.7);
 }
-
-
 
