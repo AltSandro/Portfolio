@@ -1,10 +1,12 @@
+locale: 'ru'
+
 backend:
   name: github
   repo: AltSandro/altsandro.github.io
   branch: main
 
-media_folder: img
-public_folder: /img
+media_folder: img/RaNproj
+public_folder: /img/RaNproj
 
 
 collections:
@@ -254,12 +256,16 @@ collections:
                 widget: "string"
 
   - label: "RaNproj"
-    name: "RaNproj"
+    name: "img/RaNproj"
     folder: "img/RaNproj"
     create: true
+    update: true
+    delete: true
+    uploadMedia: true
+    deleteMedia: true
     fields:
-      - { label: "Название", name: "title", widget: "string" }
       - { label: "Изображение", name: "image", widget: "image" }    
+
 
 
 
