@@ -209,7 +209,7 @@ collections:
   - name: "lang_data"
     label: "Language Data"
     editor:
-      preview: false
+      preview: true
     files:
       - label: "Language Data"
         name: "lang_data"
