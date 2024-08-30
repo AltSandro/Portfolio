@@ -7,7 +7,7 @@
         const skillsContainer = document.querySelector('.iconsOfSkills');
         skillsContainer.innerHTML = '';
 
-        data.forEach(skill => {
+        data.skills.forEach(skill => {
           let skillHTML = `
             <div class="boxCel${skill.debug ? ' erroring' : ''}">
               <div class="iconSkillsSet">

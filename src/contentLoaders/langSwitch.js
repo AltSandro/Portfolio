@@ -1,5 +1,6 @@
 (function langSwitch(){
     "use strict"
+    
     async function loadLanguageData() {
         try {
             const response = await fetch('json/lang-data.json');
@@ -36,12 +37,22 @@
 
             contentItems.forEach(item => {
                 const itemId = item.getAttribute('data-langSwitch-item');
+                const languageEntries = languageData[language] || [];
+                const fallbackEntries = languageData["en"] || [];
+            
+                const getContentById = (id, entries) => {
+                    const entry = entries.find(entry => entry.key === id);
+                    return entry ? entry.value : null;
+                };
+                    
+                
+                let content = getContentById(itemId, languageEntries) || getContentById(itemId, fallbackEntries);
 
-                let content = languageData[language]?.[itemId] || languageData["en"]?.[itemId]; 
-                         
                 if (!content) {
                     if (item.classList.contains('textareaSpecSubmitMessage')) {
                         content = item.placeholder;
+                    } else if (item.hasAttribute('data-textContent')) {
+                        content = item.getAttribute('data-textContent');
                     } else if (item.tagName === 'INPUT') {
                         if (item.type === 'text' || item.type === 'email' || item.type === 'password' || item.type === 'file') {
                             content = item.placeholder;
@@ -71,8 +82,12 @@
                     }
                 }
 
+
+
                 if (item.classList.contains('textareaSpecSubmitMessage')) {
                     item.placeholder = content;
+                } else if (item.hasAttribute('data-textContent')) {
+                    item.setAttribute('data-textContent', content);
                 } else if (item.tagName === 'INPUT' && (item.type === 'text' || item.type === 'email' || item.type === 'password')) {
                     item.placeholder = content;
                 } else if (item.tagName === 'TEXTAREA') {
@@ -118,25 +133,30 @@
 
     }
 
-    (()=> {
+    (() => {
         let baseFooterContentAdded = false;
         let baseNavContentAdded = false;
-    
+        let is404Page = false;
+
         function checkInitialization() {
-            if (baseFooterContentAdded && baseNavContentAdded) {
+            if ((baseFooterContentAdded && baseNavContentAdded) || is404Page) {
                 initialize();
             }
         }
-
+        if (window.location.pathname === '/404.html' || document.title.includes('404')) {
+            is404Page = true;
+                checkInitialization();
+        }
         document.addEventListener('baseFooterContentAdded', function () {
             baseFooterContentAdded = true;
             checkInitialization();
         });
-    
         document.addEventListener('baseNavContentAdded', function () {
             baseNavContentAdded = true;
             checkInitialization();
         });
+
     })();
+    
 
 })();

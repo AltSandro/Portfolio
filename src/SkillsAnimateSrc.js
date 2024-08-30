@@ -60,13 +60,13 @@
       .then(response => response.json())
       .then(skillsData => {
         document.addEventListener("scroll", handleScroll);
-        document.addEventListener("scroll", () => handleScrollAndHover(skillsData));
+        document.addEventListener("scroll", () => handleScrollAndHover(skillsData.skills));
 
         const observer = new MutationObserver((mutations) => {
           for (let mutation of mutations) {
             if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
               handleScroll();
-              handleScrollAndHover(skillsData);
+              handleScrollAndHover(skillsData.skills);
             }
           }
         });

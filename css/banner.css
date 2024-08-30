@@ -224,3 +224,8 @@ header.banner .site-heading span.subheading,
 .header-round-button:active {
     box-shadow: 0 0 0 0 white;
 }
+
+.contactBanner {
+    box-shadow: 0px 11px 11px -10px rgba(7, 7, 7, 0.67);
+    border-bottom: var(--border-thickness) solid rgba(29, 1, 51, 0.822); 
+}

@@ -312,13 +312,25 @@ button.navbar-toggler:active {
   background: var(--bs-navbar-color); 
 }
 
+.navbarTogglerhamburger .hamburgerTop {
+  height: 2px;
+  margin: 0px;
+  padding: 0px;
+}
+
 .navbarTogglerhamburger .hamburgerMid {
   width: 100%;
   transition: all 200ms ease-in-out;
+  height: 2px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .navbarTogglerhamburger .hamburgerBottom {
   width: 100%;
+  height: 2px;
+  margin: 0px;
+  padding: 0px;
   transition: all 400ms ease-in-out;
 }
 
